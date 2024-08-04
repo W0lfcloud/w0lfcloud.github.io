@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Projekt OP týpek v dungeonu" startnode="13" creator="Twine" creator-version="2.8.1" format="SugarCube" format-version="2.36.1" ifid="595AE502-518E-4C60-8F97-8A0CA81526AB" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* import fontů */
+	<tw-storydata name="Projekt OP týpek v dungeonu" startnode="4" creator="Twine" creator-version="2.8.1" format="SugarCube" format-version="2.36.1" ifid="595AE502-518E-4C60-8F97-8A0CA81526AB" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* import fontů */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -232,7 +232,6 @@ Natáhneš se nad sebe aby jsi z držáku připevněného na zdi vyjmul hoříc�
 🍓 &amp; ☁️ &lt;/h1&gt; 
 
 [[Tak se konečně prober spáči!-&gt;Cela]] &lt;p id=&quot;poznamka&quot;&gt;(Začni příběh)&lt;/p&gt;
-&lt;img src=&quot;Images\alarm.png&quot; width=25%&gt;
 &lt;/center&gt;</tw-passagedata><tw-passagedata pid="5" name="1. křižovatka" tags="1.-patro" position="2050,700" size="100,100">&lt;&lt;type 20ms&gt;&gt;
 Ocitáš se na křižovatce dvou cest. Ta se rozděluje na tři cesty.
 
@@ -383,7 +382,9 @@ Lore
 
 (Design)
 
-Bgm?</tw-passagedata><tw-passagedata pid="19" name="StoryCaption" tags="DevLog" position="1000,300" size="100,100">&lt;center&gt;&lt;hr&gt;&lt;/center&gt;Tvoje staty: 
+Bgm?
+
+obrázky se dělají takhle - &lt;img src=&quot;Images\alarm.png&quot; width=25%&gt;</tw-passagedata><tw-passagedata pid="19" name="StoryCaption" tags="DevLog" position="1000,300" size="100,100">&lt;center&gt;&lt;hr&gt;&lt;/center&gt;Tvoje staty: 
 $hp HP
 $def DEF
 $dmg DMG
@@ -407,7 +408,8 @@ Můžeš se rozhodnout jej vylovit nebo nechat na dně.
 
 [[Natáhnout se pro předmět-&gt;Past]]
 [[Nechci se namočit-&gt;2. křižovatka]]
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Past" tags="1.-patro" position="1300,450" size="100,100">Zapřel jsi se o hranu studny a natáhnul paži ke dnu.
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Past" tags="1.-patro" position="1300,450" size="100,100">&lt;&lt;type 20ms&gt;&gt;
+Zapřel jsi se o hranu studny a natáhnul paži ke dnu.
 
 &lt;span id=&quot;prostor&quot;&gt;\
 	&lt;&lt;button &quot;Hoď kostkou&quot;&gt;&gt;\
@@ -434,7 +436,8 @@ Naháhnul jsi se pro drahokam jako proutek. Málem jsi se do studny převážil.
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;/replace&gt;&gt;\
 	&lt;&lt;/button&gt;&gt;
-&lt;/span&gt;</tw-passagedata><tw-passagedata pid="25" name="Uzavření studny" tags="1.-patro" position="1300,550" size="100,100"></tw-passagedata><tw-passagedata pid="26" name="Sehnutí se" tags="1.-patro" position="1200,450" size="100,100">&lt;&lt;type 20ms&gt;&gt;\
+&lt;/span&gt;
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Uzavření studny" tags="1.-patro" position="1300,550" size="100,100"></tw-passagedata><tw-passagedata pid="26" name="Sehnutí se" tags="1.-patro" position="1200,450" size="100,100">&lt;&lt;type 20ms&gt;&gt;\
 Opatrně jsi se rozkročil a sehnul k drahokamu. Dno pod tebou tiše popraskává.
 
 &lt;&lt;If $hodKostkou is 1 or $hodKostkou is 2 or $hodKostkou is 3 &gt;&gt;\
