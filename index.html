@@ -204,7 +204,7 @@ S rozmazaným viděním se rozhlížíš kolem sebe. Na stěně po tvé pravici 
 Tvůj úkol je prostý, musíš se odtud dostat a zjistit co se stalo. 
 &lt;hr&gt;
 [[Sebrat pochodeň-&gt;+ Pochodeň]] &lt;p id=&quot;poznamka&quot;&gt; (Pozor, tohle rozhodnutí ovlivní tvůj průchod hrou)&lt;/p&gt;
-[[Podívat se na vrata-&gt;Dlouhá místnost]]
+[[Podívat se na vrata a vstoupit do nich-&gt;Dlouhá místnost]]
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Dlouhá místnost" tags="1.-patro" position="2050,450" size="100,200">&lt;&lt;type 20ms&gt;&gt;
 Stojíš před masivními kamennými vraty s vyrytými tvary a znaky, které jsi snad nikdy v životě neviděl. Když se do nich opřeš, aby jsi je otevřel, jdou překvapivě lehce otevřít.
 
@@ -217,9 +217,10 @@ Před sebou vidíš dlouhou osvětlenou místnost se stolkem a židličkou, o kt
 &lt;p id=&quot;poznamka&quot;&gt;Nyní máš $def DEF. Toto číslo se odečítá od útoku nepřítele.&lt;/p&gt;
 
 2. Rezatý meč //[2 STR]// &lt;&lt;set $str = 2&gt;&gt;
-&lt;p id=&quot;poznamka&quot;&gt;Nyní máš $str STR. Toto číslo se přičítá k tvému útoku. &lt;/p&gt;
+&lt;p id=&quot;poznamka&quot;&gt;Nyní máš $str STR. Toto číslo se přičítá ke tvému útoku. &lt;/p&gt;
 
 [[Pokračuj rovně-&gt;1. křižovatka]]
+[[Vrať se zpět do cely-&gt;Cela]]
 
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="+ Pochodeň" tags="1.-patro" position="1850,250" size="100,100">&lt;&lt;type 20ms&gt;&gt;
 Natáhneš se nad sebe, aby jsi z držáku připevněného na zdi vyjmul hořící pochodeň. Možná se bude hodit.
@@ -232,25 +233,23 @@ Natáhneš se nad sebe, aby jsi z držáku připevněného na zdi vyjmul hoříc
 
 [[Tak se konečně prober spáči!-&gt;Cela]] &lt;p id=&quot;poznamka&quot;&gt; (Začni příběh)&lt;/p&gt;
 &lt;/center&gt;</tw-passagedata><tw-passagedata pid="5" name="1. křižovatka" tags="1.-patro" position="2050,700" size="100,100">&lt;&lt;type 20ms&gt;&gt;
-Ocitáš se na křižovatce.
+Ocitáš se na křižovatce. Musíš si zvolit, kterým směrem se vypravíš.
 
 První cesta vede po slabě osvětlené cestě směrem na východ.
 Druhá cesta, směrem na jih, je zablokována železnými mřížemi, avšak naskýtá se zde výhled do okolí.
 Třetí cesta, vedoucí na západ, je velice dobře osvětlená. Světlo z plápolajících pochodní svítí až k tobě.
-&lt;hr&gt; Vyber si kudy se vypravíš:
-
+&lt;hr&gt;
 [[Odboč na šerou cestu (východ)-&gt;Místnost před vodou]]
 [[Prozkoumej výhled (jih)-&gt;Výhled za mříží]]
 [[Odboč na osvětlenou cestu (západ)-&gt;2. křižovatka]]
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="2. křižovatka" tags="1.-patro" position="1875,700" size="100,100">&lt;&lt;type 20ms&gt;&gt;
-Dorazil jsi na druhou křižovatku. Vedou odtud čtyři cesty.
+Dorazil jsi na druhou křižovatku. Vedou odtud další čtyři cesty.
 
 První cesta, směrem na západ, vede do nějaké obrovské místnosti.
 Druhá cesta se stáčí k jižnímu točitému schodišti.
 Severní cesta vede někam za zatáčku. Nevíš co by se tam mohlo nacházet.
-&lt;hr&gt;&lt;&lt;if lastVisited(&quot;Místnost s tapiseriemi&quot;) is -1&gt;&gt;\
-[[Pokračuj do veliké místnosti (západ)-&gt;Místnost s tapiseriemi]]
-&lt;&lt;/if&gt;&gt;\
+&lt;hr&gt;
+[[Pokračuj rovně do veliké místnosti (západ)-&gt;Místnost s tapiseriemi]]
 &lt;&lt;if lastVisited(&quot;Točité schody&quot;) is -1&gt;&gt;\
    [[Odboč k točitému schodišti (jih)-&gt;Točité schody]]
 &lt;&lt;/if&gt;&gt;\
@@ -269,18 +268,19 @@ Přiblížil jsi se k těžkým kovovým mřížím. Z bližšího pohledu usoud
 Před sebou si totiž všímáš obrovské vodní plochy. Hladina vody je poměrně nízko, přesto si netroufáš odhadovat hloubku podzemního jezera.
 
 Ve výhledu také spatříš nepatrný ostrov. 
-
+&lt;hr&gt;
 [[Vrať se na križovatku-&gt;1. křižovatka]]
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Místnost před vodou" tags="1.-patro" position="2225,675" size="200,200">&lt;&lt;type 20ms&gt;&gt;
 Před tebou se rozléhá místnost plná louží. Kapky vody ti dokonce padají za krk kabátu. Není divu když máš před sebou rozhled na obrovskou otevřenou vodní plochu.  
 Na druhé straně místnosti se nachází temná díra. Kdo ví kam vede.
 &lt;hr&gt;
+[[Vstup skrz temnou díru (východ)-&gt;Tunely_1]]
 [[Zpět na křižovatku-&gt;1. křižovatka]]
-[[Vstoupit skrz temnou díru-&gt;Tunely_1]]
 
 &lt;&lt;if $paka is true&gt;&gt;\
-Najednou se něco stalo a na jižní straně se přes vodu objevil most, který vede někam kam ani nedohlédneš.
-[[Vydat se přes most (jih)-&gt;Most nahoru]]
+Najednou se ozval podivný zvuk a na jižní straně se přes vodu objevil most, který vede někam kam ani nedohlédneš.
+
+[[Vydej se přes most (jih)-&gt;Most nahoru]]
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Dveře na klíč" tags="1.-patro" position="1700,550" size="100,100">&lt;&lt;type 20ms&gt;&gt;
 Kráčíš po cestě a zajdeš za roh. Tam spatříš staré železné dveře. I když vypadají rezavě a staře, Zdání klame, jelikož jsou bytelné a robustní. V duchu si pomyslíš že tuto bariéru jen tak nevyrazíš.
@@ -324,7 +324,7 @@ Rukou jsi zavadil o objekt připomínající stůl. Na něm jsi nahmatal něco c
 [[Vrať se zpátky za most-&gt;2. křižovatka]]
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Místnost se studnou" tags="1.-patro" position="1500,450" size="200,200">&lt;&lt;type 20ms&gt;&gt;
 &lt;&lt;if lastVisited(&quot;Hnízdo&quot;) &gt; 0&gt;&gt;\
-Našel jsi skrytou cestu, která vede přímo do místnosti se studnou!
+Vypadá to, že jsi našel skrytý boční vchod do místnosti podivného tvaru.
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if lastVisited(&quot;+ Klíč&quot;) &gt; 0&gt;&gt;\
 Otevřel jsi dveře a vstoupil do místnosti podivného tvaru. 
@@ -376,8 +376,9 @@ Vyděšeně vytáhneš svůj rezatý meč a chystáš se na boj. V druhé ruce d
 &lt;&lt;/link&gt;&gt;
 
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Most nahoru" tags="1.-patro" position="2275,925" size="100,200">&lt;&lt;type 20ms&gt;&gt;
-Jdeš několik minut přes dlouhý most. Najednou se před tebou ocitne velkolepý vchod do obrovské místnosti na vrcholu zatopené věže.
-[[Místnost se sochou minulosti]]
+Jdeš několik minut přes dlouhý most. Před tebou se ocitá velkolepý vchod do obrovské místnosti na vrcholu zatopené věže.
+
+[[Jít do místnosti-&gt;Místnost se sochou minulosti]]
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Todo List" tags="DevLog" position="700,100" size="200,200">Funkce
 - Bojový systém (bude)
 - Propracovanější inventář (zatím je v side baru)
@@ -390,14 +391,14 @@ Lore
 
 Bgm?
 
-obrázky se dělají takhle - &lt;img src=&quot;Images\alarm.png&quot; width=25%&gt;</tw-passagedata><tw-passagedata pid="19" name="StoryCaption" tags="DevLog" position="1000,300" size="100,100">&lt;center&gt;&lt;hr&gt;&lt;/center&gt;Tvoje staty: 
+obrázky se dělají takhle - &lt;img src=&quot;Images\alarm.png&quot; width=25%&gt;</tw-passagedata><tw-passagedata pid="19" name="StoryCaption" tags="DevLog" position="1000,300" size="100,100">&lt;center&gt;&lt;hr&gt;&lt;/center&gt;Tvoje atributy: 
 $hp/$player.maxhp HP
 $def DEF
 $str STR
 
 $xp/$maxxp XP
 $lvl LVL
- &lt;&lt;if $xp == $maxxp&gt;&gt;\
+ &lt;&lt;if $xp &gt;= $maxxp&gt;&gt;\
 Postupuješ na další level! 
 
 &lt;&lt;button &quot;+ STR&quot; `passage()`&gt;&gt;&lt;&lt;set $str++&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;&lt;button &quot;+ DEF&quot; `passage()`&gt;&gt;&lt;&lt;set $def++&gt;&gt;&lt;&lt;/button&gt;&gt;
@@ -430,7 +431,7 @@ Po podrobnějším zkoumání studny poznáváš předmět na dně. Je to nějak
 Můžeš se rozhodnout jej vylovit nebo nechat na dně.
 &lt;hr&gt;
 [[Natáhnout se pro předmět-&gt;Past]] &lt;p id=&quot;poznamka&quot;&gt; (Hod kostkou pro šanci na získání drahokamu)&lt;/p&gt;
-[[Nechci se namočit-&gt;2. křižovatka]]
+[[Nechci se namočit, vrátím se zpět-&gt;2. křižovatka]]
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Past" tags="1.-patro" position="1250,525" size="100,100">&lt;&lt;type 20ms&gt;&gt;
 Zapřel jsi se o hranu studny a natáhnul paži ke dnu.
 
@@ -455,7 +456,7 @@ Dno hlasitě zapraskalo. Tento zvuk jsi slyšet nechtěl. Máš jen omezený ča
 [[Rozložit váhu a sehnout se pro drahokam-&gt;Sehnutí se]]
 
 &lt;&lt;elseif $hodKostkou is 1 or $hodKostkou is 2&gt;&gt;\
-Naháhnul jsi se pro drahokam jako proutek a málem jsi se do studny převážil. Naštěstí jsi se pořádně zapřel nohama a teď v ruce třímáš velice krásný drahokam.
+Natáhnul jsi se pro drahokam jako proutek a málem jsi se do studny převážil. Naštěstí ses pořádně zapřel nohama a teď v ruce třímáš velice krásný drahokam.
 &lt;&lt;run $inv.push(&#39;Drahokam&#39;)&gt;&gt;\
 
 [[Pokračuj-&gt;Uzavření studny]]
@@ -463,7 +464,8 @@ Naháhnul jsi se pro drahokam jako proutek a málem jsi se do studny převážil
 &lt;&lt;/replace&gt;&gt;\
 	&lt;&lt;/button&gt;&gt;
 &lt;/span&gt;
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Uzavření studny" tags="1.-patro" position="1250,650" size="100,100">Vycházíš z místnosti se studnou zpět na druhou křižovatku.
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Uzavření studny" tags="1.-patro" position="1250,650" size="100,100">Vycházíš z místnosti se studnou přes staré železné dveře zpět na druhou křižovatku.
+
 [[Pokračuj-&gt;2. křižovatka]]</tw-passagedata><tw-passagedata pid="26" name="Sehnutí se" tags="1.-patro" position="1125,525" size="100,100">&lt;&lt;type 20ms&gt;&gt;\
 Opatrně jsi se rozkročil a sehnul k drahokamu. Dno pod tebou tiše popraskává.
 
@@ -506,17 +508,25 @@ Narazil jsi na dalšího nechutného pavouka! Tento je dokonce ještě větší 
 &lt;&lt;/link&gt;&gt;
 
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Skrytý průchod" tags="1.-patro" position="1750,425" size="100,100">&lt;&lt;type 20ms&gt;&gt;
-Našel jsi tajný průchod! 
+Přicházíš do nějaké velké kamenné místnosti a červené světlo tě skoro oslepí. Nějakou chvíli čekáš, než si tvoje oči na světlo zvyknou.
 
 [[Vstoupit-&gt;Místnost se studnou]]
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Podzemní jezírko" tags="1.-patro" position="2450,200" size="200,200">&lt;&lt;type 20ms&gt;&gt;
-Objevil jsi podzemní jezírko! Našel jsi zde bylinky, které tě vyléčí zpět na maximální životy. 
+Objevil jsi podzemní jezírko! Odpočinul sis a našel jsi zde bylinky, které tě vyléčí zpět na maximální životy. 
 &lt;p id=&quot;poznamka&quot;&gt;Tvoje HP bylo obnoveno.&lt;/p&gt;
 &lt;&lt;set $hp to $player.maxhp&gt;&gt;\
 
+Také jsi zde našel léčivý lektvar, který můžeš použít k obnovení HP v boji.
+&lt;&lt;run $inv.push(&#39;Léčivý lektvar&#39;)&gt;&gt;\ 
+
 [[Vrať se zpět do tunelů-&gt;Tunely_3]]
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="Místnost se sochou minulosti" tags="1.-patro" position="2225,1175" size="200,200">Vidíš velkou sochu uprostřed místnosti a most do dalšího patra.
-[[Exit do LVL 2]]</tw-passagedata><tw-passagedata pid="33" name="Exit do LVL 2" tags="Přechod" position="1975,1250" size="200,100"></tw-passagedata><tw-passagedata pid="34" name="Combat" tags="" position="3150,525" size="200,200">$player.name: $hp/$player.maxhp HP
+Před očima se ti odehraje část tvé minulosti. &lt;p id=&quot;poznamka&quot;&gt;(Která ještě není sepsaná :D) &lt;/p&gt;
+
+[[Konec-&gt;Exit do LVL 2]]</tw-passagedata><tw-passagedata pid="33" name="Exit do LVL 2" tags="Přechod" position="1975,1250" size="200,100">Dohrál jsi první část hry! &lt;3
+
+&lt;&lt;link &quot;Zpět na start&quot; &quot;START&quot;&gt;&gt;&lt;&lt;run UI.restart()&gt;&gt;&lt;&lt;/link&gt;&gt;
+</tw-passagedata><tw-passagedata pid="34" name="Combat" tags="" position="3150,525" size="200,200">$player.name: $hp/$player.maxhp HP
 $enemy.name: $enemyhp/$enemy.maxhp HP
 
 $combatmsg
@@ -532,8 +542,26 @@ Jsi mrtvý.
 
 &lt;&lt;else&gt;&gt;\
 &lt;&lt;link &quot;Zaútoč mečem&quot; &quot;Combat&quot;&gt;&gt;&lt;&lt;attack&gt;&gt;&lt;&lt;enemyturn&gt;&gt;&lt;&lt;/link&gt;&gt; &lt;p id=&quot;poznamka&quot;&gt; (Hod kostkou pro dmg)&lt;/p&gt;
+&lt;&lt;if $inv.includes(&#39;Pochodeň&#39;)&gt;&gt;\
 &lt;&lt;link &quot;Pokus se ho zapálit svojí pochodní&quot; &quot;Combat&quot;&gt;&gt;&lt;&lt;enemyturn&gt;&gt;&lt;&lt;pochodenAttack&gt;&gt;&lt;&lt;/link&gt;&gt; &lt;p id=&quot;poznamka&quot;&gt; (Hod kostkou pro riskantní útok)&lt;/p&gt;
+&lt;&lt;else&gt;&gt;\
+&lt;&lt;link &quot;Seber svoji pochodeň&quot; &quot;Combat&quot;&gt;&gt;&lt;&lt;set $combatmsg to &quot;Vzal sis pochodeň zpět!&quot;&gt;&gt;&lt;&lt;run $inv.push(&#39;Pochodeň&#39;)&gt;&gt;\&lt;&lt;enemyturn&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;\
 &lt;&lt;link &quot;Pokus se z boje utéct&quot; &quot;Combat&quot;&gt;&gt;&lt;&lt;utek&gt;&gt;&lt;&lt;enemyturn&gt;&gt;&lt;&lt;/link&gt;&gt; &lt;p id=&quot;poznamka&quot;&gt; (Hod kostkou pro šanci na útěk)&lt;/p&gt;
+&lt;&lt;if $inv.includes(&#39;Léčivý lektvar&#39;)&gt;&gt;\
+&lt;&lt;link &quot;Použij léčivý lektvar&quot; &quot;Combat&quot;&gt;&gt;&lt;&lt;hpPotion&gt;&gt;&lt;&lt;enemyturn&gt;&gt;&lt;&lt;/link&gt;&gt; &lt;p id=&quot;poznamka&quot;&gt; (Obnoví HP)&lt;/p&gt;
+   
+&lt;&lt;/if&gt;&gt;
+
+
+
+
+
+
+
+
+
+
 &lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="35" name="Hráč" tags="widget" position="3475,425" size="100,100">&lt;&lt;widget &quot;playersetup&quot;&gt;&gt;
 
 &lt;&lt;set $player to {
@@ -548,8 +576,9 @@ maxhp:25,
 &lt;&lt;widget &quot;levelup&quot;&gt;&gt;\
 &lt;&lt;set $lvl++&gt;&gt;\
 &lt;&lt;set $player.maxhp +=5&gt;&gt;\
+&lt;&lt;set $xp = $xp - $maxxp&gt;&gt;\
 &lt;&lt;set $maxxp +=10&gt;&gt;\
-&lt;&lt;set $xp = 0&gt;&gt;\
+
 &lt;&lt;/widget&gt;&gt;\
 
 </tw-passagedata><tw-passagedata pid="36" name="Nepřátelé" tags="widget" position="3725,425" size="100,100">&lt;&lt;widget &quot;enemysetup&quot;&gt;&gt;
@@ -558,27 +587,25 @@ maxhp:25,
 name:&quot;Pavouk&quot;,
 maxhp:20,
 mindamage:4,
-maxdamage:6,
+maxdamage:7,
 accuracy:7,
 attackmsg:[&quot;Pavouk tě kousne&quot;, &quot;Pavouk na tebe skočí&quot;],
 specialattackmsg:&quot;&quot;,
 intromsg:&quot;Pavouk na tebe agresivně kouká!&quot;,
 deathmsg:&quot;Pavouk je mrtvej!&quot;,
-xxp:10,
 }
 &gt;&gt;
 
 &lt;&lt;set setup.pavoukBoss to {
-name:&quot;Pavoučí Boss&quot;,
+name:&quot;Pavoučí boss&quot;,
 maxhp:30,
 mindamage:6,
 maxdamage:10,
-accuracy:6,
+accuracy:8,
 attackmsg:[&quot;Pavoučí boss tě kousne&quot;, &quot;Pavoučí boss na tebe skočí&quot;],
 specialattackmsg:&quot;Pavoučí boss se na chvíli zastaví&quot;,
 intromsg:&quot;Pavoučí boss na tebe agresivně kouká!&quot;,
 deathmsg:&quot;Pavoučí boss je mrtvej!&quot;,
-xxp:20,
 }
 &gt;&gt;
 
@@ -600,15 +627,21 @@ xxp:20,
 &lt;&lt;set $hodKostkou to random(1,2)&gt;&gt;
 
     &lt;&lt;if $hodKostkou is 1&gt;&gt;\
-    &lt;&lt;set $combatmsg to &quot;Nepovedlo se ti to, tvoje pochodeň ti vypadla z ruky a ty tak přicházíš o svůj jediný zdroj světla.&quot;&gt;&gt;
-    &lt;&lt;set $enemycombatmsg to &quot;Pavouk na tebe po tmě skočil a zabil tě!&quot;&gt;&gt;
-    &lt;&lt;set $hp to 0&gt;&gt;
+    &lt;&lt;set $combatmsg to &quot;Netrefil ses, tvoje pochodeň ti vypadla z ruky a ty tak přicházíš o svůj jediný zdroj světla. Seber ji nebo neuvidíš.&quot;&gt;&gt;
+    &lt;&lt;enemyheavyattack&gt;&gt;
+    &lt;&lt;if $inv.delete(&#39;Pochodeň&#39;)&gt;&gt;\
+    &lt;&lt;/if&gt;&gt;\
 
     &lt;&lt;else&gt;&gt;\
-    &lt;&lt;set $combatmsg to &quot;Povedlo se! Flákl jsi pavouka ohnivou pochodní a ten zhořel.&quot;&gt;&gt;
-    &lt;&lt;set $enemyhp to 0&gt;&gt;
-    &lt;&lt;set $enemycombatmsg to $enemy.deathmsg&gt;&gt;
+    &lt;&lt;set $hodKostkou to random(1,6)&gt;&gt;
+	&lt;&lt;set $celkemDmg to ($hodKostkou + $str + 5)&gt;&gt;
+	&lt;&lt;set $playerdamage to $celkemDmg&gt;&gt;
 
+	&lt;&lt;set $enemyhp -= $playerdamage&gt;&gt;
+	&lt;&lt;set $enemyhp to Math.clamp($enemyhp,0,$enemy.maxhp)&gt;&gt;
+    
+    &lt;&lt;set $combatmsg to &quot;Povedlo se! Hodil jsi kostkou číslo $hodKostkou a flákl jsi pavouka svou ohnivou pochodní za $celkemDmg dmg!&quot;&gt;&gt;
+    
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;/widget&gt;&gt;
 
@@ -619,7 +652,12 @@ xxp:20,
     
      &lt;&lt;else&gt;&gt;\
      &lt;&lt;set $combatmsg to &quot;[[Uteč-&gt;Místnost před vodou]]&quot;&gt;&gt;
- 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;hpPotion&quot;&gt;&gt;
+&lt;&lt;set $hp to $player.maxhp&gt;&gt;\
+&lt;&lt;if $inv.delete(&#39;Léčivý lektvar&#39;)&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="NepřátelskéAkce" tags="widget" position="3675,525" size="200,100">&lt;&lt;widget &quot;enemyattack&quot;&gt;&gt;
 &lt;&lt;set _enemyattackroll to random(1,10)&gt;&gt;
@@ -637,20 +675,61 @@ xxp:20,
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;/widget&gt;&gt;
-</tw-passagedata><tw-passagedata pid="39" name="NepřítelůvTurn" tags="widget" position="3675,625" size="200,100">&lt;&lt;widget &quot;enemyturn&quot;&gt;&gt;
+
+&lt;&lt;widget &quot;enemyheavyattack&quot;&gt;&gt;
+&lt;&lt;set $enemydamage to random($enemy.mindamage + 10 ,$enemy.maxdamage +10) - $def&gt;&gt;
+
+&lt;&lt;set $hp -= $enemydamage&gt;&gt;&lt;&lt;set $hp to Math.clamp($hp,0,$player.maxhp)&gt;&gt;
+&lt;&lt;set $enemycombatmsg to &quot;$enemy.name na tebe po tmě skočí a hituje tě za $enemydamage dmg!&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;
+
+
+&lt;&lt;widget &quot;enemyheal&quot;&gt;&gt;
+&lt;&lt;set $enemyhealroll to random(5,10)&gt;&gt;
+&lt;&lt;set $enemyhp += $enemyhealroll&gt;&gt;
+&lt;&lt;set $enemyhp to Math.clamp($enemyhp,0,$enemy.maxhp)&gt;&gt;
+&lt;&lt;set $enemycombatmsg to &quot;$enemy.specialattackmsg a vyléčí si $enemyhealroll HP!&quot;&gt;&gt;
+
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="NepřítelůvTurn" tags="widget" position="3675,625" size="200,100">&lt;&lt;widget &quot;enemyturn&quot;&gt;&gt;
 &lt;&lt;if $enemyhp != 0&gt;&gt;
 
   &lt;&lt;if $enemy.name == &quot;Pavouk&quot;&gt;&gt;
-  &lt;&lt;enemyattack&gt;&gt;
+  			&lt;&lt;if $inv.includes(&#39;Pochodeň&#39;)&gt;&gt;\
+             &lt;&lt;enemyattack&gt;&gt;
+             &lt;&lt;else&gt;&gt;
+  			&lt;&lt;enemyheavyattack&gt;&gt;
+             &lt;&lt;/if&gt;&gt;
 
-  &lt;&lt;elseif $enemy.name == &quot;Pavoučí Boss&quot;&gt;&gt;
-  &lt;&lt;enemyattack&gt;&gt;
-
+  &lt;&lt;elseif $enemy.name == &quot;Pavoučí boss&quot;&gt;&gt;
+ 	  &lt;&lt;if $enemyhp &lt; ($enemy.maxhp/2)&gt;&gt;
+                          &lt;&lt;set _moveroll to random(1,2)&gt;&gt;
+                          
+            &lt;&lt;if _moveroll == 1&gt;&gt;
+				&lt;&lt;if $inv.includes(&#39;Pochodeň&#39;)&gt;&gt;\
+             &lt;&lt;enemyattack&gt;&gt;
+             &lt;&lt;else&gt;&gt;
+  			&lt;&lt;enemyheavyattack&gt;&gt;
+             &lt;&lt;/if&gt;&gt;
+            
+          	&lt;&lt;else&gt;&gt;
+          	&lt;&lt;enemyheal&gt;&gt;
+			
+            &lt;&lt;/if&gt;&gt;
+  
+        &lt;&lt;else&gt;&gt;
+			&lt;&lt;if $inv.includes(&#39;Pochodeň&#39;)&gt;&gt;\
+             &lt;&lt;enemyattack&gt;&gt;
+             &lt;&lt;else&gt;&gt;
+  			&lt;&lt;enemyheavyattack&gt;&gt;
+             &lt;&lt;/if&gt;&gt;
+		  
+        &lt;&lt;/if&gt;&gt;
+  &lt;&lt;/if&gt;&gt;
+  
+  
 &lt;&lt;else&gt;&gt;
 &lt;&lt;set $enemycombatmsg to $enemy.deathmsg&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-
 &lt;&lt;/widget&gt;&gt;
 
 </tw-passagedata><tw-passagedata pid="40" name="StartCombat" tags="widget" position="3150,400" size="200,100">&lt;&lt;widget &quot;startcombat&quot;&gt;&gt;
@@ -659,24 +738,14 @@ xxp:20,
 &lt;&lt;set $combatmsg to &quot;Odhodlaně koukáš na pavouka!&quot;&gt;&gt;
 &lt;&lt;set $enemycombatmsg to $enemy.intromsg&gt;&gt;
 
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="EndCombat" tags="widget" position="3150,750" size="200,100">&lt;&lt;widget &quot;givxp&quot;&gt;&gt;\
-&lt;&lt;set $xp += $enemy.xxp&gt;&gt;\
-        &lt;&lt;if $xp == $maxxp&gt;&gt;\
-Postupuješ na další level! 
-&lt;&lt;button &quot;Vylepšit STR&quot; `passage()`&gt;&gt; &lt;&lt;set $str++&gt;&gt; &lt;&lt;/button&gt;&gt;
-&lt;&lt;button &quot;Vylepšit DEF&quot; `passage()`&gt;&gt; &lt;&lt;set $def++&gt;&gt; &lt;&lt;/button&gt;&gt;
-        &lt;&lt;levelup&gt;&gt;\
-        &lt;&lt;/if&gt;&gt;
-&lt;&lt;/widget&gt;&gt;\
-
-
-&lt;&lt;widget &quot;endcombat&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="EndCombat" tags="widget" position="3150,750" size="200,100">&lt;&lt;widget &quot;endcombat&quot;&gt;&gt;
 &lt;&lt;unset $enemy, $enemyhp,, $combatmsg, $enemycombatmsg, $playerdamage, $enemydamage&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 
 </tw-passagedata><tw-passagedata pid="42" name="GameOver" tags="" position="3525,650" size="100,100">&lt;p id=&quot;game_over&quot;&gt; Tvá cesta a život zde končí.&lt;/p&gt;
 
-&lt;&lt;link &quot;Zpět na start&quot; &quot;START&quot;&gt;&gt;&lt;&lt;set $hp to $player.maxhp&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Pavouk1Win" tags="1.-patro" position="2775,575" size="100,100">&lt;&lt;type 20ms&gt;&gt;
+&lt;&lt;link &quot;Zpět na start&quot; &quot;START&quot;&gt;&gt;&lt;&lt;run UI.restart()&gt;&gt;&lt;&lt;/link&gt;&gt;
+</tw-passagedata><tw-passagedata pid="43" name="Pavouk1Win" tags="1.-patro" position="2775,575" size="100,100">&lt;&lt;type 20ms&gt;&gt;
 Po náročném boji jsi nad pavoukem zvítězil! &lt;p id=&quot;poznamka&quot;&gt;Získáváš +10 XP.
 
 XP zvyšují tvůj level. Při každém postupu na další level si můžeš v postranním menu vylepšit svoji STR nebo DEF a zároveň se ti zvýší tvoje HP o 5.&lt;/p&gt;
@@ -689,7 +758,9 @@ Po náročném boji jsi opět nad pavoukem zvítězil! &lt;p id=&quot;poznamka&q
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="PavoukBossWin" tags="1.-patro" position="1850,450" size="100,100">&lt;&lt;type 20ms&gt;&gt;
 Dokázal jsi porazit pavoučího bosse! &lt;p id=&quot;poznamka&quot;&gt;Získáváš +20 xp.&lt;/p&gt;
 
-&lt;&lt;link &quot;Pokračuj dál na konec tunelu&quot; &quot;Skrytý průchod&quot;&gt;&gt;&lt;&lt;set $xp += 20&gt;&gt;\&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Hráčův level" tags="" position="1200,300" size="100,100">Level - na každém levelu si můžeš vybrat +str nebo +def
+&lt;&lt;link &quot;Pokračuj dál na konec tunelu&quot; &quot;Skrytý průchod&quot;&gt;&gt;&lt;&lt;set $xp += 20&gt;&gt;\&lt;&lt;/link&gt;&gt;
+
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Hráčův level" tags="" position="1200,300" size="100,100">Level - na každém levelu si můžeš vybrat +str nebo +def
 1. 10 xp
 2. 20 xp
 3. 30 xp
