@@ -359,7 +359,7 @@ Sešel jsi schodiště a obličej tě štípe čím dál více.
 Náhle cítíš jak vzduch kolem tebe začíná hořet. Ve vteřině se těkavý plyn v místnosti roztahuje a s kontaktem plamene tvé louče celá místnost exploduje. Smrad těkavého plynu se mění na smrad spáleného masa.
 
 &lt;p id=&quot;game_over&quot;&gt; Tvá cesta a život zde končí.&lt;/p&gt;
-&lt;&lt;link &quot;Zpět na start&quot; &quot;START&quot;&gt;&gt;&lt;&lt;set $hp to $player.maxhp&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Zpět na start&quot; &quot;START&quot;&gt;&gt;&lt;&lt;run UI.restart()&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 &lt;&lt;else&gt;&gt;\
 Obličej si schováváš pod kabát s nadějí, že to bude lepší. Stejně je tady tma, takže si to můžeš dovolit. S hlavou v kabátu a rukou před sebou jako slepec skenuješ místnost.&lt;hr&gt;
@@ -445,7 +445,7 @@ Zapřel jsi se o hranu studny a natáhnul paži ke dnu.
 SAKRA! Vykřikl jsi když se převážil a spadnul do studny. Než jsi ale stihnul zareagovat, obličejem jsi dopadnul na dno. Při pádu sis přelomil vaz.
 
 &lt;p id=&quot;game_over&quot;&gt; Tvá cesta a život zde končí.&lt;/p&gt;
-&lt;&lt;link &quot;Zpět na start&quot; &quot;START&quot;&gt;&gt;&lt;&lt;set $hp to $player.maxhp&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Zpět na start&quot; &quot;START&quot;&gt;&gt;&lt;&lt;run UI.restart()&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 &lt;&lt;elseif $hodKostkou is 3 or $hodKostkou is 4&gt;&gt;\
 SAKRA! Vykřikl jsi když se převážil a spadnul do studny. Naštěstí jsi se zachytil o vnitřní kraj studny a opatrně se spustil ke dnu. Holt jsi se namočil.
@@ -480,7 +480,7 @@ Bohužel se ti to nepovedlo a spadnul jsi do studny. Než jsi ale stihnul zareag
 
 &lt;p id=&quot;game_over&quot;&gt; Tvá cesta a život zde končí.&lt;/p&gt;
 
-&lt;&lt;link &quot;Zpět na start&quot; &quot;START&quot;&gt;&gt;&lt;&lt;set $hp to $player.maxhp&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Zpět na start&quot; &quot;START&quot;&gt;&gt;&lt;&lt;run UI.restart()&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 &lt;&lt;elseif $hodKostkou is 3 or $hodKostkou is 4 or $hodKostkou is 5 or $hodKostkou is 6&gt;&gt;\
 Povedlo se! Naštěstí jsi se pořádně zapřel nohama a teď v ruce třímáš velice krásný drahokam.
@@ -494,7 +494,9 @@ Povedlo se! Naštěstí jsi se pořádně zapřel nohama a teď v ruce třímá�
 &lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="27" name="Tunely_3" tags="1.-patro" position="2575,500" size="200,100">&lt;&lt;type 20ms&gt;&gt;
 Procházíš dlouhým tunelem, naštěstí zatím bez pavouků. Před tebou jsou dvě cesty. 
 
+&lt;&lt;if lastVisited(&quot;Podzemní jezírko&quot;) is -1&gt;&gt;\
 [[Projdi lákavě vypadající jeskyní přímo před tebou (sever) -&gt;Podzemní jezírko]]
+&lt;&lt;/if&gt;&gt;\
 [[Pokračuj tunelem doleva (západ)-&gt;Tunely_4]]
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Tunely_4" tags="1.-patro" position="2325,500" size="200,100">&lt;&lt;type 20ms&gt;&gt;
 Z temnoty na tebe vyskočil další pavouk! 
