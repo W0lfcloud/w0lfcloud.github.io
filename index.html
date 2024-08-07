@@ -475,10 +475,11 @@ Opatrně jsi se rozkročil a sehnul k drahokamu. Dno pod tebou tiše popraskáv�
 	&lt;&lt;replace &quot;#prostor&quot;&gt;&gt;\
 			Hodil jsi číslo $hodKostkou.
             
-&lt;&lt;If $hodKostkou is 1 or $hodKostkou is 2 &gt;&gt;\
+&lt;&lt;if $hodKostkou is 1 or $hodKostkou is 2 &gt;&gt;\
 Bohužel se ti to nepovedlo a spadnul jsi do studny. Než jsi ale stihnul zareagovat, obličejem jsi dopadnul na dno. Při pádu sis přelomil vaz.
 
 &lt;p id=&quot;game_over&quot;&gt; Tvá cesta a život zde končí.&lt;/p&gt;
+
 &lt;&lt;link &quot;Zpět na start&quot; &quot;START&quot;&gt;&gt;&lt;&lt;set $hp to $player.maxhp&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 &lt;&lt;elseif $hodKostkou is 3 or $hodKostkou is 4 or $hodKostkou is 5 or $hodKostkou is 6&gt;&gt;\
@@ -486,10 +487,14 @@ Povedlo se! Naštěstí jsi se pořádně zapřel nohama a teď v ruce třímá�
 &lt;&lt;run $inv.push(&#39;Drahokam&#39;)&gt;&gt;\
 
 [[Pokračuj-&gt;Uzavření studny]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/replace&gt;&gt;\
+	&lt;&lt;/button&gt;&gt;
+&lt;/span&gt;
 &lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="27" name="Tunely_3" tags="1.-patro" position="2575,500" size="200,100">&lt;&lt;type 20ms&gt;&gt;
 Procházíš dlouhým tunelem, naštěstí zatím bez pavouků. Před tebou jsou dvě cesty. 
 
-[[Projdi hezky vypadající jeskyní přímo před tebou (sever) -&gt;Podzemní jezírko]]
+[[Projdi lákavě vypadající jeskyní přímo před tebou (sever) -&gt;Podzemní jezírko]]
 [[Pokračuj tunelem doleva (západ)-&gt;Tunely_4]]
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Tunely_4" tags="1.-patro" position="2325,500" size="200,100">&lt;&lt;type 20ms&gt;&gt;
 Z temnoty na tebe vyskočil další pavouk! 
@@ -513,11 +518,11 @@ Přicházíš do nějaké velké kamenné místnosti a červené světlo tě sko
 [[Vstoupit-&gt;Místnost se studnou]]
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Podzemní jezírko" tags="1.-patro" position="2450,200" size="200,200">&lt;&lt;type 20ms&gt;&gt;
 Objevil jsi podzemní jezírko! Odpočinul sis a našel jsi zde bylinky, které tě vyléčí zpět na maximální životy. 
-&lt;p id=&quot;poznamka&quot;&gt;Tvoje HP bylo obnoveno.&lt;/p&gt;
-&lt;&lt;set $hp to $player.maxhp&gt;&gt;\
-
 Také jsi zde našel léčivý lektvar, který můžeš použít k obnovení HP v boji.
 &lt;&lt;run $inv.push(&#39;Léčivý lektvar&#39;)&gt;&gt;\ 
+
+&lt;p id=&quot;poznamka&quot;&gt;Tvoje HP bylo obnoveno.&lt;/p&gt;
+&lt;&lt;set $hp to $player.maxhp&gt;&gt;\
 
 [[Vrať se zpět do tunelů-&gt;Tunely_3]]
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="Místnost se sochou minulosti" tags="1.-patro" position="2225,1175" size="200,200">Vidíš velkou sochu uprostřed místnosti a most do dalšího patra.
