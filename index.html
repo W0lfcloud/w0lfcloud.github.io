@@ -263,7 +263,7 @@ Když se probudíš na studeném a tvrdém kameni, uvítá tě prudká bolest hl
 
 S velkým úsilím se zvedáš. Záda ti drhnou o drsnou kamennou zeď. Opíráš se o ni a lapáš po dechu. Vlhký vzduch je cítit zatuchlinou a každý tvůj nádech je namáhavý.
 
- //&quot;Ughhh...&quot;// utrousíš bolestí a pokusíš se otevřít oči. Zrak se ti mlží a trvá několik vteřin, než se ve tmě začnou rýsovat tvary. Zamrkáš a snažíš se urovnat si myšlenky. Někde se ozývá zvuk kapající vody.
+ //„Ughhh...&quot;// utrousíš bolestí a pokusíš se otevřít oči. Zrak se ti mlží a trvá několik vteřin, než se ve tmě začnou rýsovat tvary. Zamrkáš a snažíš se urovnat si myšlenky. Někde se ozývá zvuk kapající vody.
 
 &gt; [[Rozhlédni se kolem sebe-&gt;Cela2]]
 &lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Dlouhá místnost" tags="1.-patro" position="2050,600" size="100,200">&lt;&lt;type 40ms&gt;&gt;\
@@ -284,7 +284,7 @@ Plný radosti ze svého nálezu se rozhlédeš se po místnosti. Pořád slyší
 &gt; [[Pokračuj rovně-&gt;1. křižovatka]]
 &gt; [[Vrať se zpět do cely-&gt;Cela2]]
 
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="+ Pochodeň" tags="1.-patro" position="1850,400" size="100,100">&lt;&lt;type 20ms&gt;&gt;\
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="+ Pochodeň" tags="1.-patro" position="1850,400" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
 Natáhneš se nad sebe, aby jsi z držáku připevněného na zdi vyjmul hořící pochodeň. 
 Je ale dost vysoko a přímo pod ní je v prohlubni na podlaze velká kaluž vody.
 
@@ -323,28 +323,24 @@ Naproti sobě uvidíš těžce vypadající kamenná vrata. Vypadá to jako jedi
 
 &lt;p id=&quot;startMoznosti&quot;&gt;[[Informace-&gt;Info]]&lt;/p&gt;
 
-&lt;/center&gt;</tw-passagedata><tw-passagedata pid="5" name="1. křižovatka" tags="1.-patro" position="2050,875" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
-Ocitáš se na křižovatce. Odněkud tu fouká mírný vánek. Musíš si zvolit, kterým směrem se vypravíš. 
+&lt;/center&gt;</tw-passagedata><tw-passagedata pid="5" name="2. křižovatka" tags="1.-patro" position="1725,875" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
+Přicházíš před další křižovatku, kde je vzduch o něco méně zatuchlý, ale stále je v něm cítit známá vlhkost. Před tebou se táhnou tři nové cesty, každá zahalená tajemstvím. Zamyslíš se a prohlížíš si okolí, vědom si toho, že každá z těchto cest může vést buď ke tvé spáse, nebo ke katastrofě.
 
-Cesta rovně směrem z cely tu končí, je zablokována železnými mřížemi, přes které svítí světlo. Vypadá to, že za nimi je nějaká vyhlídka do okolí. Východní strana křižovatky vede po slabě osvětlené cestě, která klesá někam dolů. Dále nedohlédneš. Opačná cesta, vedoucí na západ, je velice dobře osvětlená. Světlo z lamp svítí až k tobě.
+Západní cesta vede do velkého otevřeného prostoru. Cítíš odtud zvláštní pocit klidu, který z toho směru vyzařuje, jako by místnost uvnitř nabízela jakési útočiště. 
 
-&gt; [[Prozkoumej výhled před tebou (jih)-&gt;Výhled za mříží]]
-&gt; [[Odboč na šerou cestu (východ)-&gt;Místnost před vodou]]
-&gt; [[Odboč na osvětlenou cestu (západ)-&gt;Průchod]]
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="2. křižovatka" tags="1.-patro" position="1725,875" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
-Dorazil jsi na druhou křižovatku. Vedou odtud další čtyři cesty.
+Na jihu se stáčí točité schodiště dolů do neznáma. Když si představíš, jak po něm sestupuješ hlouběji do hlubin kobky, projede tebou vlna nejistoty.
 
-První cesta, směrem na západ, vede do nějaké obrovské místnosti. Druhá cesta se stáčí k jižnímu točitému schodišti. Severní cesta vede někam za zatáčku. Nevíš co by se tam mohlo nacházet.
+Severní cesta zahýbá a mizí za rohem. Nemáš tušení, co by tam na tebe mohlo čekat.
+
+Znovu na tebe doléhá tíha volby, tentokrát o něco složitější. 
 
 &gt; [[Vstup do veliké místnosti (západ)-&gt;Místnost s tapiseriemi]]
-&lt;&lt;if lastVisited(&quot;Točité schody&quot;) is -1&gt;&gt;\
-[[Odboč k točitému schodišti (jih)-&gt;Točité schody]]
-&lt;&lt;/if&gt;&gt;\
-&lt;&lt;if lastVisited(&quot;Místnost se studnou&quot;) is -1&gt;&gt;\
-[[Vydej se k zatáčce (sever)-&gt;Dveře na klíč]]
-&lt;&lt;/if&gt;&gt;\
-[[Zpět na osvětlený průchod (východ)-&gt;Průchod]]
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Místnost s tapiseriemi" tags="1.-patro" position="1450,875" size="200,200">&lt;&lt;type 40ms&gt;&gt;\
+&lt;&lt;if lastVisited(&quot;Točité schody&quot;) is -1&gt;&gt;\ 
+&gt; [[Odboč k točitému schodišti (jih)-&gt;Točité schody]]&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if lastVisited(&quot;Místnost se studnou&quot;) is -1&gt;&gt;\ 
+&gt; [[Vydej se k zatáčce (sever)-&gt;Dveře na klíč]]&lt;&lt;/if&gt;&gt;\
+&gt; [[Zpět na osvětlený průchod (východ)-&gt;Průchod]]
+&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="6" name="Místnost s tapiseriemi" tags="1.-patro" position="1450,875" size="200,200">&lt;&lt;type 40ms&gt;&gt;\
 Vstupuješ do rozlehlé síně a okamžitě zatajíš dech. Stěny jsou tu plné překrásných tapiserií a různých nástěnných maleb, jejichž syté barvy čas nijak nepoznamenal. Stojíš jako zamrzlý v úžasu a tvůj pohled skáče od jednoho mistrovského díla k druhému. Vytvožit takovou krásu muselo dát hromadu práce.
 
 Poprvé od hrozného probuzení v tomto prokletém žaláři cítíš klid. Studená kamenná podlaha pod tebou už nepůsobí tak drsně a z hlavy se ti, i když jen na okamžik, zvedá tíha strachu a zmatku.
@@ -352,44 +348,46 @@ Poprvé od hrozného probuzení v tomto prokletém žaláři cítíš klid. Stud
 Na chvíli se necháš unášet klidem a vyčistíš si mysl. Teď už je ale čas se vrátit na cestu ven. Neochotně si povzdechneš a otočíš se k východu. 
 
 &gt; [[Vrať se zpět-&gt;2. křižovatka]]
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Výhled za mříží" tags="1.-patro" position="2050,1025" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Výhled za mříží" tags="1.-patro" position="2050,1025" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
 Přiblížil jsi se k silným kovovým mřížím. Z bližšího pohledu usoudíš, že tady musí stát tak stovky let. Místy jsou zrezlé a tehdejší černý nátěr se již sloupal. Možná kvůli vlhkosti v ovzduší. 
 
 Před sebou si všímáš obrovské vodní plochy. Hladina vody je poměrně nízko, přesto si netroufáš odhadovat hloubku podzemního jezera. V dáli se z vody tyčí vysoká impozantní kamenná věž. Cítíš, jako by tě k ní něco přitahovalo. 
 
 &gt; [[Vrať se na križovatku-&gt;1. křižovatka]]
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Místnost před vodou" tags="1.-patro" position="2225,850" size="200,200">&lt;&lt;type 40ms&gt;&gt;\
-Před tebou se rozléhá místnost plná louží. Máš rozhled na obrovskou otevřenou vodní plochu. Na druhé straně místnosti se nachází temná díra. Kdo ví kam vede.
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Místnost před vodou" tags="1.-patro" position="2225,850" size="200,200">&lt;&lt;type 40ms&gt;&gt;\
+Před tebou se rozléhá místnost plná louží. Máš rozhled na obrovskou otevřenou vodní plochu, která z nějakého důvodu vydává slabé světlo. Na druhé straně místnosti se nachází temná díra. Kdo ví kam vede.
 
 &lt;&lt;if !$inv.includes(&#39;Pochodeň&#39;)&gt;&gt;\
 Jelikož nemáš žádný zdroj světla, tak v temné díře nic neuvidíš. Možná by jsi tam neměl chodit. Ale třeba se tam skrývá něco, co by ti mohlo pomoct se odtud dostat. 
 &lt;&lt;/if&gt;&gt;\
 
 &lt;&lt;if $paka is true&gt;&gt;\
-Najednou se ozval podivný zvuk a na jižní straně se přes vodu objevil most, který vede do obrovské kamenné věže.
+Najednou se ozval podivný zvuk a na jižní straně se objevil most.
+
+Stojíš u vchodu na most, jehož kamenný oblouk se táhne nad světélkující, klidnou vodou. Na druhé straně mostu, osvětlená slabou září přízračného světla kobky, stojí vysoká, impozantní věž. Přepadá tě nutkání přejít na druhou stranu a láká tě kupředu.
 
 &gt; [[Vydej se přes most (jih)-&gt;Most nahoru]]&lt;&lt;/if&gt;&gt;\
 &gt; [[Vstup skrz temnou díru (východ)-&gt;Tunely_1]]
 &gt; [[Zpět na křižovatku-&gt;1. křižovatka]]
 
-&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="10" name="Dveře na klíč" tags="1.-patro" position="1550,725" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
-Kráčíš po cestě a zajdeš za roh. Tam spatříš staré železné dveře. I když vypadají rezavě a staře, Zdání klame, jelikož jsou bytelné a robustní. V duchu si pomyslíš že tuto bariéru jen tak neprorazíš.
+&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="9" name="Dveře na klíč" tags="1.-patro" position="1550,725" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
+Kráčíš po cestě a zajdeš za roh. Cestu ti zablokují velké železné dveře. I když vypadají křehce a staře, zdání klame, jelikož jsou bytelné a robustní. Vypadá to, že tuto bariéru jen tak neprorazíš.
 
-Zkoušíš proto zatáhnout za kliku a doufáš že se otevřou. Tvé pokusy jsou ovšem beznadějné, jsou asi zamčené.
+Zkoušíš proto zatáhnout za kliku a doufáš že se otevřou. Tvé pokusy jsou ovšem beznadějné, protože jsou zamčené.
 
 &lt;&lt;if $inv.includes(&#39;Neznámý klíč&#39;)&gt;&gt;\
-      Ty jsi ale naštěstí narazil na klíč. Zkusíš jej vložit do zámku. Trochu to zaskřípe, zarachotí, a pak se ti vykouzlí úsměv na tváři. Dveře jsou odemčené a cesta před tebou je volná. 
+Ty jsi ale naštěstí narazil na klíč. Zkusíš jej vložit do zámku. Trochu to zaskřípe, zarachotí, a pak se ti vykouzlí úsměv na tváři. Dveře jsou odemčené a cesta před tebou je volná. 
       
 &gt; [[Vstoupit do dveří-&gt;Místnost se studnou]]
 &gt; [[Zpět na křižovatku-&gt;2. křižovatka]]
     
 &lt;&lt;else&gt;&gt;\
-   Poražen masivními dveřmi se smutně otáčíš zpět na křižovatku.
+Poražen masivními dveřmi se smutně otáčíš zpět na křižovatku.
    
 &gt; [[Zpět na křižovatku-&gt;2. křižovatka]]
    
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="11" name="Tunely_1" tags="1.-patro" position="2450,925" size="200,100">&lt;&lt;type 40ms&gt;&gt;\
+&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="10" name="Tunely_1" tags="1.-patro" position="2450,925" size="200,100">&lt;&lt;type 40ms&gt;&gt;\
 Nervózně sestupuješ do temnoty a s každým tvým krokem je vzduch chladnější a těžší. Opatrně našlapuješ kupředu.
 
 &lt;&lt;if $inv.includes(&#39;Pochodeň&#39;)&gt;&gt;\
@@ -412,17 +410,20 @@ Co tě napadlo se již nedozvíš, jelikož pomalu ztrácíš vědomí a s otev�
 &lt;&lt;link &quot;Zpět na start&quot; &quot;START&quot;&gt;&gt;&lt;&lt;run UIBar.stow()&gt;&gt;&lt;&lt;run UI.restart()&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="+ Klíč" tags="1.-patro" position="1450,1175" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="+ Klíč" tags="1.-patro" position="1450,1175" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
 Rukou jsi zavadil o objekt připomínající stůl. Na něm jsi nahmatal něco chlupatého. Zapištělo to a ty jsi leknutím poskočil. Výskokem jsi omylem převrátil stůl před tebou. Ale zvuk který jsi poté slyšel ti udělal radost. O kamenou zem zacinkal nějaký předmět. Vypadá to jako klíč.
 &lt;&lt;run $inv.push(&#39;Neznámý klíč&#39;)&gt;&gt;\
 
-Najednou přímo před tebou ve tmě zasvítily dvě červené oči malého tvora. Radost z nálezu vystřídal strach. Uslyšel jsi klepnutí nečeho o podlahu. Dvě oči se otočily a zmizely ve tmě.
+Najednou přímo před tebou ve tmě zasvítily dvě červené oči malého tvora. Uslyšel jsi klepnutí nečeho o podlahu. Zarazil ses, ale dvě oči se svižně otočily a zmizely ve tmě.
 
-Natáhneš se pro předmět. 
-&lt;p id=&quot;poznamka&quot;&gt; (Před očima se ti odehraje vzpomínka ze své minulosti.)&lt;/p&gt;
+Natáhneš se pro předmět. Je to přívěsek - jednoduchý, opotřebovaný a na první pohled nenápadný, ale jakmile ho svými prsty sevřeš, zaplaví tě podivný pocit.
+
+V mysli se ti mihne slabá vzpomínka, která sklouzává těsně za okraj tvého vědomí. Vnímáš záblesky světla a tiché hučení magie. V mysli se ti ozve hlas - hluboký a zřetelný. //„Jsi předurčený k něčemu víc, Aidene, mnohem většímu, než oni kdy pochopí.“// Ačkoli jsou ta slova vzdálená, připadají ti až bolestně povědomá. Kdo ti to řekl? A proč?
+
+ //„Bylo to snad... moje jméno?&quot;// proneseš do tmy. Náhlá vlna zmatku tě donutí pevněji sevřít přívěsek, ale vzpomínka zmizí stejně rychle, jako se objevila. Zůstaneš stát v naprosté temnotě, nejistý tím, co se právě stalo, ale víš, že se v tobě probudilo něco důležitého.
 
 &gt; [[Vrať se zpátky za most-&gt;2. křižovatka]]
-&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="13" name="Místnost se studnou" tags="1.-patro" position="1350,625" size="200,200">&lt;&lt;type 40ms&gt;&gt;\
+&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="12" name="Místnost se studnou" tags="1.-patro" position="1350,625" size="200,200">&lt;&lt;type 40ms&gt;&gt;\
 &lt;&lt;if lastVisited(&quot;Hnízdo&quot;) &gt; 0&gt;&gt;\
 Vypadá to, že jsi našel skrytý boční vchod do místnosti podivného tvaru. Kousek od tebe jsou velké železné dveře, které nejspíš slouží jako hlavní vchod, který jsi nevyužil.
 &lt;&lt;/if&gt;&gt;\
@@ -442,7 +443,7 @@ Přišel jsi k fontáně blíže, aby jsi mohl toto dílo ocenit zblízka, když
 
 &gt; [[Zatáhnout za páku-&gt;Páka]]
 &gt; [[Zpět na křižovatku-&gt;2. křižovatka]]
-&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="14" name="Točité schody" tags="1.-patro" position="1725,1050" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
+&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="13" name="Točité schody" tags="1.-patro" position="1725,1050" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
 Sestupuješ po točitém schodišti a každý krok se ve stísněném prostoru ozývá zlověstnou ozvěnou. Vzduch je hutný a lepí se ti na kůži. Do nosu ti vnikne podivný štiplavý zápach a brzy se ti začnou slzet oči, které s každým mrknutím mírně pálí. 
 
 &lt;&lt;if $inv.includes(&#39;Pochodeň&#39;)&gt;&gt;\
@@ -450,14 +451,15 @@ Váháš, ale postupuješ dále. Poblikávající pochodeň v tvé ruce vrhá na
 &lt;&lt;/if&gt;&gt;\
 
 &gt; [[Pokračuj po schodech-&gt;Místnost s plynem]]
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Místnost s plynem" tags="1.-patro" position="1675,1175" size="200,100">&lt;&lt;type 40ms&gt;&gt;\
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Místnost s plynem" tags="1.-patro" position="1675,1175" size="200,100">&lt;&lt;type 40ms&gt;&gt;\
 &lt;&lt;if $inv.includes(&#39;Pochodeň&#39;)&gt;&gt;\
 Jakmile se dostaneš na konec schodiště, pálení v očích se stupňuje a stává se téměř nesnesitelným. Instinktivně si otíráš obličej, ale nijak to nepomáhá. Něco je špatně. Hodně špatně.
 
-Než stihneš zareagovat, vzduch kolem tebe se změní, začne být žhavější a těžší. Z ničeho nic plamen z tvé pochodně způsobí výbuch a se plyn vznítí, . Místností se rozlévá spalující žár a vypadá to, že se vznítil i všechen okolní vzduch. Výbuch tě odhodí dozadu a poslední, co cítíš, je bolestivé hoření tvého těla. Nepříjemný smrad plynu se mění na smrad spáleného masa.
+Než stihneš zareagovat, vzduch kolem tebe se změní, začne být žhavější a těžší. Z ničeho nic plamen z tvé pochodně způsobí výbuch a se plyn vznítí. Místností se rozlévá spalující žár a vypadá to, že se vznítil i všechen okolní vzduch. Výbuch tě odhodí dozadu a poslední, co cítíš, je bolestivé hoření tvého těla. Nepříjemný smrad plynu se mění na smrad spáleného masa.
 
 &lt;&lt;set $hp to 0&gt;&gt;\
 &lt;p id=&quot;game_over&quot;&gt;Tvoje pochodeň se kvůli plynu v místnosti vznítila. Tvá cesta a život zde končí.&lt;/p&gt;
+
 &lt;&lt;link &quot;Zpět na start&quot; &quot;START&quot;&gt;&gt;&lt;&lt;run UIBar.stow()&gt;&gt;&lt;&lt;run UI.restart()&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 &lt;&lt;else&gt;&gt;\
@@ -465,7 +467,7 @@ Jakmile se dostaneš na konec schodiště, pálení v očích se stupňuje a st�
 
 &gt; [[Zkontrolovat okolí-&gt;+ Klíč]]
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Tunely_2" tags="1.-patro" position="2675,825" size="100,200">&lt;&lt;type 20ms&gt;&gt;\
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Tunely_2" tags="1.-patro" position="2675,825" size="100,200">&lt;&lt;type 20ms&gt;&gt;\
 Z temnoty na tebe vyskočil obrovský chlupatý pavouk!
 Vyděšeně vytáhneš svůj rezatý meč a chystáš se na boj. V druhé ruce držíš svoji pochodeň, která osvětluje kamenný tunel plný pavučin. Mohla by se ti taky hodit v boji, ale je to riskantní. 
 
@@ -476,11 +478,11 @@ Vyděšeně vytáhneš svůj rezatý meč a chystáš se na boj. V druhé ruce d
 &lt;&lt;set $runtarget to &quot;Tunely_1&quot;&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Most nahoru" tags="1.-patro" position="2275,1100" size="100,200">&lt;&lt;type 40ms&gt;&gt;\
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Most nahoru" tags="1.-patro" position="2275,1100" size="100,200">&lt;&lt;type 40ms&gt;&gt;\
 Jdeš několik minut přes dlouhý most. Před tebou se ocitá velkolepý vchod do obrovské místnosti na vrcholu zatopené věže.
 
 &gt; [[Jdi do místnosti-&gt;Místnost se sochou minulosti]]
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Todo List" tags="DevLog" position="700,100" size="200,200">Start screen - gif v pozadí, logo
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Todo List" tags="DevLog" position="700,100" size="200,200">Start screen - gif v pozadí, logo
 
 Design
 
@@ -490,7 +492,7 @@ obrázky se dělají takhle - &lt;img src=&quot;Images\alarm.png&quot; width=25%
 
 settings - 
 Fullscreen prompt &lt;&lt;run Fullscreen.request();&gt;&gt; &lt;&lt;runFullscreen.exit();&gt;&gt; Fullscreen.toggle();
-hlasitost?</tw-passagedata><tw-passagedata pid="19" name="StoryCaption" tags="DevLog" position="1000,300" size="100,100">&lt;center&gt;&lt;hr&gt;&lt;/center&gt;Tvoje atributy: 
+hlasitost?</tw-passagedata><tw-passagedata pid="18" name="StoryCaption" tags="DevLog" position="1000,300" size="100,100">&lt;center&gt;&lt;hr&gt;&lt;/center&gt;Tvoje atributy: 
 $lvl LVL
 $xp/$maxxp XP
  &lt;&lt;if $xp &gt;= $maxxp&gt;&gt;\
@@ -510,7 +512,7 @@ Zatím nic
 &lt;center&gt;&lt;hr&gt;&lt;/center&gt;\
 &lt;&lt;link &quot;Nastavení&quot;&gt;&gt;&lt;&lt;run UI.settings();&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Restartovat&quot;&gt;&gt;&lt;&lt;run UI.restart()&gt;&gt;&lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="20" name="StoryAuthor" tags="DevLog" position="1000,200" size="100,100">od ☁️ &amp; 🍓</tw-passagedata><tw-passagedata pid="21" name="StoryInit" tags="DevLog" position="1200,100" size="100,100">&lt;&lt;set $hp = 25&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="19" name="StoryAuthor" tags="DevLog" position="1000,200" size="100,100">od ☁️ &amp; 🍓</tw-passagedata><tw-passagedata pid="20" name="StoryInit" tags="DevLog" position="1200,100" size="100,100">&lt;&lt;set $hp = 25&gt;&gt;\
 &lt;&lt;set $def = 0&gt;&gt;\
 &lt;&lt;set $str = 0&gt;&gt;\
 
@@ -525,13 +527,12 @@ Zatím nic
 &lt;&lt;playersetup&gt;&gt;
 &lt;&lt;enemysetup&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="22" name="StoryDisplayTitle" tags="DevLog" position="1000,100" size="100,100">Projekt dungeon</tw-passagedata><tw-passagedata pid="23" name="Studna" tags="1.-patro" position="1225,700" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
-Po podrobnějším zkoumání studny poznáváš předmět na dně. Je to nějaký drahokam. 
-Můžeš se rozhodnout jej vylovit nebo nechat na dně.
+</tw-passagedata><tw-passagedata pid="21" name="StoryDisplayTitle" tags="DevLog" position="1000,100" size="100,100">Projekt dungeon</tw-passagedata><tw-passagedata pid="22" name="Studna" tags="1.-patro" position="1225,700" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
+Stojíš na okraji studny a nahlížíš do její hlubiny. Voda na dně se v matném světle slabě leskne. Po podrobnějším zkoumání studny nacházíš nějaký malý třpytivý předmět na dně. Můžeš se rozhodnout jej vylovit nebo ho nechat studně.
 
-&gt; [[Natáhnout se pro předmět-&gt;Past]] &lt;p id=&quot;poznamka&quot;&gt; (Hod kostkou pro šanci na získání drahokamu)&lt;/p&gt;
+&gt; [[Natáhnout se pro předmět-&gt;Past]] &lt;p id=&quot;poznamka&quot;&gt; (Hod kostkou pro šanci na získání předmětu)&lt;/p&gt;
 &gt; [[Nechci se namočit, vrátím se zpět-&gt;2. křižovatka]]
-&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="24" name="Past" tags="1.-patro" position="1100,700" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
+&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="23" name="Past" tags="1.-patro" position="1100,700" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
 Zapřel jsi se o hranu studny a natáhnul paži ke dnu.
 
 &lt;span id=&quot;prostor&quot;&gt;\
@@ -552,19 +553,18 @@ SAKRA! Vykřikl jsi když se převážil a spadnul do studny. Naštěstí jsi se
 
 Dno hlasitě zapraskalo. Tento zvuk jsi slyšet nechtěl. Máš jen omezený čas na rozhodnutí, co teď provedeš.
 
-&gt; [[Zariskuj a sehni se pro drahokam-&gt;Sehnutí se]]
+&gt; [[Zariskuj a sehni se pro předmět-&gt;Sehnutí se]]
 &gt; [[Rychle ven!-&gt;Uzavření studny]]
 
 &lt;&lt;elseif $hodKostkou is 1 or $hodKostkou is 2&gt;&gt;\
-Natáhnul jsi se pro drahokam jako proutek a málem jsi se do studny převážil. Naštěstí ses pořádně zapřel nohama a teď v ruce třímáš velice krásný drahokam.
-&lt;&lt;run $inv.push(&#39;Drahokam&#39;)&gt;&gt;\
+Natáhnul ses jako proutek a málem ses do studny převážil. Naštěstí ses pořádně zapřel nohama a předmět je tvůj.
 
-&gt; [[Pokračuj-&gt;Uzavření studny]]
+&gt; [[Prohlédni si neznámý předmět zblízka-&gt;Prsten]]
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;/replace&gt;&gt;\
 	&lt;&lt;/button&gt;&gt;
 &lt;/span&gt;
-&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="25" name="Uzavření studny" tags="1.-patro" position="1075,825" size="100,100">&lt;&lt;if lastVisited(&quot;Hnízdo&quot;) &gt; 0&gt;&gt;\
+&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="24" name="Uzavření studny" tags="1.-patro" position="1050,825" size="100,100">&lt;&lt;if lastVisited(&quot;Hnízdo&quot;) &gt; 0&gt;&gt;\
 Vrátil ses zpět do místnosti se studnou. 
 
 Něco se tu ovšem změnilo. Velké železné dvěre byly najednou otevřeny dokořán. Jsi si jistý, že když jsi sem přišel skrytým průchodem, tak byly rozhodně zavřené. Zrovna se ti to hodí, protože zpět do tunelů už rozhodně nechceš. 
@@ -573,7 +573,7 @@ Prošel jsi jimi a ocitl ses před křižovatkou.
 
 &gt; [[Pokračuj na křižovatku-&gt;2. křižovatka]]
 
-&lt;&lt;else&gt;&gt;
+&lt;&lt;else&gt;&gt;\
 Vrátil ses zpět do místnosti se studnou. Ještě pár minut jsi obdivoval podivnou sochu.
 
 Poté jsi vyšel přes tebou odemčené železné dveře a ocitl ses zpět před druhou křižovatkou.
@@ -583,7 +583,7 @@ Poté jsi vyšel přes tebou odemčené železné dveře a ocitl ses zpět před
 
 
 
-</tw-passagedata><tw-passagedata pid="26" name="Sehnutí se" tags="1.-patro" position="975,700" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="25" name="Sehnutí se" tags="1.-patro" position="925,625" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
 Opatrně jsi se rozkročil a sehnul k drahokamu. Dno pod tebou tiše popraskává.
 
 &lt;span id=&quot;prostor&quot;&gt;\
@@ -594,34 +594,32 @@ Opatrně jsi se rozkročil a sehnul k drahokamu. Dno pod tebou tiše popraskáv�
             
 &lt;&lt;if $hodKostkou is 1 or $hodKostkou is 2 &gt;&gt;\
 Bohužel se ti to nepovedlo a spadnul jsi do studny. Naštěstí jsi stihnul zareagovat, a vylezl jsi ven jen s lehkým zraněním. Příště už ale nemusíš mít takové štěstí.
-&lt;&lt;set $hp -= 10&gt;&gt;\
+&lt;&lt;set $hp -= 12&gt;&gt;\
 
 &gt; [[Pokračuj-&gt;Uzavření studny]]
 &lt;&lt;elseif $hodKostkou is 3 or $hodKostkou is 4 or $hodKostkou is 5 or $hodKostkou is 6&gt;&gt;\
-Povedlo se! Naštěstí jsi se pořádně zapřel nohama a teď v ruce třímáš velice krásný drahokam.
-&lt;&lt;run $inv.push(&#39;Drahokam&#39;)&gt;&gt;\
-&lt;p id=&quot;poznamka&quot;&gt; (Před očima se ti odehraje vzpomínka ze své minulosti.)&lt;/p&gt;
+Povedlo se! Naštěstí ses pořádně zapřel nohama a předmět je tvůj.
 
-&gt; [[Pokračuj-&gt;Uzavření studny]]
+&gt; [[Prohlédni si neznámý předmět zblízka-&gt;Prsten]]
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;/replace&gt;&gt;\
 	&lt;&lt;/button&gt;&gt;
 &lt;/span&gt;
-&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="27" name="Tunely_3" tags="1.-patro" position="2575,675" size="200,100">&lt;&lt;type 40ms&gt;&gt;
+&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="26" name="Tunely_3" tags="1.-patro" position="2575,675" size="200,100">&lt;&lt;type 40ms&gt;&gt;
 Procházíš dlouhým tunelem, naštěstí zatím bez pavouků. Před tebou jsou dvě cesty. 
 
 &lt;&lt;if lastVisited(&quot;Podzemní jezírko&quot;) is -1&gt;&gt;\
 [[Projdi lákavě vypadající jeskyní přímo před tebou (sever) -&gt;Podzemní jezírko]]
 &lt;&lt;/if&gt;&gt;\
 [[Pokračuj tunelem doleva (západ)-&gt;Tunely_4]]
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Tunely_4" tags="1.-patro" position="2325,675" size="200,100">&lt;&lt;type 40ms&gt;&gt;
-Z temnoty na tebe vyskočil další pavouk! 
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Tunely_4" tags="1.-patro" position="2325,675" size="200,100">&lt;&lt;type 40ms&gt;&gt;
+Už sis myslel že jsi z nejhoršího venku. Ale z temnoty na tebe vyskočil další pavouk! 
 &lt;&lt;link &quot;Do boje! &quot; &quot;Combat&quot;&gt;&gt;
 &lt;&lt;set $enemy to clone(setup.pavouk)&gt;&gt; 
 &lt;&lt;startcombat&gt;&gt;
 &lt;&lt;set $wintarget to &quot;Pavouk2Win&quot;&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Hnízdo" tags="1.-patro" position="1750,725" size="100,100">&lt;&lt;type 40ms&gt;&gt;
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Hnízdo" tags="1.-patro" position="1850,700" size="100,100">&lt;&lt;type 40ms&gt;&gt;
 Narazil jsi na dalšího nechutného pavouka! Tento je dokonce ještě větší než ti předchozí. Vypadá to, že za ním se konečně nachází konec tunelu, ze kterého vychází podivně červené světlo. 
 
 &lt;&lt;link &quot;Do boje! &quot; &quot;Combat&quot;&gt;&gt;
@@ -630,31 +628,22 @@ Narazil jsi na dalšího nechutného pavouka! Tento je dokonce ještě větší 
 &lt;&lt;set $wintarget to &quot;PavoukBossWin&quot;&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Skrytý průchod" tags="1.-patro" position="1600,600" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Skrytý průchod" tags="1.-patro" position="1600,600" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
 Přicházíš do nějaké velké kamenné místnosti a červené světlo tě skoro oslepí. Nějakou chvíli čekáš, než si tvoje oči na světlo zvyknou.
 
 [[Vstoupit-&gt;Místnost se studnou]]
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Podzemní jezírko" tags="1.-patro" position="2525,400" size="200,200">&lt;&lt;type 40ms&gt;&gt;
-Objevil jsi podzemní jezírko! Odpočinul sis a našel jsi zde bylinky, které tě vyléčí zpět na maximální životy. 
-Také jsi zde našel léčivý lektvar, který můžeš použít k obnovení HP v boji.
-&lt;&lt;run $inv.push(&#39;Léčivý lektvar&#39;)&gt;&gt;\ 
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Místnost se sochou minulosti" tags="1.-patro" position="2225,1350" size="200,200">&lt;&lt;type 40ms&gt;&gt;\
+Těžké dřevěné dveře se s úpěním otevřou a odhalí velkou kruhovou komnatu uvnitř. 
 
-&lt;p id=&quot;poznamka&quot;&gt;Tvoje HP bylo obnoveno.&lt;/p&gt;
-&lt;&lt;set $hp to $player.maxhp&gt;&gt;\
-
-&lt;p id=&quot;poznamka&quot;&gt; (Před očima se ti odehraje vzpomínka ze své minulosti.)&lt;/p&gt;
-
-[[Vrať se zpět do tunelů-&gt;Tunely_3]]
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="Místnost se sochou minulosti" tags="1.-patro" position="2225,1350" size="200,200">&lt;&lt;type 40ms&gt;&gt;\
-Vidíš velkou sochu uprostřed místnosti a most do dalšího patra.
-&lt;p id=&quot;poznamka&quot;&gt; (Před očima se ti odehraje vzpomínka ze své minulosti.)&lt;/p&gt;
-&lt;p id=&quot;poznamka&quot;&gt;(Která ještě není sepsaná :D) &lt;/p&gt;
+tu něco dopíšu, teď jdu spát
 
 &gt; [[Konec-&gt;Exit do LVL 2]]
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Exit do LVL 2" tags="Přechod" position="1975,1425" size="200,100">Dohrál jsi první část hry! &lt;3
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Exit do LVL 2" tags="Přechod" position="1975,1425" size="200,100">S nově nabytým odhodláním jsi vykročil vpřed a nechal za sebou první patro této kobky. Čeká tě další podlaží a s ním další výzvy, další vzpomínky - a možná i klíč k obnovení tvé síly.
+
+Dohrál jsi první část hry! &lt;3
 
 &lt;&lt;link &quot;Zpět na start&quot; &quot;START&quot;&gt;&gt;&lt;&lt;run UI.restart()&gt;&gt;&lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="34" name="Combat" tags="" position="2925,200" size="200,200">$player.name: $hp/$player.maxhp HP
+</tw-passagedata><tw-passagedata pid="32" name="Combat" tags="" position="2925,200" size="200,200">$player.name: $hp/$player.maxhp HP
 $enemy.name: $enemyhp/$enemy.maxhp HP
 
 $combatmsg
@@ -690,7 +679,7 @@ Jsi mrtvý.
 
 
 
-&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="35" name="Hráč" tags="widget" position="3250,100" size="100,100">&lt;&lt;widget &quot;playersetup&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="33" name="Hráč" tags="widget" position="3250,100" size="100,100">&lt;&lt;widget &quot;playersetup&quot;&gt;&gt;
 
 &lt;&lt;set $player to {
 name:&quot;Hráč&quot;,
@@ -709,7 +698,7 @@ maxhp:25,
 
 &lt;&lt;/widget&gt;&gt;\
 
-</tw-passagedata><tw-passagedata pid="36" name="Nepřátelé" tags="widget" position="3500,100" size="100,100">&lt;&lt;widget &quot;enemysetup&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="34" name="Nepřátelé" tags="widget" position="3500,100" size="100,100">&lt;&lt;widget &quot;enemysetup&quot;&gt;&gt;
 
 &lt;&lt;set setup.pavouk to {
 name:&quot;Pavouk&quot;,
@@ -737,7 +726,7 @@ deathmsg:&quot;Pavoučí boss je mrtvej!&quot;,
 }
 &gt;&gt;
 
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="HráčovyAkce" tags="widget" position="3200,200" size="200,100">&lt;&lt;widget &quot;attack&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="HráčovyAkce" tags="widget" position="3200,200" size="200,100">&lt;&lt;widget &quot;attack&quot;&gt;&gt;
 
 &lt;&lt;set $hodKostkou to random(1,6)&gt;&gt;
 &lt;&lt;set $celkemDmg to ($hodKostkou + $str)&gt;&gt;
@@ -787,7 +776,7 @@ deathmsg:&quot;Pavoučí boss je mrtvej!&quot;,
 &lt;&lt;set $hp to $player.maxhp&gt;&gt;\
 &lt;&lt;if $inv.delete(&#39;Léčivý lektvar&#39;)&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="NepřátelskéAkce" tags="widget" position="3450,200" size="200,100">&lt;&lt;widget &quot;enemyattack&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="NepřátelskéAkce" tags="widget" position="3450,200" size="200,100">&lt;&lt;widget &quot;enemyattack&quot;&gt;&gt;
 &lt;&lt;set _enemyattackroll to random(1,10)&gt;&gt;
 
 &lt;&lt;if _enemyattackroll &gt; $enemy.accuracy&gt;&gt;
@@ -818,7 +807,7 @@ deathmsg:&quot;Pavoučí boss je mrtvej!&quot;,
 &lt;&lt;set $enemyhp to Math.clamp($enemyhp,0,$enemy.maxhp)&gt;&gt;
 &lt;&lt;set $enemycombatmsg to &quot;$enemy.specialattackmsg a vyléčí si $enemyhealroll HP!&quot;&gt;&gt;
 
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="NepřítelůvTurn" tags="widget" position="3450,300" size="200,100">&lt;&lt;widget &quot;enemyturn&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="NepřítelůvTurn" tags="widget" position="3450,300" size="200,100">&lt;&lt;widget &quot;enemyturn&quot;&gt;&gt;
 &lt;&lt;if $enemyhp != 0&gt;&gt;
 
   &lt;&lt;if $enemy.name == &quot;Pavouk&quot;&gt;&gt;
@@ -860,35 +849,35 @@ deathmsg:&quot;Pavoučí boss je mrtvej!&quot;,
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="40" name="StartCombat" tags="widget" position="2925,75" size="200,100">&lt;&lt;widget &quot;startcombat&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="38" name="StartCombat" tags="widget" position="2925,75" size="200,100">&lt;&lt;widget &quot;startcombat&quot;&gt;&gt;
 
 &lt;&lt;set $enemyhp to $enemy.maxhp&gt;&gt;
 &lt;&lt;set $combatmsg to &quot;Odhodlaně koukáš na pavouka!&quot;&gt;&gt;
 &lt;&lt;set $enemycombatmsg to $enemy.intromsg&gt;&gt;
 
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="EndCombat" tags="widget" position="2925,425" size="200,100">&lt;&lt;widget &quot;endcombat&quot;&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="EndCombat" tags="widget" position="2925,425" size="200,100">&lt;&lt;widget &quot;endcombat&quot;&gt;&gt;
 &lt;&lt;unset $enemy, $enemyhp,, $combatmsg, $enemycombatmsg, $playerdamage, $enemydamage&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="42" name="GameOver" tags="" position="3250,325" size="100,100">&lt;p id=&quot;game_over&quot;&gt;Nepřítel tě porazil. Tvá cesta a život zde končí.&lt;/p&gt;
+</tw-passagedata><tw-passagedata pid="40" name="GameOver" tags="" position="3250,325" size="100,100">&lt;p id=&quot;game_over&quot;&gt;Nepřítel tě porazil. Tvá cesta a život zde končí.&lt;/p&gt;
 
 &lt;&lt;link &quot;Zpět na start&quot; &quot;START&quot;&gt;&gt;&lt;&lt;run UIBar.stow()&gt;&gt;&lt;&lt;run UI.restart()&gt;&gt;&lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="43" name="Pavouk1Win" tags="1.-patro" position="2775,750" size="100,100">&lt;&lt;type 40ms&gt;&gt;
+</tw-passagedata><tw-passagedata pid="41" name="Pavouk1Win" tags="1.-patro" position="2775,750" size="100,100">&lt;&lt;type 40ms&gt;&gt;
 Po náročném boji jsi nad pavoukem zvítězil! &lt;p id=&quot;poznamka&quot;&gt;Získáváš +10 XP.
 
 XP zvyšují tvůj level. Při každém postupu na další level si můžeš v postranním menu vylepšit svoji STR nebo DEF a zároveň se ti zvýší tvoje HP o 5.&lt;/p&gt;
 
 &lt;&lt;link &quot;Pokračuj dál tunelem&quot; &quot;Tunely_3&quot;&gt;&gt;&lt;&lt;set $xp += 10&gt;&gt;\&lt;&lt;/link&gt;&gt;
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Pavouk2Win" tags="1.-patro" position="2225,675" size="100,100">&lt;&lt;type 40ms&gt;&gt;
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Pavouk2Win" tags="1.-patro" position="2225,675" size="100,100">&lt;&lt;type 40ms&gt;&gt;
 Po náročném boji jsi opět nad pavoukem zvítězil! &lt;p id=&quot;poznamka&quot;&gt;Získáváš +10 xp.&lt;/p&gt;
 
 &lt;&lt;link &quot;Pokračuj dál tunelem&quot; &quot;Hnízdo&quot;&gt;&gt;&lt;&lt;set $xp += 10&gt;&gt;\&lt;&lt;/link&gt;&gt;
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="PavoukBossWin" tags="1.-patro" position="1700,625" size="100,100">&lt;&lt;type 40ms&gt;&gt;
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="PavoukBossWin" tags="1.-patro" position="1725,650" size="100,100">&lt;&lt;type 40ms&gt;&gt;
 Dokázal jsi porazit pavoučího bosse! &lt;p id=&quot;poznamka&quot;&gt;Získáváš +20 xp.&lt;/p&gt;
 
 &lt;&lt;link &quot;Pokračuj dál na konec tunelu&quot; &quot;Skrytý průchod&quot;&gt;&gt;&lt;&lt;set $xp += 20&gt;&gt;\&lt;&lt;/link&gt;&gt;
 
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Info" tags="1.-patro" position="1575,50" size="100,100">&lt;center&gt; 
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Info" tags="1.-patro" position="1575,50" size="100,100">&lt;center&gt; 
 Tvůj úkol je prostý, musíš se dostat z dungeonu a zjistit kdo jsi a co se ti stalo. Tvá rozhodnutí ovlivní průchod hrou. Čti text pozorně. 
 
 &lt;hr&gt;
@@ -903,7 +892,7 @@ Vytvořeno pomocí Twine a Sugarcube.
 Wolfcloud
 
 &lt;&lt;link &quot;Zpět&quot; &quot;START&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;/center&gt;</tw-passagedata><tw-passagedata pid="47" name="Cela2" tags="1.-patro" position="2050,425" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
+&lt;/center&gt;</tw-passagedata><tw-passagedata pid="45" name="Cela2" tags="1.-patro" position="2050,425" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
 Se stále mírně rozmazaným viděním se rozhlížíš kolem sebe. Pohlédneš nahoru, strop nad tebou je vlhký a voda vytrvale kape do malých kaluží rozesetých po kamenné podlaze. Každá kapka vytváří ozvěnu rozléhající se v naprostém tichu. Zachvěješ se a uvědomíš si, jaká je ti zima - jsi sotva oblečený. Máš na sobě jen tenkou rozrhanou látku. 
 
  //„Jak jsem se sem sakra dostal?“// zamumláš si pod nosem, tvůj hlas je ale tvým uším neznámý. 
@@ -912,25 +901,60 @@ Místnost osvětluje několik menších lamp připevěných kde zdi. Většina z
 
 &gt; [[Natáhnout se pro pochodeň-&gt;+ Pochodeň]] &lt;p id=&quot;poznamka&quot;&gt; (Hod kostkou pro šanci na získání pochodně)&lt;/p&gt;
 &gt; [[Ignorovat pochodeň a pokračovat dál-&gt;- Pochodeň]] 
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Útěk" tags="" position="3125,1175" size="100,100">Nepříteli jsi unikl. Jenže co teď?
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Útěk" tags="" position="3125,1175" size="100,100">Nepříteli jsi unikl. Jenže co teď?
 
-[[Zpět do tunelů-&gt;Tunely_1]]</tw-passagedata><tw-passagedata pid="49" name="- Pochodeň" tags="1.-patro" position="2225,400" size="100,100">&lt;&lt;type 20ms&gt;&gt;
+[[Zpět do tunelů-&gt;Tunely_1]]</tw-passagedata><tw-passagedata pid="47" name="- Pochodeň" tags="1.-patro" position="2225,400" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
 Odvrátíš zrak od pochodně a svou pozornost zaměříš na těžce vypadající kamenná vrata na konci místnosti. Vypadá to jako jediná cesta ven.
 
 &gt; [[Podívat se na vrata a vstoupit do nich-&gt;Dlouhá místnost]]
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Průchod" tags="" position="1875,875" size="100,100">Procházíš dlouhou osvětlenou chodbou. Přijde ti jako by neměla konce.
+&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="48" name="Průchod" tags="" position="1875,875" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
+Vstupuješ do dlouhé, dobře osvětlené chodby, kde světlo z lamp vrhá na kamenné stěny ostré stíny. Před tebou se táhne zdánlivě nekonečná cesta a každý krok se rozléhá ozvěnou. Díváš se před sebe v naději, že zahlédneš konec, ale chodba se vleče dál.
 
 &gt; [[Projdi chodbou (západ)-&gt;2. křižovatka]]
-&gt; [[Zpět na první křižovatku-&gt;1. křižovatka]]</tw-passagedata><tw-passagedata pid="51" name="Páka" tags="" position="1250,575" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
+&gt; [[Zpět na první křižovatku-&gt;1. křižovatka]]
+&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="49" name="Páka" tags="" position="1250,575" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
 &lt;&lt;set $paka to true&gt;&gt;\
 Zatáhl jsi za páku. Stejně ti nic jiného nezbývalo.
 
 V soše to zacvakalo a najednou se pochodně agresivně rozhořely. Celá fontána i se sochou se dala do pohybu. Po nepříjemném zvuku dření kamene o kámen se socha konečně zastavila. Před tebou se objevila studna, kterou fontána skrývala. Není nijak hluboká, vody je tam tak po kolena. 
 
-Když studnu zkoumáš z výšky, zahlédneš na dně něco třpytivého.
-
 &gt; [[Prozkoumat studnu-&gt;Studna]]
 &gt; [[Zpět na křižovatku-&gt;2. křižovatka]]
+&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="50" name="Podzemní jezírko" tags="1.-patro" position="2525,400" size="200,200">&lt;&lt;type 40ms&gt;&gt;
+Objevil jsi podzemní jezírko! Odpočinul sis a našel jsi zde bylinky, které tě vyléčí zpět na maximální životy. 
+Také jsi zde našel léčivý lektvar, který můžeš použít k obnovení HP v boji.
+&lt;&lt;run $inv.push(&#39;Léčivý lektvar&#39;)&gt;&gt;\ 
+
+Opíráš se o chladnou kamennou zeď a dýcháš ztěžka. Sotva jsi porazil tu děsivou pavoučí bestii. Pachuť strachu stále přetrvává. Když se vzpamatuješ, padne ti zrak na malý zaprášený předmět napůl zahrabaný v hlíně. Je to přívěsek - jednoduchý, opotřebovaný a na první pohled nenápadný, ale jakmile ho svými prsty sevřeš, zaplaví tě podivný pocit.
+
+V mysli se ti mihne slabá vzpomínka, která sklouzává těsně za okraj tvého vědomí. Vnímáš záblesky světla a tiché hučení magie. V mysli se ti ozve hlas - hluboký a zřetelný. //„Jsi stvořen pro víc, Aidene, mnohem víc, než oni kdy pochopí.“// Ačkoli jsou ta slova vzdálená, připadají ti až bolestně povědomá. Kdo ti to řekl? A proč?
+
+ //„Bylo to snad... moje jméno?&quot;// proneseš k tichému jezírku, které tě nerušeně pozoruje. Náhlá vlna zmatku tě donutí pevněji sevřít přívěsek, ale vzpomínka zmizí stejně rychle, jako se objevila. Zůstaneš stát v matném světle svojí pochodně, nejistý tím, co se právě stalo, ale víš, že se v tobě probudilo něco důležitého.
+ 
+&lt;p id=&quot;poznamka&quot;&gt;Tvoje HP bylo obnoveno.&lt;/p&gt;
+&lt;&lt;set $hp to $player.maxhp&gt;&gt;\
+
+[[Vrať se zpět do tunelů-&gt;Tunely_3]]
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="1. křižovatka" tags="1.-patro" position="2050,875" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
+Ocitneš se na křižovatce. Chodbami se nese slabý vánek, který víří zatuchlý vzduch. Jde v něm cítít vlhkost. Zastavíš se a očima zkoumáš tři možné cesty před sebou. Přímá cesta, ta, která tě dovedla až sem, náhle končí, zablokovaná těžkými železnými mřížemi. Za nimi svítí světlo. Vypadá to, jako nějaká vyhlídka do okolí. 
+
+Na východě se matně osvětlená cesta svažuje dolů do stínů. Čím víc se namáháš, abys tam viděl, tím tísnivěji tma působí. Něco na této cestě ti nahání husí kůži.
+
+Na opačné straně, směrem na západ, je cesta ozářená světlem. Stálá záře lamp lemuje stěny a vrhá přívětivou, i když trochu děsivou záři. Vypadá to tam bezpečně, ale možná bys na tomhle místě neměl důvěřovat svému zdání.
+
+Musíš se rozhodnout, kudy půjdeš.
+
+&gt; [[Prozkoumej výhled (jih)-&gt;Výhled za mříží]]
+&gt; [[Odboč na šerou cestu (východ)-&gt;Místnost před vodou]]
+&gt; [[Odboč na osvětlenou cestu (západ)-&gt;Průchod]]
+&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="Prsten" tags="" position="825,825" size="100,100">&lt;&lt;type 40ms&gt;&gt;\
+Dlaní uchopíš malý kovový předmět. Je to prsten - sice zčernalý, ale jednoznačně precizně vytvořený. Chladný kov ti připadá podivně povědomý. Jakmile ho podržíš proti světlu, v mysli se ti vynoří vzpomínka - nedůležitá, ale podivně utěšující.
+
+Ocitáš se ve sluncem ozářené zahradě, nad hlavou ti zní ptáci a ve vzduchu se vznáší vůně čerstvých bylinek. Sedíš na kamenné lavičce, převaluješ mezi prsty podobný prsten a nepřítomně sleduješ, jak tvůj mistr kráčí opodál. Mluví o něčem důležitém, ale ty se touláš myšlenkami. Z dálky se ozývá jeho hlas, jehož slova sotva zaregistruješ. //„Aidene, posloucháš vůbec?“// řekne s pokřiveným úsměvem a vytrhne tě ze zamyšlení.
+
+Výjev mizí stejně rychle, jako se objevil. Vypadalo to krátký záblesk obyčejného dne - který ti teď připadá vzdálený a ztracený v temnotě kobky.
+
+&gt; [[Vrať se zpět-&gt;Uzavření studny]]
 &lt;&lt;/type&gt;&gt;\</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
