@@ -1,0 +1,32 @@
+:: StoryTitle
+Ozvěny zapomnění
+
+:: StoryData
+{
+  "ifid": "595AE502-518E-4C60-8F97-8A0CA81526AB",
+  "format": "SugarCube",
+  "format-version": "2.36.1",
+  "tag-colors": {
+    "START": "green",
+    "1.-patro": "red",
+    "DevLog": "purple",
+    "Přechod": "green",
+    "Widget": "blue",
+    "widget": "blue"
+  },
+  "zoom": 0.6
+}
+
+:: StoryInit {"position":"1200,100","size":"100,100"}
+<<set $hp = 25>>\
+<<set $def = 0>>\
+<<set $str = 0>>\
+<<set $xp = 0>>\
+<<set $maxxp = 10>>\
+<<set $lvl = 1>>\
+<<set $inv = []>>\
+<<set $equip = []>>\
+<<set $hodKostkou = 0>>
+
+<<playersetup>>
+<<enemysetup>>

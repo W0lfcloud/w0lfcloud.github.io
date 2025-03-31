@@ -1,0 +1,45 @@
+:: player [widget] {"position":"3250,100","size":"100,100"}
+<<widget "playersetup">>
+    <<set $player to {
+    name:"Hráč",
+    maxhp:25,
+    }
+    >>
+    <<set $hp to $player.maxhp>>
+<</widget>>
+
+:: HráčovyAkce [widget] {"position":"3200,200","size":"200,100"}
+<<widget "attack">>
+
+<<set $hodKostkou to random(1,6)>>
+<<set $celkemDmg to ($hodKostkou + $str)>>
+<<set $playerdamage to $celkemDmg>>
+
+	<<set $enemyhp -= $playerdamage>>
+	<<set $enemyhp to Math.clamp($enemyhp,0,$enemy.maxhp)>>
+
+<<set $combatmsg to "Hodil jsi kostkou číslo $hodKostkou a hituješ nepřítele za $celkemDmg dmg!">>
+<</widget>>
+
+<<widget "pochodenAttack">>
+
+<<set $hodKostkou to random(1,2)>>
+
+    <<if $hodKostkou is 1>>\
+    <<set $combatmsg to "Netrefil ses, tvoje pochodeň ti vypadla z ruky a ty tak přicházíš o svůj jediný zdroj světla. Seber ji nebo neuvidíš.">>
+    <<enemyheavyattack>>
+    <<if $inv.delete('Pochodeň')>>\
+    <</if>>\
+
+    <<else>>\
+    <<set $hodKostkou to random(1,6)>>
+	<<set $celkemDmg to ($hodKostkou + $str + 5)>>
+	<<set $playerdamage to $celkemDmg>>
+
+	<<set $enemyhp -= $playerdamage>>
+	<<set $enemyhp to Math.clamp($enemyhp,0,$enemy.maxhp)>>
+    
+    <<set $combatmsg to "Povedlo se! Hodil jsi kostkou číslo $hodKostkou a flákl jsi pavouka svou ohnivou pochodní za $celkemDmg dmg!">>
+    
+<</if>>\
+<</widget>>

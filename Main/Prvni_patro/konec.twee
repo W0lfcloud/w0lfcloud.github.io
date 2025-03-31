@@ -1,0 +1,48 @@
+:: Most nahoru [PrvniPatro] {"position":"2275,1100","size":"100,200"}
+<<type 40ms>>\
+Stojíš u vstupu na úzký kamenný most, který se táhne nad hlubokou černou propastí. Vzduch je těžký a stěnami podzemí vibruje tiché, vzdálené šumění. Na druhé straně mostu se tyčí věž - její rozpadající se silueta je slabě osvětlena zvláštní září. Přepadá tě zvlášní pocit. Nedokážeš to vysvětlit, ale víš, že tě to k té věži táhne, jako by ve svých zdech skrývala odpovědi.
+
+Přecházíš most a opatrně našlapuješ. Tvé kroky se odrážejí od kamene. Propast pod tebou je plná podivně světélkující vody.
+
+> [[Jdi do věže->Místnost se sochou minulosti]]
+<</type>>\
+
+:: Místnost se sochou minulosti [PrvniPatro] {"position":"2225,1350","size":"200,200"}
+<<type 40ms>>\
+Když se přiblížíš ke vchodu věže, hlavou ti projede ostrá bolest. Najednou už myslí nejsi v kobce.<</type>>\
+<<type 60ms>>\
+
+Jsi jinde - venku, pod širým nebem. Stojíš před další věží, ale tahle je majestátní, její lesknoucí se věžičky sahají až k nebi. Obklopuje ji jezero, voda je klidná a tichá a odráží zářivé sluneční světlo nad ní. Nejsi sám. Je tam Thalor, stojí vedle tebe a jeho plášť se třepotá ve větru. Jeho ruka spočívá na tvém rameni, zatímco ty s úžasem hledíš na věž. „Tady začíná tvá cesta, Aidene,“ řekne. „Tam se naučíš, co to znamená ovládat svou sílu.“
+
+V duchu vidíš sám sebe, mladšího, plného ambicí a vzrušení. Kdysi jsi byl nadaným studentem v této věži, útočišti pro nadějné mágy. Thalor ti byl nejen učitelem, ale i průvodcem, který ti ukázal, jak ovládnout umění magie. Vzpomínáš si na dlouhé hodiny strávené nad starobylými texty, kdy jsi cvičil kouzla až do vyčerpání.
+
+Vzpomínka se mění. Teď jsi starší, už nejsi student, ale mág se značnými schopnostmi. Věž je stejná, ale něco se změnilo ve vzduchu - napětí, které jsi dříve nevnímal. Stojíš před radou oděných postav, jejichž tváře jsou zahaleny stínem. Mluví o moci, odpovědnosti a nebezpečí, které představuješ. Snažíš se jim oponovat, domlouvat, ale oni už jsou rozhodnuti. Bojí se tě. Bojí se toho, čím se stáváš.
+
+„Aidene,“ Thalorův hlas se prodere vzpomínkami, “tvá moc je velká, ale stejně tak i strach, který v ostatních vyvolává. Musíš být opatrný - jsou lidé, kteří to nepochopí, kteří se budou snažit zničit to, co nemohou ovládnout.“
+
+Teď už to vidíš. Zrada, podrazy, lži, které tě sem přivedly. Nebylo to jen nedorozumění - byl to promyšlený tah, jak tě zbavit moci a uvrhnout tě do tohoto vězení, daleko od světa. Rada, právě ta, která kdysi rozvíjela tvůj talent, se obrátila proti tobě.
+
+Vidina začíná blednout, sluncem ozářená věž se rozplývá v chladném, vlhkém kameni kobky. Zamrkáš a setřeseš ze sebe poslední zbytky vzpomínek. Věž, ve které teď stojíš, není ta z tvého mládí, není to místo, kde ses kdysi učil tajemstvím magie. Ne, je to vězení, postavené, aby tě zadrželo, aby potlačilo to, čeho se báli. Ale ta minulost, ty vzpomínky - ty jsou stále tvou součástí.
+
+Zhluboka se nadechneš a necháš na sebe dopadnout tíhu toho odhalení. Kdysi jsi byl mág s velkým potenciálem, nejslibnější Thalorův student, ale Rada tě zradila. Žalář ti teď slouží jako klec, ale nedokázala zahladit to, kým jsi byl - nebo kým stále jsi.
+
+Rozhlížíš se po rozpadajícím se interiéru věže. Účel této kobky je teď jasný. Měla tě zlomit, donutit tě zapomenout. Ale podcenili tě. Pomalu sesbíráš myšlenky a vydáš se k východu na druhé straně věže. Tvá mysl je teď bystřejší, jasnější. Vcházíš na další most, necháváš za sebou podivnou věž a v mysli tě stále pálí vzpomínka na zradu.
+
+> [[Přejdi na most->Exit do LVL 2]]
+<</type>>
+
+:: Exit do LVL 2 [Přechod] {"position":"1975,1425","size":"200,100"}
+<<type 40ms>>\
+Cesta před tebou se táhne do neznáma, ale ty už nejsi ztracený, dezorientovaný vězeň, jakým jsi byl, když ses poprvé probudil. Znovu máš cíl. Kdysi jsi byl Aidenem, učedníkem Thalora, mágem, kterého se obávali ti, kdo se tě snažili ovládnout. A nyní z tohoto místa unikneš. Žádný žalář tě nemůže držet navždy.
+
+S nově nabytým pocitem odhodlání vykročíš vpřed a necháš za sebou první patro kobky. Čekají tě další výzvy, další nepřátelé, další vzpomínky - a možná i klíč k navrácení tvé moci.
+
+> [[Konec hry->Koneccc]]
+<</type>>
+:: Koneccc
+<<type 40ms>>\
+Dohrál jsi demo Ozvěn zapomění! Moc ti děkuji za tvůj čas! <3 
+Tohle je moje úplně první hra, kterou pouštím do éteru. Zabralo mi neskutečně dlouhou dobu ji vytvořit, ale dalo mi to spoustu zkušeností do budoucna. - Wolfcloud
+
+<<link "Zpět na start" "Start">><<run UI.restart()>><</link>>
+<</type>>

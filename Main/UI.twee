@@ -1,0 +1,24 @@
+:: StoryCaption [DevLog] {"position":"1000,300","size":"100,100"}
+<center><div id="delitko"></div></center>
+
+<p id="uiText">Atributy:</p> 
+<img src="/Imgs/lvl.png" width=10%> $lvl LVL
+<span id="xpIcon"></span> $xp/$maxxp XP
+ <<if $xp >= $maxxp>>\
+Postupuješ na další level! 
+
+<<button "+ STR" `passage()`>><<set $str++>><</button>> <<button "+ DEF" `passage()`>><<set $def++>><</button>><<levelup>><</if>>\
+<span id="hpIcon"></span> $hp/$player.maxhp HP 
+<span id="strIcon"></span> $str str
+<span id="defIcon"></span> $def def
+<center><hr></center><p id="uiText">Inventář:</p><<= $inv.join(', ')>>
+<<if $inv.length is 0>>\
+Zatím nic 
+<</if>>\
+<center><hr></center><p id="uiText">Vybavení:</p><<= $equip.join(', ')>>
+<<if $equip.length is 0>>\
+Zatím nic 
+<</if>>\
+<center><hr></center>
+<span id="UI-menu"><<link "Nastavení">><<run UI.settings();>><</link>>
+<<link "Restartovat">><<run UI.restart()>><</link>></span>

@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+
+/* CSS všeho */
+
+body {
+  	font-family: Roboto;
+	font-size: 130%;
+ 	text-align: center;
+ 	color: #d2aea3;
+  	padding: 50px;
+}
+
+body.zacatek {
+	background-image: url("/Imgs/titlescreen.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	user-select: none;
+}
+
+body.PrvniPatro {
+	background-color: #1c1514;
+}
+
+p {
+  display: inline;
+}
+
+a,a:visited,a:hover,a:active{
+  color: #d2aea3;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition:0.5s color ease;
+  text-decoration:none;
+  text-shadow: 1px 0px 20px #96766c;
+}
+
+a:hover {
+ color: #cc542f;
+ text-shadow: 1px 0px 10px #cc542f;
+}
+
+
+hr { 
+  width: 50%;
+  border-top: 1px solid #d2aea3;
+}
+
+button {
+	color: #1c1514;
+	background-color: #cc542f;
+	border-radius: 8px;
+	border: solid#cc542f;
+	padding: 10px 20px;
+}
+
+button:hover {
+	background-color: #cc542f;
+	box-shadow: #cc542f 0 1px 30px;
+    transition-duration: .1s;
+	border: solid#cc542f;
+}
+
+.vzpominaciButton button {
+	text-transform: uppercase;
+  	font-weight: bold;
+	color: #1c1514;
+  	background-image: linear-gradient(120deg, #f3ad45 43.89%, #C64932 64.72%);
+  	padding: 20px;
+ 	border-style: none;
+  	border-radius: 8px;
+	transition: all 3s;
+}
+
+.vzpominaciButton button:hover { 
+	box-shadow: #cc542f 0 1px 30px;
+    transition-duration: 1s;
+}
+
+/* 
+button {
+  background-image: linear-gradient(92.88deg, #ccae27 9.16%, #E07E43 43.89%, #C64932 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #1c1514;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: 18px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+}
+
+button:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 0 2.6rem;
+  }
+}
+ */
+h1 {
+	margin-top: 0;
+	line-height: 1;
+}
+::selection {
+	color: #1c1514;
+	background-color:  #d2aea3;
+  }
+
+#logo {
+	content:url("/Imgs/logoOzveny.png");
+	width: 45%;
+	height: 45%;
+}
+
+#vlnovky {
+	content:url("/Imgs/dvevlnovky2.png");
+	width: 30%;
+	height: 30%;
+	opacity: 50%;
+}
+
+#vlnovka {
+	content:url("/Imgs/vlnovka.png");
+	width: 30%;
+	height: 30%;
+}
+
+#delitko {
+	content:url("/Imgs/delitko.png");
+	width: 80%;
+	height: 80%;
+}
+
+#startMoznosti {
+ font-size: 170%;
+ line-height: 3;
+}
+
+#startMoznosti a:hover {
+ color: #cc542f;
+ text-decoration: none;
+}
+
+
+
+.info {
+	margin-right: 300px;
+	margin-left: 300px;
+}
+#poznamka {
+ color: #cc542f;
+ font-family: "Fira Code";
+}
+
+#passages {
+	display: grid;
+  text-align: center;
+}
+
+#game_over {
+  color: #F52C2C;
+  font-weight: bold;
+}
+
+
+/* design UI sidebaru */
+
+#ui-bar { 
+	padding: 50px 20px;
+	background-color: #0d0909;
+	border: none;
+  }
+  
+  #ui-bar-body {
+	  line-height: 1.80;
+	  overflow: hidden;
+	  user-select: none;
+	  margin: 1.5em 0;
+  }
+  
+  #ui-bar-toggle {
+	  visibility: hidden;
+  }
+  
+  #ui-bar-toggle,
+  #ui-bar-history [id|="history"] {
+	  font-size: 1.2em;
+	  line-height: inherit;
+	  color: #eee;
+	  background-color: transparent;
+	  border: none;
+		margin: 10px 0px;
+  }
+
+  #ui-bar-tray {
+	visibility: hidden;
+    position: absolute;
+    top: .2em;
+    left: 0;
+    right: 0;
+}
+  #menu ul {
+	  margin: 1em 0 0;
+	  padding: 0;
+	  list-style: none;
+	  border: 1px solid #444;
+  
+	  bottom: 0;
+  }
+  
+  #menu {
+		visibility: hidden;
+		border: none;
+  }
+  
+  
+  #UI-menu {
+	color: #d2aea3;
+	text-transform: uppercase;
+	font-weight: bold;
+	transition:0.5s color ease;
+	text-decoration:none;
+	text-shadow:none;
+  } 
+  
+  #uiText {
+   color: #d2aea3;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 1px 0px 20px #96766c;
+	padding: 20px;
+  }
+  
+  #story-title {
+	color: #d2aea3;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 1px 0px 20px #96766c;
+	line-height: 1.5;
+}
+
+  #lvlIcon {
+	  content:url("/Imgs/lvl.png");
+	  width: 10%;
+	  height: 10%;
+  }
+  
+  #xpIcon {
+	  content:url("/Imgs/xp.png");
+	  width: 10%;
+	  height: 10%;
+  }
+  
+  #hpIcon {
+	  content:url("/Imgs/heart.png");
+	  width: 8%;
+	  height: 8%;
+  }
+  
+  #strIcon {
+	  content:url("/Imgs/attack.png");
+	  width: 8%;
+	  height: 8%;
+  }
+  
+  #defIcon {
+	  content:url("/Imgs/defense.png");
+	  width: 8%;
+	  height: 8%;
+  }
+
+  #ui-dialog-title { 
+	font-size: 1.5em;
+    margin: 0x;
+    padding: .6em 3.1em .6em 1.5em;
+    text-align: center;
+	color: #d2aea3;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 1px 0px 20px #96766c;
+	line-height: 1.5;
+	background-color: #1c1514;
+}
+
+#ui-dialog {
+	border-radius:5em;
+	border: 5px;
+    display: none;
+    margin: 0;
+    max-width: 66em;
+    opacity: 0;
+    padding: 0;
+    position: fixed;
+    top: 50px;
+    z-index: 100100;
+}
+
+#ui-dialog.open {
+	border-radius:5em;
+	border: 5px;
+    display: block;
+    opacity: 1;
+    -webkit-transition: opacity .2s ease-in;
+    -o-transition: opacity .2s ease-in;
+    transition: opacity .2s ease-in;
+}
+
+#ui-dialog-body {
+    background-color: #0d0909;
+    border: none;
+    height: calc(100% - 2.1em);
+    line-height: 1.5;
+    min-width: 300px;
+    overflow: auto;
+    padding: 2em 4em;
+	text-align: center;
+}
+
+#ui-dialog-close {
+	color:#d2aea3;
+	height: 100%;
+  }
+
+  #ui-dialog-body.settings {
+	background-color: #0d0909;
+	font-weight: bold;
+	font-size: 130%;
+}
+  #ui-dialog-body ul.buttons {
+	visibility: hidden;
+  }
+  

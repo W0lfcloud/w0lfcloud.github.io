@@ -1,0 +1,164 @@
+:: Místnost před vodou [PrvniPatro] {"position":"2225,850","size":"200,200"}
+<<type 40ms>>\
+Před tebou se rozléhá místnost plná louží. Máš rozhled na obrovskou otevřenou vodní plochu, která z nějakého důvodu vydává slabé světlo. Na druhé straně místnosti se nachází temná díra. Kdo ví kam vede.
+<<if !$inv.includes('Pochodeň')>>\
+
+Jelikož nemáš žádný zdroj světla, tak v temné díře nic neuvidíš. Možná by jsi tam neměl chodit. Ale třeba se tam skrývá něco, co by ti mohlo pomoct se odtud dostat. 
+<</if>>\
+
+<<if $paka is true>>\Najednou se ozval podivný zvuk a na jižní straně se objevil most.
+
+Obrátíš se k němu. Jeho kamenný oblouk se táhne nad světélkující, klidnou vodou. Na druhé straně mostu, osvětlená slabou září přízračného světla kobky, stojí vysoká, impozantní věž. Přepadá tě nutkání přejít na druhou stranu a láká tě kupředu.
+
+> [[Vydej se přes most (jih)->Most nahoru]]<</if>>\
+> [[Vstup skrz temnou díru (východ)->Tunely_1]]
+> [[Zpět na křižovatku->1. křižovatka]]
+
+<</type>>\
+
+
+:: Tunely_1 [PrvniPatro] {"position":"2450,925","size":"200,100"}
+<<type 40ms>>\
+Nervózně sestupuješ do temnoty a s každým tvým krokem je vzduch chladnější a těžší. Opatrně našlapuješ kupředu.
+<<if $inv.includes('Pochodeň')>>\
+Naštěstí máš s sebou zdroj světla, který ti v tunelu pomůže se orientovat. Štěstí se ovšem brzy mění v neštěstí. Potichu si zakleješ, když před sebou v úzké zatáčce uvidíš obrovskou síť plnou prachu a kousků sutin. Polkneš a doufáš že se majitelé sítí již blízkosti nezdržují.
+
+> [[Pokračuj k zatáčce->Tunely_2]]
+
+<<else>>\
+<<set $hp to 0>>\
+Pohltí tě absolutní tma, která ti svojí tíhou tlačí na hrudník. Srdce ti tluče až v uších, a rukama šátráš po drsných stěnách, které tě vedou hlouběji do neznáma.
+
+Tvoje kroky se slabě odrážejí v úzkém tunelu, kde je každý zvuk umocněný tichem. Po chvíli, která ti připadá jako celá věčnost, se ti na krku objeví zvláštní teplo - zpočátku malý, téměř uklidňující pocit. Než však stačíš zareagovat, zasáhne tě palčivá bolest.
+
+Něco ostrého ti proniká hrdlem. Zalapáš po dechu, ale žádný zvuk z tebe nevyjde. Ruce ti vylétnou na krk, mezi prsty ti prosakuje krev a ty se zhroutíš na studený kámen. Ústa ti naplní chuť železa a při dopadu na zem se ozve hlasité žuchnutí.
+
+Co tě napadlo se již nedozvíš, jelikož pomalu ztrácíš vědomí a s otevřenou náručí vítáš smrt.
+
+<p id="game_over">Jelikož jsi neměl žádný zdroj světla, tak tě nečekaně překvapil smrtící pavouk. Tvá cesta a život zde končí.</p> 
+
+<<link "Zpět na start" "Start">><<run UIBar.stow()>><<run UI.restart()>><</link>>
+
+<</if>>\
+<</type>>
+
+
+:: Tunely_2 [PrvniPatro] {"position":"2675,825","size":"100,200"}
+<<type 40ms>>\
+Z temnoty na tebe vyskočil obrovský chlupatý pavouk!
+Vyděšeně vytáhneš svůj rezatý meč a chystáš se na boj. V druhé ruce držíš svoji pochodeň, která osvětluje kamenný tunel plný pavučin. Mohla by se ti taky hodit v boji, ale bylo by to riskantní. Bez ní by tvůj život v tohle tunelu hodně rychle vyhasnul.
+
+<<link "Do boje! " "Combat">>
+<<set $enemy to clone(setup.pavouk)>> 
+<<startcombat>>
+<<set $wintarget to "Pavouk1Win">>
+<<set $runtarget to "Tunely_1">>
+<</link>>
+
+<</type>>
+
+
+:: Tunely_3 [PrvniPatro] {"position":"2575,675","size":"200,100"}
+<<type 40ms>>\
+<<if lastVisited("Podzemní jezírko") is -1>>\
+Procházíš dlouhým tunelem, naštěstí zatím bez pavouků. Před tebou jsou dvě cesty. 
+
+[[Projdi lákavě vypadající jeskyní přímo před tebou (sever) ->Podzemní jezírko]]
+[[Pokračuj tunelem doleva (západ)->Tunely_4]]
+<</if>>\
+<<if lastVisited("Podzemní jezírko") > 0>>\
+Po svém krátkém odpočinku pokračuješ dál tunelem. 
+
+[[Pokračuj tunelem doleva (západ)->Tunely_4]]
+<</if>>\
+<</type>>
+
+
+:: Tunely_4 [PrvniPatro] {"position":"2325,675","size":"200,100"}
+<<type 40ms>>\
+Už sis myslel, že jsi z nejhoršího venku. Ale z temnoty na tebe vyskočil další hnusný pavouk! Nemáš jinou možnost, než s ním bojovat.
+
+<<link "Do boje! " "Combat">>
+<<set $enemy to clone(setup.pavouk)>> 
+<<startcombat>>
+<<set $wintarget to "Pavouk2Win">>
+<</link>>
+<</type>>
+
+
+:: Pavouk1Win [PrvniPatro] {"position":"2775,750","size":"100,100"}
+<<type 40ms>>\
+Po náročném boji jsi nad pavoukem zvítězil! <p id="poznamka">Získáváš +10 XP.
+
+XP zvyšují tvůj level. Při každém postupu na další level si můžeš v postranním menu vylepšit svoji STR nebo DEF a zároveň se ti zvýší tvoje HP o 5.</p>
+
+<<link "Pokračuj dál tunelem" "Tunely_3">><<set $xp += 10>>\<</link>>
+<</type>>
+
+
+:: Pavouk2Win [PrvniPatro] {"position":"2225,675","size":"100,100"}
+<<type 40ms>>\
+Po náročném boji jsi opět nad pavoukem zvítězil! <p id="poznamka">Získáváš +10 xp.</p>
+
+<<link "Pokračuj dál tunelem" "Hnízdo">><<set $xp += 10>>\<</link>>
+<</type>>
+
+:: Podzemní jezírko [PrvniPatro] {"position":"2525,400","size":"200,200"}
+<<type 40ms>>\
+Opíráš se o chladnou kamennou zeď a dýcháš ztěžka. Sotva jsi porazil tu děsivou pavoučí bestii. Rozhlédneš se - jeskyně před tebou ukrývá menší podzemní jezírko. Naplňuje tě až podivným pocitem klidu, ovšem pachuť strachu stále přetrvává. Když se vzpamatuješ, padne ti zrak na malý zaprášený předmět napůl zahrabaný v hlíně. Je to přívěsek - jednoduchý, opotřebovaný a na první pohled nenápadný, ale jakmile ho svými prsty sevřeš, zaplaví tě podivný pocit.
+
+V mysli se ti mihne slabá vzpomínka, která sklouzává těsně za okraj tvého vědomí. 
+
+<span id="prostor">\
+	<center><span class = "vzpominaciButton"><<button "Zaměř svoji pozornost na vzpomínku">>\
+	<<replace "#prostor">>\      
+		<<type 40ms>>\
+		Vnímáš záblesky světla a tiché hučení magie. V mysli se ti ozve hlas - hluboký a zřetelný. //„Jsi stvořen pro víc, Aidene, mnohem víc, než oni kdy pochopí.“// Ačkoli jsou ta slova vzdálená, připadají ti až bolestně povědomá. Kdo ti to řekl? A proč?
+
+ //„Bylo to snad... moje jméno?"// proneseš k tichému jezírku, které tě nerušeně pozoruje. Náhlá vlna zmatku tě donutí pevněji sevřít přívěsek, ale vzpomínka zmizí stejně rychle, jako se objevila. Zůstaneš stát v matném světle svojí pochodně, nejistý tím, co se právě stalo, ale víš, že se v tobě probudilo něco důležitého.
+
+ Odpočinul sis a nabral zpět své síly. Také jsi zde našel léčivý lektvar, který můžeš použít později k obnovení HP v boji.
+<<run $inv.push('Léčivý lektvar')>>\ 
+
+<p id="poznamka">Tvoje HP bylo obnoveno. Získal jsi léčivý lektvar.</p>
+<<set $hp to $player.maxhp>>\
+
+[[Vrať se zpět do tunelů->Tunely_3]]
+<</type>>
+
+<</replace>>\
+	<</button>></span></center>
+</span>
+<</type>>\
+
+:: Hnízdo [PrvniPatro] {"position":"1850,700","size":"100,100"}
+<<type 40ms>>\
+Narazil jsi na dalšího nechutného pavouka! Tento je dokonce ještě větší než ti předchozí. Vypadá to, že za ním se konečně nachází konec tunelu, ze kterého vychází podivně červené světlo. 
+
+<<link "Do boje! " "Combat">>
+<<set $enemy to clone(setup.pavoukBoss)>> 
+<<startcombat>>
+<<set $wintarget to "PavoukBossWin">>
+<</link>>
+
+<</type>>
+
+:: PavoukBossWin [PrvniPatro] {"position":"1725,650","size":"100,100"}
+<<type 40ms>>\
+Dokázal jsi porazit i toho největšího pavouka. Oddychneš si a z čela si setřeš kapičky potu. Opět se zadíváš na podivně čevené světlo. <p id="poznamka">Získáváš +20 xp.</p>
+
+<<link "Pokračuj dál na konec tunelu" "Skrytý průchod">><<set $xp += 20>>\<</link>>
+
+<</type>>
+
+:: Skrytý průchod [PrvniPatro] {"position":"1600,600","size":"100,100"}
+<<type 40ms>>\
+Přicházíš do nějaké velké kamenné místnosti a červené světlo tě skoro oslepí. Nějakou chvíli čekáš, než si tvoje oči na světlo zvyknou.
+
+[[Vstoupit->Místnost se studnou]]
+<</type>>
+
+:: Útěk {"position":"3125,1175","size":"100,100"}
+Nepříteli jsi unikl. Utíkáš zpět až na první křižovatku.
+
+[[Zpět do tunelů->1. křižovatka]]

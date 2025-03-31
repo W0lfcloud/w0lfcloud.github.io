@@ -1,0 +1,79 @@
+:: EndCombat [widget] {"position":"2925,425","size":"200,100"}
+<<widget "endcombat">>
+<<unset $enemy, $enemyhp,, $combatmsg, $enemycombatmsg, $playerdamage, $enemydamage>>
+<</widget>>
+
+:: Combat [boj] {"position":"2925,200","size":"200,200"}
+$player.name: $hp/$player.maxhp HP
+$enemy.name: $enemyhp/$enemy.maxhp HP
+
+$combatmsg
+$enemycombatmsg
+
+<<if $hp == 0>>\
+    Jsi mrtvý.
+
+    <<link "Pokračuj" "GameOver">><<endcombat>><</link>>
+    <<elseif $enemyhp == 0>>\
+    <p id="poznamka">Vyhrál jsi!</p>
+
+    <<link "Pokračuj dál" $wintarget>><<endcombat>><</link>>
+
+<<else>>\
+<<link "Zaútoč mečem" "Combat">><<attack>><<enemyturn>><</link>> <p id="poznamka"> (Hod kostkou pro dmg)</p>
+
+    <<if $inv.includes('Pochodeň')>>\
+        <<link "Pokus se ho zapálit svojí pochodní" "Combat">><<enemyturn>><<pochodenAttack>><</link>> <p id="poznamka"> (Hod kostkou pro riskantní útok)</p>
+    <<else>>\
+    <<link "Seber svoji pochodeň" "Combat">><<set $combatmsg to "Vzal sis pochodeň zpět!">><<run $inv.push('Pochodeň')>>\<<enemyturn>><</link>>
+    <</if>>\
+
+<<link "Pokus se z boje utéct" "Combat">><<utek>><<enemyturn>><</link>> <p id="poznamka"> (Hod kostkou pro šanci na útěk)</p>
+
+    <<if $inv.includes('Léčivý lektvar')>>\
+    <<link "Použij léčivý lektvar" "Combat">><<hpPotion>><<enemyturn>><</link>> <p id="poznamka"> (Obnoví HP)</p>
+    <</if>>\
+<</if>>\
+
+:: GameOver {"position":"3250,325","size":"100,100"}
+<p id="game_over">Nepřítel tě porazil. Tvá cesta a život zde končí.</p>
+
+<<link "Zpět na začátek" "Start">><<run UIBar.stow()>><<run UI.restart()>><</link>>
+
+:: StartCombat [widget] {"position":"2925,75","size":"200,100"}
+<<widget "startcombat">>
+
+<<set $enemyhp to $enemy.maxhp>>
+<<set $combatmsg to "Odhodlaně koukáš na pavouka!">>
+<<set $enemycombatmsg to $enemy.intromsg>>
+
+<</widget>>
+
+
+
+<<widget "levelup">>\
+<<set $lvl++>>\
+<<set $player.maxhp +=5>>\
+<<set $xp = $xp - $maxxp>>\
+<<set $maxxp +=10>>\
+
+<</widget>>\
+
+
+
+
+<<widget "utek">>
+<<set $hodKostkou to random(1,4)>>
+ 	<<if $hodKostkou is 5>>\
+    <<set $combatmsg to "Pokusil ses utéct, ale pavouk tě nenechá jen tak odejít!">>
+    
+     <<else>>\
+     <<set $combatmsg to "[[Máš možnost utéct! Rychle pryč!->Útěk]]">>
+<</if>>\
+<</widget>>
+
+<<widget "hpPotion">>
+<<set $hp to $player.maxhp>>\
+<<if $inv.delete('Léčivý lektvar')>>\
+<</if>>\
+<</widget>>

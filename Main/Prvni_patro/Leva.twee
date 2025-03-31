@@ -1,0 +1,257 @@
+:: Průchod {"position":"1875,875","size":"100,100"}
+<<type 40ms>>\
+<<if lastVisited("2. křižovatka") is -1>>\Vstupuješ do dlouhé, dobře osvětlené chodby, kde světlo z lamp vrhá na kamenné stěny ostré stíny. Před tebou se táhne zdánlivě nekonečná cesta a každý krok se rozléhá ozvěnou. Díváš se před sebe v naději, že zahlédneš konec, ale chodba se vleče dál.
+<<else>>\Opět vstupuješ do dlouhé, dobře osvětlené chodby, která se nekonečně táhne.<</if>>\
+
+> [[Projdi chodbou (západ)->2. křižovatka]]
+> [[Zpět na první křižovatku (východ)->1. křižovatka]]
+<</type>>\
+
+:: 2. křižovatka [PrvniPatro] {"position":"1725,875","size":"100,100"}
+<<type 40ms>>\
+Přicházíš před další křižovatku, kde je vzduch o něco méně zatuchlý, ale stále je v něm cítit známá vlhkost. Před tebou se táhnou tři nové cesty, každá zahalená tajemstvím. Zamyslíš se a prohlížíš si okolí, vědom si toho, že každá z těchto cest může vést buď ke tvé spáse, nebo ke katastrofě.
+
+Západní cesta vede do velkého otevřeného prostoru. Cítíš odtud zvláštní pocit klidu, který z toho směru vyzařuje, jako by místnost uvnitř nabízela jakési útočiště. 
+
+Na jihu se stáčí točité schodiště dolů do neznáma. Když si představíš, jak po něm sestupuješ hlouběji do hlubin kobky, projede tebou vlna nejistoty.
+
+Severní cesta zahýbá a mizí za rohem. Nemáš tušení, co by tam na tebe mohlo čekat.
+
+Znovu na tebe doléhá tíha volby, tentokrát o něco složitější. 
+
+> [[Vstup do veliké místnosti (západ)->Místnost s tapiseriemi]]
+<<if lastVisited("Točité schody") is -1>>\ 
+> [[Odboč k točitému schodišti (jih)->Točité schody]]<</if>>\
+<<if lastVisited("Místnost se studnou") is -1>>\ 
+> [[Vydej se k zatáčce (sever)->Dveře na klíč]]<</if>>\
+> [[Zpět na osvětlený průchod (východ)->Průchod]]
+<</type>>\
+
+
+:: Místnost s tapiseriemi [PrvniPatro] {"position":"1450,875","size":"200,200"}
+<<type 40ms>>\
+Vstupuješ do rozlehlé síně a okamžitě zatajíš dech. Stěny jsou tu plné překrásných tapiserií a různých nástěnných maleb, jejichž syté barvy čas nijak nepoznamenal. Stojíš jako zamrzlý v úžasu a tvůj pohled skáče od jednoho mistrovského díla k druhému. Vytvožit takovou krásu muselo dát hromadu práce.
+
+Poprvé od hrozného probuzení v tomto prokletém žaláři cítíš klid. Studená kamenná podlaha pod tebou už nepůsobí tak drsně a z hlavy se ti, i když jen na okamžik, zvedá tíha strachu a zmatku.
+
+Na chvíli se necháš unášet klidem a vyčistíš si mysl. Teď už je ale čas se vrátit na cestu ven. Neochotně si povzdechneš a otočíš se k východu. 
+
+> [[Vrať se zpět->2. křižovatka]]
+<</type>>
+
+
+:: Točité schody [PrvniPatro] {"position":"1725,1050","size":"100,100"}
+<<type 40ms>>\
+Sestupuješ po točitém schodišti a každý krok se ve stísněném prostoru ozývá zlověstnou ozvěnou. Vzduch je hutný a lepí se ti na kůži. Do nosu ti vnikne podivný štiplavý zápach a brzy se ti začnou slzet oči, které s každým mrknutím mírně pálí. 
+<<if $inv.includes('Pochodeň')>>\Váháš, ale postupuješ dále. Poblikávající pochodeň v tvé ruce vrhá na kamenné stěny vlnící se stíny.<</if>>\
+> [[Pokračuj po schodech->Místnost s plynem]]
+<</type>>
+
+:: Místnost s plynem [PrvniPatro] {"position":"1675,1175","size":"200,100"}
+<<type 40ms>>\
+<<if $inv.includes('Pochodeň')>>\
+Jakmile se dostaneš na konec schodiště, pálení v očích se stupňuje a stává se téměř nesnesitelným. Instinktivně si otíráš obličej, ale nijak to nepomáhá. Něco je špatně. Hodně špatně.
+
+Než stihneš zareagovat, vzduch kolem tebe se změní, začne být žhavější a těžší. Z ničeho nic plamen z tvé pochodně způsobí výbuch a se plyn vznítí. Místností se rozlévá spalující žár a vypadá to, že se vznítil i všechen okolní vzduch. Výbuch tě odhodí dozadu a poslední, co cítíš, je bolestivé hoření tvého těla. Nepříjemný smrad plynu se mění na smrad spáleného masa.
+
+<<set $hp to 0>>\<p id="game_over">Tvoje pochodeň se kvůli plynu v místnosti vznítila. Tvá cesta a život zde končí.</p>
+<<link "Zpět na start" "Start">><<run UIBar.stow()>><<run UI.restart()>><</link>>\
+<<else>>\Jakmile se dostaneš na konec schodiště, pálení v očích se stupňuje a stává se téměř nesnesitelným. Obličej si schováváš pod kabát s nadějí, že to bude lepší. Pohlcuje tě naprostá tma. S hlavou v kabátu rukou před sebou skenuješ místnost.
+> [[Zkontrolovat okolí->+ Klíč]]
+<</if>>\
+<</type>>\
+
+
+:: + Klíč [PrvniPatro] {"position":"1450,1175","size":"100,100"}
+<<type 40ms>>\
+Rukou jsi zavadil o objekt připomínající stůl. Na něm jsi nahmatal něco chlupatého. Zapištělo to a ty jsi leknutím poskočil. Výskokem jsi omylem převrátil stůl před tebou. Ale zvuk který jsi poté slyšel ti udělal radost. O kamenou zem zacinkal nějaký předmět. Vypadá to jako klíč.
+<<run $inv.push('Neznámý klíč')>>\
+
+Najednou přímo před tebou ve tmě zasvítily dvě červené oči malého tvora. Uslyšel jsi klepnutí nečeho o podlahu. Zarazil ses, ale dvě oči se svižně otočily a zmizely ve tmě.
+
+Natáhneš se pro předmět. Je to přívěsek - jednoduchý, opotřebovaný a na první pohled nenápadný, ale jakmile ho svými prsty sevřeš, zaplaví tě podivný pocit.
+
+V mysli se ti mihne slabá vzpomínka, která sklouzává těsně za okraj tvého vědomí. 
+
+<span id="prostor">\
+	<center><span class = "vzpominaciButton"><<button "Zaměř svoji pozornost na vzpomínku">>\
+	<<replace "#prostor">>\      
+		<<type 40ms>>\
+		Vnímáš záblesky světla a tiché hučení magie. V mysli se ti ozve hlas - hluboký a zřetelný. //„Jsi stvořen pro víc, Aidene, mnohem víc, než oni kdy pochopí.“// Ačkoli jsou ta slova vzdálená, připadají ti až bolestně povědomá. Kdo ti to řekl? A proč?
+
+ //„Bylo to snad... moje jméno?"// proneseš k tichému jezírku, které tě nerušeně pozoruje. Náhlá vlna zmatku tě donutí pevněji sevřít přívěsek, ale vzpomínka zmizí stejně rychle, jako se objevila. Zůstaneš stát v matném světle svojí pochodně, nejistý tím, co se právě stalo, ale víš, že se v tobě probudilo něco důležitého.
+
+Po tomhle zážitku se vracíš zpět na křižovatku. 
+
+> [[Vrať se zpátky za most->2. křižovatka]]
+<</type>>
+<</replace>>\
+	<</button>></span></center>
+</span>\
+<</type>>\
+
+:: Dveře na klíč [PrvniPatro] {"position":"1550,725","size":"100,100"}
+<<type 40ms>>\
+Kráčíš po cestě a zajdeš za roh. Cestu ti zablokují velké železné dveře. I když vypadají křehce a staře, zdání klame, jelikož jsou bytelné a robustní. Vypadá to, že tuto bariéru jen tak neprorazíš.
+
+Zkoušíš proto zatáhnout za kliku a doufáš že se otevřou. Tvé pokusy jsou ovšem beznadějné, protože jsou zamčené.
+
+<<if $inv.includes('Neznámý klíč')>>\
+Ty jsi ale naštěstí narazil na klíč. Zkusíš jej vložit do zámku. Trochu to zaskřípe, zarachotí, a pak se ti vykouzlí úsměv na tváři. Dveře jsou odemčené a cesta před tebou je volná. 
+      
+> [[Vstoupit do dveří->Místnost se studnou]]
+> [[Zpět na křižovatku->2. křižovatka]]
+    
+<<else>>\
+Poražen masivními dveřmi se smutně otáčíš zpět na křižovatku.
+   
+> [[Zpět na křižovatku->2. křižovatka]]
+   
+<</if>>\
+<</type>>\
+
+
+:: Místnost se studnou [PrvniPatro] {"position":"1350,625","size":"200,200"}
+<<type 40ms>>\
+<<if lastVisited("Hnízdo") > 0>>\
+Vypadá to, že jsi našel skrytý boční vchod do místnosti podivného tvaru. Kousek od tebe jsou velké železné dveře, které nejspíš slouží jako hlavní vchod, který jsi nevyužil.
+<</if>>\
+<<if lastVisited("+ Klíč") > 0>>\
+Otevřel jsi dveře a vstoupil do místnosti podivného tvaru. 
+<<if $inv.delete('Neznámý klíč')>>\
+<</if>>\
+<</if>>\
+
+První věc kterou si uvědomíš je, že pochodně na stěnách zde září podivnou rudou září. Jakoby něco jejich plameny dusilo. Udivuje tě to, ale nijak si tím nelámeš hlavu.
+
+Po tvé levici si všímáš hezké fontány se sochou ženy v dlouhém šatu. Kde se tady vzala taková fontána? Na pohled ti přijde hezká, to bezpochyb. Jen tě udivuje, kolik krásných věcí se v tomto podzemí může nacházet.
+
+Přišel jsi k fontáně blíže, aby jsi mohl toto dílo ocenit zblízka, když tu si na boku podstavy všimneš trčet nepatrnou páčku. Co by se tak po jejím zatáhnutí mohlo stát? Možná na tebe spadnou ze stropu hadi, možná se propadneš podlahou, možná se zjeví magický portál vedoucí pryč z tohoto místa... 
+
+...no dobře, to by bylo asi moc snadné. 
+
+> [[Zatáhnout za páku->Páka]]
+> [[Zpět na křižovatku->2. křižovatka]]
+<</type>>\
+
+:: Páka {"position":"1250,575","size":"100,100"}
+<<type 40ms>>\
+<<set $paka to true>>\
+Zatáhl jsi za páku. Stejně ti nic jiného nezbývalo.
+
+V soše to zacvakalo a najednou se pochodně agresivně rozhořely. Celá fontána i se sochou se dala do pohybu. Po nepříjemném zvuku dření kamene o kámen se socha konečně zastavila. Před tebou se objevila studna, kterou fontána skrývala. Není nijak hluboká, vody je tam tak po kolena. 
+
+> [[Prozkoumat studnu->Studna]]
+> [[Zpět na křižovatku->2. křižovatka]]
+<</type>>\
+
+
+:: Studna [PrvniPatro] {"position":"1225,700","size":"100,100"}
+<<type 40ms>>\
+Stojíš na okraji studny a nahlížíš do její hlubiny. Voda na dně se v matném světle slabě leskne. Po podrobnějším zkoumání studny nacházíš nějaký malý třpytivý předmět na dně. Můžeš se rozhodnout jej vylovit nebo ho nechat studně.
+
+> [[Natáhnout se pro předmět->Past]] <p id="poznamka"> (Hod kostkou pro šanci na získání předmětu)</p>
+> [[Nechci se namočit, vrátím se zpět->2. křižovatka]]
+<</type>>\
+
+
+:: Past [PrvniPatro] {"position":"1100,700","size":"100,100"}
+<<type 40ms>>\
+Zapřel jsi se o hranu studny a natáhnul paži ke dnu.
+
+<span id="prostor">\
+	<<button "Hoď kostkou">>\
+    <<set $hodKostkou to random(1,6)>>
+	<<replace "#prostor">>\
+			<p id="poznamka">Hodil jsi číslo $hodKostkou.</p>
+
+<<if $hodKostkou is 6>>\
+
+SAKRA! Vykřikl jsi když se převážil a spadnul do studny. Než jsi ale stihnul zareagovat, obličejem jsi dopadnul na dno. Při pádu sis přelomil vaz.
+
+<p id="game_over">Tvoje rozhodutí se ti stalo osudným. Tvá cesta a život zde končí.</p> <<set $hp to 0>>\
+
+<<link "Zpět na start" "Start">><<run UIBar.stow()>><<run UI.restart()>><</link>>
+
+<<elseif $hodKostkou is 3 or $hodKostkou is 4 or $hodKostkou is 5>>\
+
+SAKRA! Vykřikl jsi když se převážil a spadnul do studny. Naštěstí jsi se zachytil o vnitřní kraj studny a opatrně se spustil ke dnu. Pořádně ses namočil.
+
+Dno hlasitě zapraskalo. Tento zvuk jsi slyšet nechtěl. Máš jen omezený čas na rozhodnutí, co teď provedeš.
+
+> [[Zariskuj a sehni se pro předmět->Sehnutí se]]
+> [[Rychle ven!->Uzavření studny]]
+
+<<elseif $hodKostkou is 1 or $hodKostkou is 2>>\
+
+Natáhnul ses jako proutek a málem ses do studny převážil. Naštěstí ses pořádně zapřel nohama a předmět je tvůj.
+
+> [[Prohlédni si neznámý předmět zblízka->Prsten]]
+<</if>>\
+<</replace>>\
+	<</button>>
+</span>
+<</type>>\
+
+:: Sehnutí se [PrvniPatro] {"position":"925,625","size":"100,100"}
+<<type 40ms>>\
+Opatrně jsi se rozkročil a sehnul k drahokamu. Dno pod tebou tiše popraskává.
+
+<span id="prostor">\
+	<<button "Hoď kostkou">>\
+    <<set $hodKostkou to random(1,6)>>
+	<<replace "#prostor">>\
+			<p id="poznamka">Hodil jsi číslo $hodKostkou.</p>
+            
+<<if $hodKostkou is 1 or $hodKostkou is 2 >>\
+Bohužel se ti to nepovedlo a spadnul jsi do studny. Naštěstí jsi stihnul zareagovat, a vylezl jsi ven jen s lehkým zraněním. Příště už ale nemusíš mít takové štěstí.
+<<set $hp -= 12>>\
+
+> [[Pokračuj->Uzavření studny]]
+<<elseif $hodKostkou is 3 or $hodKostkou is 4 or $hodKostkou is 5 or $hodKostkou is 6>>\
+Povedlo se! Naštěstí ses pořádně zapřel nohama a předmět je tvůj.
+
+> [[Prohlédni si neznámý předmět zblízka->Prsten]]
+<</if>>\
+<</replace>>\
+	<</button>>
+</span>
+<</type>>\
+
+:: Prsten {"position":"825,825","size":"100,100"}
+<<type 40ms>>\
+Dlaní uchopíš malý kovový předmět. Je to prsten - sice zčernalý, ale jednoznačně precizně vytvořený. Chladný kov ti připadá podivně povědomý. Jakmile ho podržíš proti světlu, v mysli se ti vynoří vzpomínka - nedůležitá, ale podivně utěšující.
+
+<span id="prostor">\
+	<center><span class = "vzpominaciButton"><<button "Zaměř svoji pozornost na vzpomínku">>\
+	<<replace "#prostor">>\      
+		<<type 40ms>>\
+		Ocitáš se ve sluncem ozářené zahradě, nad hlavou ti zní ptáci a ve vzduchu se vznáší vůně čerstvých bylinek. Sedíš na kamenné lavičce, převaluješ mezi prsty podobný prsten a nepřítomně sleduješ, jak tvůj mistr kráčí opodál. Mluví o něčem důležitém, ale ty se touláš myšlenkami. Z dálky se ozývá jeho hlas, jehož slova sotva zaregistruješ. //„Aidene, posloucháš vůbec?“// řekne s pokřiveným úsměvem a vytrhne tě ze zamyšlení.
+
+Výjev mizí stejně rychle, jako se objevil. Vypadalo to jako krátký záblesk něčího obyčejného dne - který ti teď připadá vzdálený a ztracený v temnotě kobky.
+
+> [[Vrať se zpět->Uzavření studny]]  
+<</type>>\
+<</replace>>\
+	<</button>></span></center>
+</span>
+<</type>>\
+
+
+:: Uzavření studny [PrvniPatro] {"position":"1050,825","size":"100,100"}
+<<type 40ms>>\<<if lastVisited("Hnízdo") > 0>>\
+Vrátil ses zpět do místnosti se studnou. 
+
+Něco se tu ovšem změnilo. Velké železné dvěre byly najednou otevřeny dokořán. Jsi si jistý, že když jsi sem přišel skrytým průchodem, tak byly rozhodně zavřené. Zrovna se ti to hodí, protože zpět do tunelů už rozhodně nechceš. 
+
+Prošel jsi jimi a ocitl ses před křižovatkou.
+
+> [[Pokračuj na křižovatku->2. křižovatka]]
+
+<<else>>\
+Vrátil ses zpět do místnosti se studnou. Ještě pár minut jsi obdivoval podivnou sochu.
+
+Poté jsi vyšel přes tebou odemčené železné dveře a ocitl ses zpět před druhou křižovatkou.
+
+> [[Pokračuj na křižovatku->2. křižovatka]]
+<</if>>\<</type>>\

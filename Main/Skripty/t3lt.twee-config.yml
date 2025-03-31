@@ -1,0 +1,30 @@
+sugarcube-2:
+  macros:
+    endcombat:
+      name: endcombat
+    enemyturn:
+      name: enemyturn
+    pochodenAttack:
+      name: pochodenAttack
+    attack:
+      name: attack
+    utek:
+      name: utek
+    hpPotion:
+      name: hpPotion
+    startcombat:
+      name: startcombat
+    enemyheavyattack:
+      name: enemyheavyattack
+    enemyattack:
+      name: enemyattack
+    enemyheal:
+      name: enemyheal
+    levelup:
+      name: levelup
+    playersetup:
+      name: playersetup
+    enemysetup:
+      name: enemysetup
+    runFullscreen:
+      name: runFullscreen

@@ -1,0 +1,147 @@
+:: Start [zacatek] {"position":"2000,50","size":"200,100"}
+<<run UIBar.hide()>><<run UIBar.stow()>>\
+<center>\
+<div id="logo"></div>
+
+<p id="startMoznosti">[[Začít hru->Cela]]</p>
+<p id="startMoznosti"><<link "Nastavení">><<run UI.settings();>><</link>></p>
+<p id="startMoznosti"><<link "Informace">>
+<<script>>
+	Dialog.setup("Informace o hře");
+	Dialog.wiki(Story.get("InfoTest").processText());
+	Dialog.open();
+	<</script>>
+<</link>></p>
+
+
+<div id="vlnovky"></div>
+</center>\
+:: InfoTest [zacatek info] {"position":"1575,50","size":"100,100"}
+<center>\ 
+Tvůj úkol je prostý, musíš se dostat z dungeonu a zjistit kdo jsi, a co se ti stalo. Tvá rozhodnutí ovlivní průchod hrou, čti pozorně.
+
+Hra je designována pro hraní v 16:9 a fullscreenu (jiná rozlišení nemusí fungovat správně). Fullscreen se zapíná F11 (ve většině moderních prohlížečů) nebo tlačítkem v nastavení. Mezerníkem se přeskakuje animace psaní textu.
+
+<hr>
+<b>Vytvořeno pomocí:</b>
+
+<li>Twine</li><li>Twee Notion 3, Tweego</li><li>SugarCube v2</li><li>Visual Studio Code</li>
+
+Hra je zatím pouze v demo verzi, ale pokud ji vyzkoušíš, ocením jakýkoliv feedback! :)
+
+<a target="blank" href="https://github.com/W0lfcloud/w0lfcloud.github.io">Github</a>
+</center>
+<!-- START -->
+
+:: Cela [PrvniPatro] {"position":"2000,175","size":"200,200"}
+<<run UIBar.show()>>\
+<<run UIBar.unstow()>>\
+<<type 40ms>>\
+Když se probudíš na studeném a tvrdém kameni, uvítá tě prudká bolest hlavy. Chlad z podlahy ti proniká do kostí. Tvoje končetiny jsou ztuhlé a těžké. Nevzpomínáš si, jak dlouho tady ležíš - minuty, hodiny, dny? A co hůř, ani nevíš, kdo jsi. Všechno je rozmazané, a tvé vzpomínky zahaluje hustá mlha.
+
+S velkým úsilím se zvedáš. Záda ti drhnou o drsnou kamennou zeď. Opíráš se o ni a lapáš po dechu. Vlhký vzduch je cítit zatuchlinou a každý tvůj nádech je namáhavý.
+
+ //„Ughhh..."// utrousíš bolestí a pokusíš se otevřít oči. Zrak se ti mlží a trvá několik vteřin, než se ve tmě začnou rýsovat tvary. Zamrkáš a snažíš se urovnat si myšlenky. Někde se ozývá zvuk kapající vody.
+
+> [[Rozhlédni se kolem sebe->Cela2]]
+<</type>>
+
+
+:: Cela2 [PrvniPatro] {"position":"2050,425","size":"100,100"}
+<<type 40ms>>\
+Se stále mírně rozmazaným viděním se rozhlížíš kolem sebe. Pohlédneš nahoru, strop nad tebou je vlhký a voda vytrvale kape do malých kaluží rozesetých po kamenné podlaze. Každá kapka vytváří ozvěnu rozléhající se v naprostém tichu. Zachvěješ se a uvědomíš si, jaká je ti zima - jsi sotva oblečený. Máš na sobě jen tenkou rozrhanou látku. 
+
+ //„Jak jsem se sem sakra dostal?“// zamumláš si pod nosem, tvůj hlas je ale tvým uším neznámý. 
+
+Místnost osvětluje několik menších lamp připevěných kde zdi. Většina z nich už dosloužila a ty ostatní už svítí jen velmi slabě. Na stěně po tvé pravici ovšem hoří osamělá pochodeň, která vrhá po místnosti kolísavé světlo. Teplo, které nabízí, je pro tebe v této mrazivé kobce vítaným překvapením.
+
+> [[Natáhnout se pro pochodeň->+ Pochodeň]] <p id="poznamka"> (Hod kostkou pro šanci na získání pochodně)</p>
+> [[Ignorovat pochodeň a pokračovat dál->- Pochodeň]] 
+<</type>>
+
+:: + Pochodeň [PrvniPatro] {"position":"1850,400","size":"100,100"}
+<<type 40ms>>\
+Natáhneš se nad sebe, aby jsi z držáku připevněného na zdi vyjmul hořící pochodeň. 
+Je ale dost vysoko a přímo pod ní je v prohlubni na podlaze velká kaluž vody.
+
+<span id="prostor">\
+	<<button "Hoď kostkou">>\
+    <<set $hodKostkou to random(1,6)>>
+	<<replace "#prostor">>\
+			<p id="poznamka">Hodil jsi číslo $hodKostkou.</p>
+
+<<if $hodKostkou >= 4 >>\
+Natáhnul ses tak daleko jak jsi mohl, ale bohužel se ti nepovedlo na pochodeň dosáhnout. Kvůli svým zmrzlým svalům jsi ji akorát nešikovně shodil z držáku na zem přímo do hluboké kaluže. Plamen zhasl a světlo už na tebe svítí pouze ze slabě svítících pevných lamp na zdi.
+
+Naproti sobě uvidíš těžce vypadající kamenná vrata. Vypadá to jako jediná cesta ven.
+
+> [[Podívat se na vrata a vstoupit do nich->Dlouhá místnost]]
+
+<<else>>\
+<p id="poznamka">Získal jsi pochodeň!</p>
+
+Povedlo se ti vzít pochodeň, i přes svoje zmrzlé tělo, akorát ses trochu namočil. Snad to stálo za to.
+<<run $inv.push('Pochodeň')>>\
+Naproti sobě uvidíš těžce vypadající kamenná vrata. Vypadá to jako jediná cesta ven.
+
+> [[Podívat se na vrata a vstoupit do nich->Dlouhá místnost]]
+<</if>>\
+<</replace>>\
+	<</button>>
+</span>
+<</type>>\
+
+:: - Pochodeň [PrvniPatro] {"position":"2225,400","size":"100,100"}
+<<type 40ms>>\
+Odvrátíš zrak od pochodně a svou pozornost zaměříš na těžce vypadající kamenná vrata na konci místnosti. Vypadá to jako jediná cesta ven.
+
+> [[Podívat se na vrata a vstoupit do nich->Dlouhá místnost]]
+<</type>>\
+
+:: Dlouhá místnost [PrvniPatro] {"position":"2050,600","size":"100,200"}
+<<type 40ms>>\
+Stojíš před masivními kamennými vraty s vyrytými tvary a znaky, které jsi snad nikdy v životě neviděl. Když se do nich opřeš, tak zjistíš že jdou překvapivě lehce otevřít. Vycházíš z malé kamenné místnosti. S odhodláním dostat se ven vcházíš do zatím neznámé části kobky.
+
+Před sebou vidíš dlouhou osvětlenou místnost se starým dřevěným stolkem a židličkou, o kterou se opírají ostatky jiného člověka. Možná už jsou tady pěknou řádku let. Že by jsi tady byl zavřený opravdu tak dlouho? S hrůznou myšlenkou se otřeseš a rozhodneš se ostatky zkontrolovat zblízka.
+
+> ''Oprýskaný kabát''  //[2 DEF]// <<set $def = 2>> 
+Neznámá osoba na sobě má starý, zatuchlý kabát. Oblečeš si ho. Není sice vůbec pohodlný, ale alespoň už ti nebude taková zima. 
+<p id="poznamka">Nyní máš $def DEF. Toto číslo se odečítá od útoku nepřítele.
+</p><<run $equip.push('Oprýskaný kabát (2 DEF)')>>\
+
+> ''Rezatý meč''  //[2 STR]// <<set $str = 2>>
+Na zemi nacházíš otupělý rezatý meč. Není sice už v tom nejlepším stavu, ale mohl by ti ještě posloužit k vlastní obraně.
+<p id="poznamka">Nyní máš $str STR. Toto číslo se přičítá ke tvému útoku.
+</p><<run $equip.push('Rezatý meč (2 STR)')>>\
+
+Plný radosti ze svého nálezu se rozhlédeš se po místnosti. Pořád slyšíš rytmické kapání vody na kamennou podlahu. Vypadá to, že nic dalšího už tu není a je čas jít dál.
+
+> [[Pokračuj rovně->1. křižovatka]]
+> [[Vrať se zpět do cely->Cela2]]
+<</type>>
+
+
+:: 1. křižovatka [PrvniPatro] {"position":"2050,875","size":"100,100"}
+<<type 40ms>>\
+Ocitneš se na křižovatce. Chodbami se nese slabý vánek, který víří zatuchlý vzduch. Jde v něm cítít vlhkost. Zastavíš se a očima zkoumáš tři možné cesty před sebou. Přímá cesta, ta, která tě dovedla až sem, náhle končí, zablokovaná těžkými železnými mřížemi. Za nimi svítí světlo. Vypadá to, jako nějaká vyhlídka do okolí. 
+
+Na východě se matně osvětlená cesta svažuje dolů do stínů. Čím víc se namáháš, abys tam viděl, tím tísnivěji tma působí. Něco na této cestě ti nahání husí kůži.
+
+Na opačné straně, směrem na západ, je cesta ozářená světlem. Stálá záře lamp lemuje stěny a vrhá přívětivou, i když trochu děsivou záři. Vypadá to tam bezpečně, ale možná bys na tomhle místě neměl důvěřovat svému zdání.
+
+Musíš se rozhodnout, kudy půjdeš.
+
+> [[Prozkoumej výhled (jih)->Výhled za mříží]]
+> [[Odboč na šerou cestu (východ)->Místnost před vodou]]
+> [[Odboč na osvětlenou cestu (západ)->Průchod]]
+<</type>>
+
+
+:: Výhled za mříží [PrvniPatro] {"position":"2050,1025","size":"100,100"}
+<<type 40ms>>\
+Přiblížil jsi se k silným kovovým mřížím. Z bližšího pohledu usoudíš, že tady musí stát tak stovky let. Místy jsou zrezlé a tehdejší černý nátěr se již sloupal. Možná kvůli vlhkosti v ovzduší. 
+
+Před sebou si všímáš obrovské vodní plochy. Hladina vody je poměrně nízko, přesto si netroufáš odhadovat hloubku podzemního jezera. V dáli se z vody tyčí vysoká impozantní kamenná věž. Cítíš, jako by tě k ní něco přitahovalo. 
+
+> [[Vrať se na křižovatku->1. křižovatka]]
+<</type>>
