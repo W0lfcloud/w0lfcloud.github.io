@@ -15,7 +15,8 @@
 
 
 <div id="vlnovky"></div>
-<p>by Wolfcloud</p>
+
+<p id="poznamka">@ Wolfcloud 2025</p>
 </center>\
 
 
@@ -24,9 +25,6 @@
 Tvůj úkol je prostý, musíš se dostat z dungeonu a zjistit kdo jsi, a co se ti stalo. Tvá rozhodnutí ovlivní průchod hrou, čti pozorně.
 
 Hra je designována pro hraní v 16:9 a fullscreenu (jiná rozlišení nemusí fungovat správně). Fullscreen se zapíná F11 (ve většině moderních prohlížečů) nebo tlačítkem v nastavení. Mezerníkem se přeskakuje animace psaní textu.
-<<link "Fullscreen Mode">>
-  <<run Fullscreen.toggle()>>
-<</link>>
 <hr>
 <b>Vytvořeno pomocí:</b>
 
