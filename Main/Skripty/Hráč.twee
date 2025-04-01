@@ -18,7 +18,7 @@
 	<<set $enemyhp -= $playerdamage>>
 	<<set $enemyhp to Math.clamp($enemyhp,0,$enemy.maxhp)>>
 
-<<set $combatmsg to "Hodil jsi kostkou číslo $hodKostkou a hituješ nepřítele za $celkemDmg dmg!">>
+<<set $combatmsg to "Hodil jsi kostkou číslo $hodKostkou a trefuješ nepřítele za $celkemDmg dmg!">>
 <</widget>>
 
 <<widget "pochodenAttack">>
@@ -39,7 +39,7 @@
 	<<set $enemyhp -= $playerdamage>>
 	<<set $enemyhp to Math.clamp($enemyhp,0,$enemy.maxhp)>>
     
-    <<set $combatmsg to "Povedlo se! Hodil jsi kostkou číslo $hodKostkou a flákl jsi pavouka svou ohnivou pochodní za $celkemDmg dmg!">>
+    <<set $combatmsg to "Povedlo se! Hodil jsi kostkou číslo $hodKostkou a udeřil jsi pavouka svou ohnivou pochodní za $celkemDmg dmg!">>
     
 <</if>>\
 <</widget>>

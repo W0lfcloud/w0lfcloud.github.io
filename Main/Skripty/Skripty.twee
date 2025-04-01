@@ -38,7 +38,11 @@ $enemycombatmsg
 :: GameOver {"position":"3250,325","size":"100,100"}
 <p id="game_over">Nepřítel tě porazil. Tvá cesta a život zde končí.</p>
 
-<<link "Zpět na začátek" "Start">><<run UIBar.stow()>><<run UI.restart()>><</link>>
+<<link "Zpět na start">><<script>>
+	Dialog.setup("Restartovat hru");
+	Dialog.wiki(Story.get("Reset").processText());
+	Dialog.open();
+	<</script>><</link>></span>
 
 :: StartCombat [widget] {"position":"2925,75","size":"200,100"}
 <<widget "startcombat">>

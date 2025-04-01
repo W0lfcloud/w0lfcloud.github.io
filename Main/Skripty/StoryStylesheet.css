@@ -333,12 +333,12 @@ h1 {
 	height: 100%;
   }
 
-  #ui-dialog-body.settings {
+#ui-dialog-body.settings {
 	background-color: #0d0909;
 	font-weight: bold;
 	font-size: 130%;
 }
-  #ui-dialog-body ul.buttons {
-	visibility: hidden;
-  }
-  
+
+#ui-dialog-body ul.buttons {
+	padding: 50px 0 0 0;
+}

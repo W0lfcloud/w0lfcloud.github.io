@@ -37,7 +37,11 @@ Co tě napadlo se již nedozvíš, jelikož pomalu ztrácíš vědomí a s otev�
 
 <p id="game_over">Jelikož jsi neměl žádný zdroj světla, tak tě nečekaně překvapil smrtící pavouk. Tvá cesta a život zde končí.</p> 
 
-<<link "Zpět na start" "Start">><<run UIBar.stow()>><<run UI.restart()>><</link>>
+<<link "Zpět na start">><<script>>
+	Dialog.setup("Restartovat hru");
+	Dialog.wiki(Story.get("Reset").processText());
+	Dialog.open();
+	<</script>><</link>>
 
 <</if>>\
 <</type>>

@@ -8,20 +8,25 @@
 <p id="startMoznosti"><<link "Informace">>
 <<script>>
 	Dialog.setup("Informace o hře");
-	Dialog.wiki(Story.get("InfoTest").processText());
+	Dialog.wiki(Story.get("Info").processText());
 	Dialog.open();
 	<</script>>
 <</link>></p>
 
 
 <div id="vlnovky"></div>
+<p>by Wolfcloud</p>
 </center>\
-:: InfoTest [zacatek info] {"position":"1575,50","size":"100,100"}
+
+
+:: Info [zacatek info] {"position":"1575,50","size":"100,100"}
 <center>\ 
 Tvůj úkol je prostý, musíš se dostat z dungeonu a zjistit kdo jsi, a co se ti stalo. Tvá rozhodnutí ovlivní průchod hrou, čti pozorně.
 
 Hra je designována pro hraní v 16:9 a fullscreenu (jiná rozlišení nemusí fungovat správně). Fullscreen se zapíná F11 (ve většině moderních prohlížečů) nebo tlačítkem v nastavení. Mezerníkem se přeskakuje animace psaní textu.
-
+<<link "Fullscreen Mode">>
+  <<run Fullscreen.toggle()>>
+<</link>>
 <hr>
 <b>Vytvořeno pomocí:</b>
 
@@ -107,12 +112,12 @@ Před sebou vidíš dlouhou osvětlenou místnost se starým dřevěným stolkem
 > ''Oprýskaný kabát''  //[2 DEF]// <<set $def = 2>> 
 Neznámá osoba na sobě má starý, zatuchlý kabát. Oblečeš si ho. Není sice vůbec pohodlný, ale alespoň už ti nebude taková zima. 
 <p id="poznamka">Nyní máš $def DEF. Toto číslo se odečítá od útoku nepřítele.
-</p><<run $equip.push('Oprýskaný kabát (2 DEF)')>>\
+</p><<run $equip.push('Oprýskaný kabát [2 def]')>>\
 
 > ''Rezatý meč''  //[2 STR]// <<set $str = 2>>
 Na zemi nacházíš otupělý rezatý meč. Není sice už v tom nejlepším stavu, ale mohl by ti ještě posloužit k vlastní obraně.
 <p id="poznamka">Nyní máš $str STR. Toto číslo se přičítá ke tvému útoku.
-</p><<run $equip.push('Rezatý meč (2 STR)')>>\
+</p><<run $equip.push('Rezatý meč [2 str]')>>\
 
 Plný radosti ze svého nálezu se rozhlédeš se po místnosti. Pořád slyšíš rytmické kapání vody na kamennou podlahu. Vypadá to, že nic dalšího už tu není a je čas jít dál.
 

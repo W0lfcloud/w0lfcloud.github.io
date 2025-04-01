@@ -44,5 +44,10 @@ S nově nabytým pocitem odhodlání vykročíš vpřed a necháš za sebou prvn
 Dohrál jsi demo Ozvěn zapomění! Moc ti děkuji za tvůj čas! <3 
 Tohle je moje úplně první hra, kterou pouštím do éteru. Zabralo mi neskutečně dlouhou dobu ji vytvořit, ale dalo mi to spoustu zkušeností do budoucna. - Wolfcloud
 
-<<link "Zpět na start" "Start">><<run UI.restart()>><</link>>
+<<link "Zpět na start">><<script>>
+	Dialog.setup("Restartovat hru");
+	Dialog.wiki(Story.get("Reset").processText());
+	Dialog.open();
+	<</script>><</link>>
+
 <</type>>

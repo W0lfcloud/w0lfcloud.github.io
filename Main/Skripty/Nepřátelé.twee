@@ -45,7 +45,7 @@ accuracy:7,
 attackmsg:["Pavouk tě kousne", "Pavouk na tebe skočí"],
 specialattackmsg:"",
 intromsg:"Pavouk na tebe agresivně kouká!",
-deathmsg:"Pavouk je mrtvej!",
+deathmsg:"Pavouk byl poražen!",
 }
 >>
 
@@ -55,10 +55,10 @@ maxhp:30,
 mindamage:6,
 maxdamage:10,
 accuracy:8,
-attackmsg:["Pavoučí boss tě kousne", "Pavoučí boss na tebe skočí"],
-specialattackmsg:"Pavoučí boss se na chvíli zastaví",
-intromsg:"Pavoučí boss na tebe agresivně kouká!",
-deathmsg:"Pavoučí boss je mrtvej!",
+attackmsg:["Velký pavouk tě kousne", "Velký pavouk na tebe skočí"],
+specialattackmsg:"Velký pavouk se na chvíli zastaví",
+intromsg:"Velký pavouk na tebe agresivně kouká!",
+deathmsg:"Velký pavouk byl poražen!",
 }
 >>
 
