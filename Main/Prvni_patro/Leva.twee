@@ -65,7 +65,7 @@ Než stihneš zareagovat, vzduch kolem tebe se změní, začne být žhavější
 :: + Klíč [PrvniPatro] {"position":"1450,1175","size":"100,100"}
 <<type 40ms>>\
 Rukou jsi zavadil o objekt připomínající stůl. Na něm jsi nahmatal něco chlupatého. Zapištělo to a ty jsi leknutím poskočil. Výskokem jsi omylem převrátil stůl před tebou. Ale zvuk který jsi poté slyšel ti udělal radost. O kamenou zem zacinkal nějaký předmět. Vypadá to jako klíč.
-<<run $inv.push('Neznámý klíč')>>\
+<<run $inv.push('Neznámý klíč')>><<ui update>>\
 
 Najednou přímo před tebou ve tmě zasvítily dvě červené oči malého tvora. Uslyšel jsi klepnutí nečeho o podlahu. Zarazil ses, ale dvě oči se svižně otočily a zmizely ve tmě.
 

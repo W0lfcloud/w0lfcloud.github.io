@@ -21,12 +21,12 @@ Obrátíš se k němu. Jeho kamenný oblouk se táhne nad světélkující, klid
 <<type 40ms>>\
 Nervózně sestupuješ do temnoty a s každým tvým krokem je vzduch chladnější a těžší. Opatrně našlapuješ kupředu.
 <<if $inv.includes('Pochodeň')>>\
-Naštěstí máš s sebou zdroj světla, který ti v tunelu pomůže se orientovat. Štěstí se ovšem brzy mění v neštěstí. Potichu si zakleješ, když před sebou v úzké zatáčce uvidíš obrovskou síť plnou prachu a kousků sutin. Polkneš a doufáš že se majitelé sítí již blízkosti nezdržují.
+Naštěstí máš s sebou zdroj světla, který ti v tunelu pomůže se orientovat. Štěstí se ovšem brzy mění v neštěstí. Potichu si zakleješ, když před sebou v úzké zatáčce uvidíš obrovskou síť plnou prachu a kousků sutin. Polkneš a doufáš, že se majitelé sítí již blízkosti nezdržují.
 
 > [[Pokračuj k zatáčce->Tunely_2]]
 
 <<else>>\
-<<set $hp to 0>>\
+<<set $hp to 0>><<ui update>>\
 Pohltí tě absolutní tma, která ti svojí tíhou tlačí na hrudník. Srdce ti tluče až v uších, a rukama šátráš po drsných stěnách, které tě vedou hlouběji do neznáma.
 
 Tvoje kroky se slabě odrážejí v úzkém tunelu, kde je každý zvuk umocněný tichem. Po chvíli, která ti připadá jako celá věčnost, se ti na krku objeví zvláštní teplo - zpočátku malý, téměř uklidňující pocit. Než však stačíš zareagovat, zasáhne tě palčivá bolest.
@@ -92,11 +92,11 @@ Už sis myslel, že jsi z nejhoršího venku. Ale z temnoty na tebe vyskočil da
 
 :: Pavouk1Win [PrvniPatro] {"position":"2775,750","size":"100,100"}
 <<type 40ms>>\
-Po náročném boji jsi nad pavoukem zvítězil! <p id="poznamka">Získáváš +10 XP.
+Po náročném boji jsi nad pavoukem zvítězil! <p id="poznamka">Získáváš +10 XP.<<set $xp += 10>><<ui update>>\
 
 XP zvyšují tvůj level. Při každém postupu na další level si můžeš v postranním menu vylepšit svoji STR nebo DEF a zároveň se ti zvýší tvoje HP o 5.</p>
 
-<<link "Pokračuj dál tunelem" "Tunely_3">><<set $xp += 10>>\<</link>>
+<<link "Pokračuj dál tunelem" "Tunely_3">><</link>>
 <</type>>
 
 
@@ -104,7 +104,7 @@ XP zvyšují tvůj level. Při každém postupu na další level si můžeš v p
 <<type 40ms>>\
 Po náročném boji jsi opět nad pavoukem zvítězil! <p id="poznamka">Získáváš +10 xp.</p>
 
-<<link "Pokračuj dál tunelem" "Hnízdo">><<set $xp += 10>>\<</link>>
+<<link "Pokračuj dál tunelem" "Hnízdo">><<set $xp += 10>><<ui update>>\<</link>>
 <</type>>
 
 :: Podzemní jezírko [PrvniPatro] {"position":"2525,400","size":"200,200"}
@@ -122,10 +122,10 @@ V mysli se ti mihne slabá vzpomínka, která sklouzává těsně za okraj tvéh
  //„Bylo to snad... moje jméno?"// proneseš k tichému jezírku, které tě nerušeně pozoruje. Náhlá vlna zmatku tě donutí pevněji sevřít přívěsek, ale vzpomínka zmizí stejně rychle, jako se objevila. Zůstaneš stát v matném světle svojí pochodně, nejistý tím, co se právě stalo, ale víš, že se v tobě probudilo něco důležitého.
 
  Odpočinul sis a nabral zpět své síly. Také jsi zde našel léčivý lektvar, který můžeš použít později k obnovení HP v boji.
-<<run $inv.push('Léčivý lektvar')>>\ 
+<<run $inv.push('Léčivý lektvar')>>\
 
 <p id="poznamka">Tvoje HP bylo obnoveno. Získal jsi léčivý lektvar.</p>
-<<set $hp to $player.maxhp>>\
+<<set $hp to $player.maxhp>><<ui update>>\
 
 [[Vrať se zpět do tunelů->Tunely_3]]
 <</type>>
@@ -151,7 +151,7 @@ Narazil jsi na dalšího nechutného pavouka! Tento je dokonce ještě větší 
 <<type 40ms>>\
 Dokázal jsi porazit i toho největšího pavouka. Oddychneš si a z čela si setřeš kapičky potu. Opět se zadíváš na podivně čevené světlo. <p id="poznamka">Získáváš +20 xp.</p>
 
-<<link "Pokračuj dál na konec tunelu" "Skrytý průchod">><<set $xp += 20>>\<</link>>
+<<link "Pokračuj dál na konec tunelu" "Skrytý průchod">><<set $xp += 20>><<ui update>><</link>>
 
 <</type>>
 

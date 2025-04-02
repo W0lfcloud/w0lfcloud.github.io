@@ -84,7 +84,7 @@ Naproti sobě uvidíš těžce vypadající kamenná vrata. Vypadá to jako jedi
 <p id="poznamka">Získal jsi pochodeň!</p>
 
 Povedlo se ti vzít pochodeň, i přes svoje zmrzlé tělo, akorát ses trochu namočil. Snad to stálo za to.
-<<run $inv.push('Pochodeň')>>\
+<<run $inv.push('Pochodeň')>><<ui update>>\
 Naproti sobě uvidíš těžce vypadající kamenná vrata. Vypadá to jako jediná cesta ven.
 
 > [[Podívat se na vrata a vstoupit do nich->Dlouhá místnost]]
@@ -122,7 +122,7 @@ Plný radosti ze svého nálezu se rozhlédeš se po místnosti. Pořád slyší
 > [[Pokračuj rovně->1. křižovatka]]
 > [[Vrať se zpět do cely->Cela2]]
 <</type>>
-
+<<ui update>>\
 
 :: 1. křižovatka [PrvniPatro] {"position":"2050,875","size":"100,100"}
 <<type 40ms>>\

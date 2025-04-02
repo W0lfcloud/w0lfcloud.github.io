@@ -28,3 +28,7 @@ sugarcube-2:
       name: enemysetup
     runFullscreen:
       name: runFullscreen
+    l:
+      name: l
+    ui:
+      name: ui

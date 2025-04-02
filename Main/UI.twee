@@ -3,10 +3,14 @@
 <p id="uiText">Atributy:</p> 
 <img src="/Imgs/xp.png" width=10%> LVL $lvl | $xp/$maxxp xp
 
- <<if $xp >= $maxxp>>\
-Postupuješ na další level! 
+<span id="prostor">\
+	 <<if $xp >= $maxxp>>\
+		<<replace "#prostor">>\      
+		<<button "+ STR" `passage()`>><<set $str++>><</button>> <<button "+ DEF" `passage()`>><<set $def++>><</button>><<levelup>>
+		<</replace>>\
+	<</if>>\
+</span><<ui update>>\
 
-<<button "+ STR" `passage()`>><<set $str++>><</button>> <<button "+ DEF" `passage()`>><<set $def++>><</button>><<levelup>><</if>>\
 <span id="hpIcon"></span> $hp/$player.maxhp
 <span id="strIcon"></span> $str 
 <span id="defIcon"></span> $def 
