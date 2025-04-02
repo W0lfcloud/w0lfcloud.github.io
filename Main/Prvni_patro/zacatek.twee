@@ -3,7 +3,7 @@
 <center>\
 <div id="logo"></div>
 
-<p id="startMoznosti">[[Začít hru->Cela]]</p>
+<p id="startMoznosti">[[Začít hru->Vitej]]</p>
 <p id="startMoznosti"><<link "Nastavení">><<run UI.settings();>><</link>></p>
 <p id="startMoznosti"><<link "Informace">>
 <<script>>
@@ -14,7 +14,9 @@
 <</link>></p>
 
 
-<div id="vlnovky"></div>
+
+
+<div id="delitko2"></div>
 
 <p id="poznamka">@ Wolfcloud 2025</p>
 </center>\
@@ -34,8 +36,21 @@ Hra je zatím pouze v demo verzi, ale pokud ji vyzkoušíš, ocením jakýkoliv 
 
 <a target="blank" href="https://github.com/W0lfcloud/w0lfcloud.github.io">Github</a>
 </center>
-<!-- START -->
 
+
+:: Vitej [PrvniPatro]
+<center>\ 
+<<type 40ms>>\
+Vítej v demo verzi hry Ozvěny zapomnění! 
+
+Hra je designována pro hraní v 16:9 a fullscreenu (jiná rozlišení nemusí fungovat správně). Fullscreen se zapíná F11 (ve většině moderních prohlížečů) nebo tlačítkem v nastavení. Mezerníkem se přeskakuje animace psaní textu.
+> [[Fajn, nech mě hrát!->Cela]]
+<</type>>\
+</center>
+
+
+
+<!-- START -->
 :: Cela [PrvniPatro] {"position":"2000,175","size":"200,200"}
 <<run UIBar.show()>>\
 <<run UIBar.unstow()>>\
@@ -103,46 +118,63 @@ Odvrátíš zrak od pochodně a svou pozornost zaměříš na těžce vypadajíc
 
 :: Dlouhá místnost [PrvniPatro] {"position":"2050,600","size":"100,200"}
 <<type 40ms>>\
-Stojíš před masivními kamennými vraty s vyrytými tvary a znaky, které jsi snad nikdy v životě neviděl. Když se do nich opřeš, tak zjistíš že jdou překvapivě lehce otevřít. Vycházíš z malé kamenné místnosti. S odhodláním dostat se ven vcházíš do zatím neznámé části kobky.
+Stojíš před masivními kamennými vraty s vyrytými tvary a znaky, které jsi nikdy dřív neviděl. Nebo snad viděl? Nevíš, tvoje mysl je zamlžená a vzpomínky v nedohlednu.
+
+Když se do nich opřeš, zjistíš, že jdou překvapivě lehce otevřít. Vycházíš z malé kamenné místnosti. S odhodláním dostat se ven vcházíš do zatím neznámé části kobky.
 
 Před sebou vidíš dlouhou osvětlenou místnost se starým dřevěným stolkem a židličkou, o kterou se opírají ostatky jiného člověka. Možná už jsou tady pěknou řádku let. Že by jsi tady byl zavřený opravdu tak dlouho? S hrůznou myšlenkou se otřeseš a rozhodneš se ostatky zkontrolovat zblízka.
 
-> ''Oprýskaný kabát''  //[2 DEF]// <<set $def = 2>> 
+> ''Oprýskaný kabát''  //[2 obrana]// <<set $def = 2>><<ui update>>
 Neznámá osoba na sobě má starý, zatuchlý kabát. Oblečeš si ho. Není sice vůbec pohodlný, ale alespoň už ti nebude taková zima. 
-<p id="poznamka">Nyní máš $def DEF. Toto číslo se odečítá od útoku nepřítele.
-</p><<run $equip.push('Oprýskaný kabát [2 def]')>>\
+<p id="poznamka">Nyní máš $def body obrany. Toto číslo se odečítá od útoku nepřítele.</p>
 
-> ''Rezatý meč''  //[2 STR]// <<set $str = 2>>
+> ''Rezatý meč''  //[2 síla]// <<set $str = 2>><<ui update>>
 Na zemi nacházíš otupělý rezatý meč. Není sice už v tom nejlepším stavu, ale mohl by ti ještě posloužit k vlastní obraně.
-<p id="poznamka">Nyní máš $str STR. Toto číslo se přičítá ke tvému útoku.
-</p><<run $equip.push('Rezatý meč [2 str]')>>\
+<p id="poznamka">Nyní máš $str body síly. Toto číslo se přičítá ke tvému útoku.</p>
 
+<<run $equip.push('Oprýskaný kabát')>>\
+<<run $equip.push('Rezatý meč')>>\
 Plný radosti ze svého nálezu se rozhlédeš se po místnosti. Pořád slyšíš rytmické kapání vody na kamennou podlahu. Vypadá to, že nic dalšího už tu není a je čas jít dál.
 
 > [[Pokračuj rovně->1. křižovatka]]
 > [[Vrať se zpět do cely->Cela2]]
 <</type>>
-<<ui update>>\
 
 :: 1. křižovatka [PrvniPatro] {"position":"2050,875","size":"100,100"}
 <<type 40ms>>\
+<<if lastVisited("Hnízdo") > 0>>\
+	Opět se ocitáš na první křižovatce. Chodbami se stále nese slabý, vlhký vánek. Musíš se rozhodnout, kudy se vydáš.
+
+> [[Prozkoumej výhled (jih)->Výhled za mříží]]
+> [[Vejdi na šerou cestu (východ)->Místnost před vodou]]
+> [[Vejdi na osvětlenou cestu (západ)->Průchod]]
+<</if>>\
+<<if lastVisited("+ Klíč") > 0>>\
+	Opět se ocitáš na první křižovatce. Chodbami se stále nese slabý, vlhký vánek. Musíš se rozhodnout, kudy se vydáš.
+
+> [[Prozkoumej výhled (jih)->Výhled za mříží]]
+> [[Vejdi na šerou cestu (východ)->Místnost před vodou]]
+> [[Vejdi na osvětlenou cestu (západ)->Průchod]]
+<</if>>\
+<<if lastVisited("+ Klíč") is -1 and lastVisited("Hnízdo") is -1>>\
 Ocitneš se na křižovatce. Chodbami se nese slabý vánek, který víří zatuchlý vzduch. Jde v něm cítít vlhkost. Zastavíš se a očima zkoumáš tři možné cesty před sebou. Přímá cesta, ta, která tě dovedla až sem, náhle končí, zablokovaná těžkými železnými mřížemi. Za nimi svítí světlo. Vypadá to, jako nějaká vyhlídka do okolí. 
 
 Na východě se matně osvětlená cesta svažuje dolů do stínů. Čím víc se namáháš, abys tam viděl, tím tísnivěji tma působí. Něco na této cestě ti nahání husí kůži.
 
 Na opačné straně, směrem na západ, je cesta ozářená světlem. Stálá záře lamp lemuje stěny a vrhá přívětivou, i když trochu děsivou záři. Vypadá to tam bezpečně, ale možná bys na tomhle místě neměl důvěřovat svému zdání.
 
-Musíš se rozhodnout, kudy půjdeš.
+Musíš se rozhodnout, kudy se vydáš.
 
 > [[Prozkoumej výhled (jih)->Výhled za mříží]]
 > [[Odboč na šerou cestu (východ)->Místnost před vodou]]
 > [[Odboč na osvětlenou cestu (západ)->Průchod]]
-<</type>>
+<</if>>\
+<</type>>\
 
 
 :: Výhled za mříží [PrvniPatro] {"position":"2050,1025","size":"100,100"}
 <<type 40ms>>\
-Přiblížil jsi se k silným kovovým mřížím. Z bližšího pohledu usoudíš, že tady musí stát tak stovky let. Místy jsou zrezlé a tehdejší černý nátěr se již sloupal. Možná kvůli vlhkosti v ovzduší. 
+Přiblížil jsi se k silným kovovým mřížím. Z bližšího pohledu usoudíš, že tady musí stát tak stovky let. Místy jsou zrezlé a tehdejší nátěr se již sloupal. Možná kvůli vlhkosti v ovzduší. 
 
 Před sebou si všímáš obrovské vodní plochy. Hladina vody je poměrně nízko, přesto si netroufáš odhadovat hloubku podzemního jezera. V dáli se z vody tyčí vysoká impozantní kamenná věž. Cítíš, jako by tě k ní něco přitahovalo. 
 

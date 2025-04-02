@@ -94,7 +94,7 @@ Už sis myslel, že jsi z nejhoršího venku. Ale z temnoty na tebe vyskočil da
 <<type 40ms>>\
 Po náročném boji jsi nad pavoukem zvítězil! <p id="poznamka">Získáváš +10 XP.<<set $xp += 10>><<ui update>>\
 
-XP zvyšují tvůj level. Při každém postupu na další level si můžeš v postranním menu vylepšit svoji STR nebo DEF a zároveň se ti zvýší tvoje HP o 5.</p>
+XP zvyšují tvůj level. Při každém postupu na další level si můžeš v postranním menu vylepšit svoji sílu nebo obranu a zároveň se ti zvýší tvoje zdraví o 5.</p>
 
 <<link "Pokračuj dál tunelem" "Tunely_3">><</link>>
 <</type>>
@@ -121,10 +121,10 @@ V mysli se ti mihne slabá vzpomínka, která sklouzává těsně za okraj tvéh
 
  //„Bylo to snad... moje jméno?"// proneseš k tichému jezírku, které tě nerušeně pozoruje. Náhlá vlna zmatku tě donutí pevněji sevřít přívěsek, ale vzpomínka zmizí stejně rychle, jako se objevila. Zůstaneš stát v matném světle svojí pochodně, nejistý tím, co se právě stalo, ale víš, že se v tobě probudilo něco důležitého.
 
- Odpočinul sis a nabral zpět své síly. Také jsi zde našel léčivý lektvar, který můžeš použít později k obnovení HP v boji.
+ Odpočinul sis a nabral zpět své síly. Také jsi zde našel léčivý lektvar, který můžeš použít později k obnovení zdraví v boji.
 <<run $inv.push('Léčivý lektvar')>>\
 
-<p id="poznamka">Tvoje HP bylo obnoveno. Získal jsi léčivý lektvar.</p>
+<p id="poznamka">Tvoje zdraví bylo obnoveno a získal jsi léčivý lektvar.</p>
 <<set $hp to $player.maxhp>><<ui update>>\
 
 [[Vrať se zpět do tunelů->Tunely_3]]

@@ -81,7 +81,7 @@ V mysli se ti mihne slabá vzpomínka, která sklouzává těsně za okraj tvéh
 
  //„Bylo to snad... moje jméno?"// proneseš k tichému jezírku, které tě nerušeně pozoruje. Náhlá vlna zmatku tě donutí pevněji sevřít přívěsek, ale vzpomínka zmizí stejně rychle, jako se objevila. Zůstaneš stát v matném světle svojí pochodně, nejistý tím, co se právě stalo, ale víš, že se v tobě probudilo něco důležitého.
 
-Po tomhle zážitku se vracíš zpět na křižovatku. 
+Po tomhle zážitku se vracíš i s klíčem a přívěskem zpět na křižovatku. <<run $inv.push('Přívěsek')>><<ui update>>\
 
 > [[Vrať se zpátky za most->2. křižovatka]]
 <</type>>
@@ -195,7 +195,7 @@ Natáhnul ses jako proutek a málem ses do studny převážil. Naštěstí ses p
 
 :: Sehnutí se [PrvniPatro] {"position":"925,625","size":"100,100"}
 <<type 40ms>>\
-Opatrně jsi se rozkročil a sehnul k drahokamu. Dno pod tebou tiše popraskává.
+Opatrně jsi se rozkročil a sehnul k předmětu. Dno pod tebou popraskává.
 
 <span id="prostor">\
 	<<button "Hoď kostkou">>\

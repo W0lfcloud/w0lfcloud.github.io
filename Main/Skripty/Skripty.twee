@@ -31,7 +31,7 @@ $enemycombatmsg
 <<link "Pokus se z boje utéct" "Combat">><<utek>><<enemyturn>><</link>> <p id="poznamka"> (Hod kostkou pro šanci na útěk)</p>
 
     <<if $inv.includes('Léčivý lektvar')>>\
-    <<link "Použij léčivý lektvar" "Combat">><<hpPotion>><<enemyturn>><</link>> <p id="poznamka"> (Obnoví HP)</p>
+    <<link "Použij léčivý lektvar" "Combat">><<hpPotion>><<enemyturn>><</link>> <p id="poznamka"> (Obnoví zdraví)</p>
     <</if>>\
 <</if>>\
 
@@ -78,6 +78,7 @@ $enemycombatmsg
 
 <<widget "hpPotion">>
 <<set $hp to $player.maxhp>>\
+<<set $combatmsg to "Vypil jsi léčivý lekvar a obnovilo se ti zdraví!">>
 <<if $inv.delete('Léčivý lektvar')>>\
 <</if>>\
 <</widget>>

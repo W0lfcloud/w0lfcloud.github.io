@@ -1,12 +1,11 @@
 :: StoryCaption [DevLog] {"position":"1000,300","size":"100,100"}
 <center><div id="delitko"></div></center>
 <p id="uiText">Atributy:</p> 
-<img src="/Imgs/xp.png" width=10%> LVL $lvl | $xp/$maxxp xp
+<center><hr></center><span id="lvlIcon"></span> LVL $lvl | $xp/$maxxp xp
 <<if $xp >= $maxxp>>\    
 		<<button "+ STR" `passage()`>><<set $str++>><</button>> <<button "+ DEF" `passage()`>><<set $def++>><</button>><<levelup>>
 <</if>>\
-
-<span id="hpIcon"></span> $hp/$player.maxhp
+<center><hr></center><span id="hpIcon"></span> $hp/$player.maxhp
 <span id="strIcon"></span> $str 
 <span id="defIcon"></span> $def 
 <center><hr></center><p id="uiText">Inventář:</p><<= $inv.join(', ')>>

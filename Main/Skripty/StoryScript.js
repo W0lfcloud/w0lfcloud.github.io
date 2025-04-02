@@ -1,5 +1,4 @@
-// d:\IT\_hry\ProjektDungeon\tweego-2.1.1-windows-x64\tweego.exe -o index.html Main Imgs -w
-// C:\Users\misa5\Desktop\DungeonLocal\tweego-2.1.1-windows-x64\tweego.exe -o index.html Main Imgs -w
+
 Config.macros.typeVisitedPassages = false;
 
 
@@ -18,13 +17,6 @@ l10nStrings.settingsTitle = 'Nastavení hry';
 l10nStrings.textOff   = 'Vyp';
 l10nStrings.textOn    = 'Zap';
 l10nStrings.settingsTextReset = 'Resetovat nastavení';
-
-//TODO:
-//Dialog obnovení hp při použití ho potky
-// Nejaky ty ilustrace
-// Nejaky ty zvuky?? 
-
-
 
 
 // ui-macro.min.js, for SugarCube 2, by Chapel

@@ -143,6 +143,13 @@ h1 {
 	height: 80%;
 }
 
+
+#delitko2 {
+	content:url("/Imgs/delitko.png");
+	width: 30%;
+	height: 30%;
+}
+
 #startMoznosti {
  font-size: 170%;
  line-height: 3;
@@ -170,7 +177,7 @@ h1 {
 }
 
 #game_over {
-  color: #F52C2C;
+  color: #cc542f;
   font-weight: bold;
 }
 
@@ -252,33 +259,36 @@ h1 {
 }
 
   #lvlIcon {
-	  content:url("/Imgs/lvl.png");
+	  content:url("/Imgs/level.png");
 	  width: 10%;
 	  height: 10%;
   }
   
   #xpIcon {
-	  content:url("/Imgs/xp.png");
+	  content:url("/Imgs/level.png");
 	  width: 10%;
 	  height: 10%;
   }
   
   #hpIcon {
-	  content:url("/Imgs/heart.png");
+	  content:url("/Imgs/heart2.png");
 	  width: 8%;
 	  height: 8%;
+	  position: relative;
   }
   
   #strIcon {
-	  content:url("/Imgs/attack.png");
+	  content:url("/Imgs/swords.png");
 	  width: 8%;
 	  height: 8%;
+	  position: relative;
   }
   
   #defIcon {
-	  content:url("/Imgs/defense.png");
+	  content:url("/Imgs/shield.png");
 	  width: 8%;
 	  height: 8%;
+	  position: relative;
   }
 
   #ui-dialog-title { 
@@ -295,8 +305,6 @@ h1 {
 }
 
 #ui-dialog {
-	border-radius:5em;
-	border: 5px;
     display: none;
     margin: 0;
     max-width: 66em;
@@ -308,8 +316,6 @@ h1 {
 }
 
 #ui-dialog.open {
-	border-radius:5em;
-	border: 5px;
     display: block;
     opacity: 1;
     -webkit-transition: opacity .2s ease-in;
@@ -342,3 +348,9 @@ h1 {
 #ui-dialog-body ul.buttons {
 	padding: 50px 0 0 0;
 }
+
+.icon-and-text {
+	display: inline-flex;
+	align-items: center; /* to align icon and text vertically */
+
+  }
