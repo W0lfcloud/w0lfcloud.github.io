@@ -276,9 +276,7 @@ h1 {
   
   #hpIcon {
 	  content:url("/Imgs/heart2.png");
-	  width: 8%;
-	  height: 8%;
-	  position: relative;
+	  width: 10%;
   }
   
   #strIcon {
@@ -287,7 +285,11 @@ h1 {
 	  height: 8%;
 	  position: relative;
   }
-  
+  #strIcon2 {
+	content:url("/Imgs/swords.png");
+	width: 3%;
+}
+
   #defIcon {
 	  content:url("/Imgs/shield.png");
 	  width: 8%;

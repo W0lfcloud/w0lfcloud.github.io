@@ -27,6 +27,7 @@
 Tvůj úkol je prostý, musíš se dostat z dungeonu a zjistit kdo jsi, a co se ti stalo. Tvá rozhodnutí ovlivní průchod hrou, čti pozorně.
 
 Hra je designována pro hraní v 16:9 a fullscreenu (jiná rozlišení nemusí fungovat správně). Fullscreen se zapíná F11 (ve většině moderních prohlížečů) nebo tlačítkem v nastavení. Mezerníkem se přeskakuje animace psaní textu.
+
 <hr>
 <b>Vytvořeno pomocí:</b>
 
@@ -44,6 +45,9 @@ Hra je zatím pouze v demo verzi, ale pokud ji vyzkoušíš, ocením jakýkoliv 
 Vítej v demo verzi hry Ozvěny zapomnění! 
 
 Hra je designována pro hraní v 16:9 a fullscreenu (jiná rozlišení nemusí fungovat správně). Fullscreen se zapíná F11 (ve většině moderních prohlížečů) nebo tlačítkem v nastavení. Mezerníkem se přeskakuje animace psaní textu.
+
+Jakýkoliv feedback je vřele vítán <3
+
 > [[Fajn, nech mě hrát!->Cela]]
 <</type>>\
 </center>
@@ -118,19 +122,17 @@ Odvrátíš zrak od pochodně a svou pozornost zaměříš na těžce vypadajíc
 
 :: Dlouhá místnost [PrvniPatro] {"position":"2050,600","size":"100,200"}
 <<type 40ms>>\
-Stojíš před masivními kamennými vraty s vyrytými tvary a znaky, které jsi nikdy dřív neviděl. Nebo snad viděl? Nevíš, tvoje mysl je zamlžená a vzpomínky v nedohlednu.
-
-Když se do nich opřeš, zjistíš, že jdou překvapivě lehce otevřít. Vycházíš z malé kamenné místnosti. S odhodláním dostat se ven vcházíš do zatím neznámé části kobky.
-
+Stojíš před masivními kamennými vraty s vyrytými tvary a znaky, které jsi nikdy dřív neviděl. Nebo snad viděl? Nevíš, tvoje mysl je zamlžená a vzpomínky v nedohlednu. Když se do nich opřeš, zjistíš, že jdou překvapivě lehce otevřít. Vycházíš z malé kamenné místnosti. S odhodláním dostat se ven vcházíš do zatím neznámé části kobky.
+<<set $str = 2>><<set $def = 2>><<ui update>>
 Před sebou vidíš dlouhou osvětlenou místnost se starým dřevěným stolkem a židličkou, o kterou se opírají ostatky jiného člověka. Možná už jsou tady pěknou řádku let. Že by jsi tady byl zavřený opravdu tak dlouho? S hrůznou myšlenkou se otřeseš a rozhodneš se ostatky zkontrolovat zblízka.
 
-> ''Oprýskaný kabát''  //[2 obrana]// <<set $def = 2>><<ui update>>
-Neznámá osoba na sobě má starý, zatuchlý kabát. Oblečeš si ho. Není sice vůbec pohodlný, ale alespoň už ti nebude taková zima. 
-<p id="poznamka">Nyní máš $def body obrany. Toto číslo se odečítá od útoku nepřítele.</p>
+> ''Oprýskaný kabát''  //[2 obrana]// 
+<p id="poznamka">Nyní máš $def body obrany. Toto číslo se odečítá od útoku nepřítele.</p> 
+Neznámá osoba na sobě má starý, zatuchlý kabát. Není sice vůbec pohodlný, ale alespoň už ti nebude taková zima. 
 
-> ''Rezatý meč''  //[2 síla]// <<set $str = 2>><<ui update>>
-Na zemi nacházíš otupělý rezatý meč. Není sice už v tom nejlepším stavu, ale mohl by ti ještě posloužit k vlastní obraně.
+> ''Rezatý meč''  //[2 síla]// 
 <p id="poznamka">Nyní máš $str body síly. Toto číslo se přičítá ke tvému útoku.</p>
+Na zemi nacházíš otupělý rezatý meč. Není sice už v tom nejlepším stavu, ale mohl by ti ještě posloužit k vlastní obraně.
 
 <<run $equip.push('Oprýskaný kabát')>>\
 <<run $equip.push('Rezatý meč')>>\

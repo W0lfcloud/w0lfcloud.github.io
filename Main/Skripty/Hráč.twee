@@ -18,7 +18,7 @@
 	<<set $enemyhp -= $playerdamage>>
 	<<set $enemyhp to Math.clamp($enemyhp,0,$enemy.maxhp)>>
 
-<<set $combatmsg to "Hodil jsi kostkou číslo $hodKostkou a trefuješ nepřítele za $celkemDmg dmg!">>
+<<set $combatmsg to "Hodil jsi kostkou číslo $hodKostkou a trefuješ nepřítele za $celkemDmg dmg! ($hodKostkou + $str)">>
 <</widget>>
 
 <<widget "pochodenAttack">>
@@ -26,7 +26,7 @@
 <<set $hodKostkou to random(1,2)>>
 
     <<if $hodKostkou is 1>>\
-    <<set $combatmsg to "Netrefil ses, tvoje pochodeň ti vypadla z ruky a ty tak přicházíš o svůj jediný zdroj světla. Seber ji nebo neuvidíš.">>
+    <<set $combatmsg to "Netrefil ses, tvoje pochodeň ti vypadla z ruky a ty tak přicházíš o svůj jediný zdroj světla. Seber ji nebo neuvidíš!">>
     <<enemyheavyattack>>
     <<if $inv.delete('Pochodeň')>>\
     <</if>>\
@@ -39,7 +39,7 @@
 	<<set $enemyhp -= $playerdamage>>
 	<<set $enemyhp to Math.clamp($enemyhp,0,$enemy.maxhp)>>
     
-    <<set $combatmsg to "Povedlo se! Hodil jsi kostkou číslo $hodKostkou a udeřil jsi pavouka svou ohnivou pochodní za $celkemDmg dmg!">>
+    <<set $combatmsg to "Povedlo se! Hodil jsi kostkou číslo $hodKostkou a udeřil jsi pavouka svou ohnivou pochodní za $celkemDmg poškození! ($hodKostkou + $str + 5)">>
     
 <</if>>\
 <</widget>>

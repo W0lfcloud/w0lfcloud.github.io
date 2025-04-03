@@ -43,9 +43,11 @@ Na chvíli se necháš unášet klidem a vyčistíš si mysl. Teď už je ale č
 :: Točité schody [PrvniPatro] {"position":"1725,1050","size":"100,100"}
 <<type 40ms>>\
 Sestupuješ po točitém schodišti a každý krok se ve stísněném prostoru ozývá zlověstnou ozvěnou. Vzduch je hutný a lepí se ti na kůži. Do nosu ti vnikne podivný štiplavý zápach a brzy se ti začnou slzet oči, které s každým mrknutím mírně pálí. 
-<<if $inv.includes('Pochodeň')>>\Váháš, ale postupuješ dále. Poblikávající pochodeň v tvé ruce vrhá na kamenné stěny vlnící se stíny.<</if>>\
+
+<<if $inv.includes('Pochodeň')>>\
+Váháš, ale postupuješ dále. Poblikávající pochodeň ve tvé ruce začíná hořet silněji, než kdykoliv předtím a vrhá na kamenné stěny vlnící se stíny.<</if>>\
 > [[Pokračuj po schodech->Místnost s plynem]]
-<</type>>
+<</type>>\
 
 :: Místnost s plynem [PrvniPatro] {"position":"1675,1175","size":"200,100"}
 <<type 40ms>>\
@@ -54,13 +56,18 @@ Jakmile se dostaneš na konec schodiště, pálení v očích se stupňuje a st�
 
 Než stihneš zareagovat, vzduch kolem tebe se změní, začne být žhavější a těžší. Z ničeho nic plamen z tvé pochodně způsobí výbuch a se plyn vznítí. Místností se rozlévá spalující žár a vypadá to, že se vznítil i všechen okolní vzduch. Výbuch tě odhodí dozadu a poslední, co cítíš, je bolestivé hoření tvého těla. Nepříjemný smrad plynu se mění na smrad spáleného masa.
 
-<<set $hp to 0>>\<p id="game_over">Tvoje pochodeň se kvůli plynu v místnosti vznítila. Tvá cesta a život zde končí.</p>
-<<link "Zpět na start" "Start">><<run UIBar.stow()>><<run UI.restart()>><</link>>\
+<<set $hp to 0>><p id="game_over">Tvoje pochodeň se kvůli plynu v místnosti vznítila. Tvá cesta a život zde končí.</p>
+
+<<link "Zpět na start">><<script>>
+	Dialog.setup("Restartovat hru");
+	Dialog.wiki(Story.get("Reset").processText());
+	Dialog.open();
+	<</script>><</link>>
 <<else>>\Jakmile se dostaneš na konec schodiště, pálení v očích se stupňuje a stává se téměř nesnesitelným. Obličej si schováváš pod kabát s nadějí, že to bude lepší. Pohlcuje tě naprostá tma. S hlavou v kabátu rukou před sebou skenuješ místnost.
+
 > [[Zkontrolovat okolí->+ Klíč]]
 <</if>>\
 <</type>>\
-
 
 :: + Klíč [PrvniPatro] {"position":"1450,1175","size":"100,100"}
 <<type 40ms>>\
@@ -118,7 +125,7 @@ Vypadá to, že jsi našel skrytý boční vchod do místnosti podivného tvaru.
 <</if>>\
 <<if lastVisited("+ Klíč") > 0>>\
 Otevřel jsi dveře a vstoupil do místnosti podivného tvaru. 
-<<if $inv.delete('Neznámý klíč')>>\
+<<if $inv.delete('Neznámý klíč')>><<ui update>>\
 <</if>>\
 <</if>>\
 
@@ -169,9 +176,14 @@ Zapřel jsi se o hranu studny a natáhnul paži ke dnu.
 
 SAKRA! Vykřikl jsi když se převážil a spadnul do studny. Než jsi ale stihnul zareagovat, obličejem jsi dopadnul na dno. Při pádu sis přelomil vaz.
 
-<p id="game_over">Tvoje rozhodutí se ti stalo osudným. Tvá cesta a život zde končí.</p> <<set $hp to 0>>\
+<<set $hp to 0>><<ui update>><p id="game_over">Tvoje rozhodutí se ti stalo osudným. Tvá cesta a život zde končí.</p> 
 
-<<link "Zpět na start" "Start">><<run UIBar.stow()>><<run UI.restart()>><</link>>
+<<link "Zpět na start">><<script>>
+	Dialog.setup("Restartovat hru");
+	Dialog.wiki(Story.get("Reset").processText());
+	Dialog.open();
+	<</script>><</link>>
+
 
 <<elseif $hodKostkou is 3 or $hodKostkou is 4 or $hodKostkou is 5>>\
 

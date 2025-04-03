@@ -4,11 +4,12 @@
 <</widget>>
 
 :: Combat [boj] {"position":"2925,200","size":"200,200"}
-$player.name: $hp/$player.maxhp HP
-$enemy.name: $enemyhp/$enemy.maxhp HP
+''$player.name:'' $hp/$player.maxhp <img src="/Imgs/heart2.png" width="3%">
+''$enemy.name:'' $enemyhp/$enemy.maxhp <img src="/Imgs/heart2.png" width="3%">
 
-$combatmsg
-$enemycombatmsg
+''Tvůj status:'' $combatmsg
+''Nepřítelův status:'' $enemycombatmsg
+
 
 <<if $hp == 0>>\
     Jsi mrtvý.

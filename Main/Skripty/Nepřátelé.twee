@@ -10,7 +10,7 @@
 <<set $enemydamage to random($enemy.mindamage,$enemy.maxdamage) - $def>>
 
 <<set $hp -= $enemydamage>><<set $hp to Math.clamp($hp,0,$player.maxhp)>>
-<<set $enemycombatmsg to "<<print $enemy.attackmsg.random()>> a hituje tě za $enemydamage dmg!">>
+<<set $enemycombatmsg to "<<print $enemy.attackmsg.random()>> a trefuje tě za $enemydamage poškození!">>
 
 <</if>>
 
@@ -20,7 +20,7 @@
 <<set $enemydamage to random($enemy.mindamage + 10 ,$enemy.maxdamage +10) - $def>>
 
 <<set $hp -= $enemydamage>><<set $hp to Math.clamp($hp,0,$player.maxhp)>>
-<<set $enemycombatmsg to "$enemy.name na tebe po tmě skočí a hituje tě za $enemydamage dmg!">>
+<<set $enemycombatmsg to "$enemy.name na tebe po tmě skočí a trefuje tě za $enemydamage poškození!">>
 <</widget>>
 
 
@@ -28,7 +28,7 @@
 <<set $enemyhealroll to random(5,10)>>
 <<set $enemyhp += $enemyhealroll>>
 <<set $enemyhp to Math.clamp($enemyhp,0,$enemy.maxhp)>>
-<<set $enemycombatmsg to "$enemy.specialattackmsg a vyléčí si $enemyhealroll HP!">>
+<<set $enemycombatmsg to "$enemy.specialattackmsg a vyléčí si $enemyhealroll životů!">>
 
 <</widget>>
 
