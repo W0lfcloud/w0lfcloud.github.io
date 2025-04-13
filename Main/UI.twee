@@ -5,9 +5,9 @@
 <<if $xp >= $maxxp>>\    
 		<<button "+ STR" `passage()`>><<set $str++>><</button>> <<button "+ DEF" `passage()`>><<set $def++>><</button>><<levelup>>
 <</if>>\
-<center><hr></center><span id="hpIcon"></span> $hp/$player.maxhp
-<span id="strIcon"></span> $str 
-<span id="defIcon"></span> $def 
+<center><hr></center><span id="icon-and-text"><span id="hpIcon"></span> $hp/$player.maxhp</span>
+<span id="icon-and-text"><span id="strIcon"></span> $str</span>
+<span id="icon-and-text"><span id="defIcon"></span> $def </span>
 <center><hr></center><p id="uiText">Inventář:</p><<= $inv.join(', ')>>
 <<if $inv.length is 0>>\
 Zatím nic 
@@ -17,13 +17,12 @@ Zatím nic
 Zatím nic 
 <</if>>\
 <center><hr></center>
-<span id="UI-menu"><<link "Nastavení">><<run UI.settings();>><</link>>
-<<link "Restartovat">><<script>>
-	Dialog.setup("Restartovat hru");
-	Dialog.wiki(Story.get("Reset").processText());
-	Dialog.open();
-	<</script>><</link>></span>
 
+<div id="function-menu">\
+		<a id="settings" class="settingsIcon"></a>
+		<a id="saves" class="savesIcon"></a>
+		<a id="restart" class="restartIcon"></a>
+</div>\
 :: Reset
 <center>\
 Veškerý pokrok bude ztracen. Opravdu chceš hru restartovat?</center>\ 

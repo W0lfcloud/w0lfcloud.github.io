@@ -19,7 +19,22 @@ bodyPozadi - #1c1514
 UIPozadi - 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 Ahojky. Jelikož jsi v minulosti projevila zájem o moji hru, tak tady posílám demo na testování. Pokud se rozhodneš hru otestovat, tak se mi bude hodit úplně jakýkoliv feedback a poznatky - ať už z hlediska mechanik, grafiky, logiky, příběhu, pravopisu nebo čehokoliv co tě napadne :D Je to textový rpgčko založený na konceptu gamebooku, takže je to hodně o čtení. Zatím obsahuje jen jeden konec a několik způsobů smrti. Je to asi na 5-10 minut, záleží na štěstí a rychlosti čtení :D Je to moje úplně první hra a pořád jsem vývojář amatér. 
 https://w0lfcloud.github.io
 
 do budoucna mám v plánu přidat víc možností průchodu a nějaký ty pěkný ilustrace :)
+
+

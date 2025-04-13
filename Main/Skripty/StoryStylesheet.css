@@ -262,6 +262,10 @@ h1 {
 	line-height: 1.5;
 }
 
+#story-caption {
+  text-align: center; /* If you want to center the whole group */
+}
+
   #lvlIcon {
 	  content:url("/Imgs/level.png");
 	  width: 10%;
@@ -296,6 +300,24 @@ h1 {
 	  height: 8%;
 	  position: relative;
   }
+
+	.savesIcon {
+		content:url("/Imgs/saves.png");
+		width: 20%;
+		height: 20%;
+	}
+
+	.settingsIcon {
+		content:url("/Imgs/settings.png");
+		width: 20%;
+		height: 20%;
+	}
+
+	.restartIcon {
+		content:url("/Imgs/restart.png");
+		width: 20%;
+		height: 20%;
+	}
 
   #ui-dialog-title { 
 	font-size: 1.5em;
@@ -355,8 +377,39 @@ h1 {
 	padding: 50px 0 0 0;
 }
 
-.icon-and-text {
-	display: inline-flex;
-	align-items: center; /* to align icon and text vertically */
+#ui-dialog-body.saves {
+	max-width: 600px;
+}
 
-  }
+#ui-dialog-body.saves>h2 {
+    background-color: #0d0909;
+    font-size: 1em;
+	font-weight: bold;
+    margin: 0;
+    padding: .1em 0 .1em .4em;
+}
+
+#ui-dialog-body.saves #saves-list button {
+    color: #eee;
+    background-color: transparent;
+    border: 1px solid #444;
+    height: 100%;
+    width: 100%;
+	padding: 15px 20px;
+ }
+
+.icon-and-text {
+	display: flex;	
+	align-items: center; 
+	justify-content: center; 
+}
+
+
+  #function-menu {
+	height: 10%;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+

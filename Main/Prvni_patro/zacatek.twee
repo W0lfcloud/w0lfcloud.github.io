@@ -4,6 +4,7 @@
 <div id="logo"></div>
 
 <p id="startMoznosti">[[Začít hru->Vitej]]</p>
+<p id="startMoznosti"><<link "Načíst hru">><<run UI.saves();>><</link>></p>
 <p id="startMoznosti"><<link "Nastavení">><<run UI.settings();>><</link>></p>
 <p id="startMoznosti"><<link "Informace">>
 <<script>>
@@ -12,7 +13,6 @@
 	Dialog.open();
 	<</script>>
 <</link>></p>
-
 
 
 
